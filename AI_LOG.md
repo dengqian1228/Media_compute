@@ -1,6 +1,6 @@
 # AI 使用总日志
 
-两位成员共用此文件。**当前仅建立记录规则与本轮可核实的初始化记录；此前本作业有关的普通问答、失败或未采用尝试尚未收集，“待补充”不等于交付合格。** 不编造成员、时间、模型、人工核验、修正或提交。
+两位成员共用此文件。**当前记录了初始化和核心模块代码生成；此前本作业有关的普通问答、失败或未采用尝试尚未收集，“待补充”不等于交付合格。** 不编造成员、时间、模型、人工核验、修正或提交。
 
 ## 记录规则
 
@@ -31,6 +31,27 @@
 - 智能体执行验证：检查 `git status --short --branch`、`git diff --check`、`git diff -- README.md .gitignore` 和未跟踪文件列表，确认仍只有初始化改动，原始提交历史未改变。`pdf_probe.py` 不在磁盘上，仅是 IDE 中尚未关闭的标签。
 - 配置过程：首次执行 `git config --local` 因 `.git/config` 沙箱权限被拒绝；依据成员本轮明确授权，获执行权限后写入仓库本地 `user.name` 和 `user.email`。`git config --show-origin` 显示本地身份为上述姓名与邮箱，全局配置未修改。
 - 提交信息：**待成功提交后从 Git 读取并追加**；本条不预填时间、hash 或通过结论。
+
+## 初始化提交结果（提交后补记；待后续提交保存）
+
+- 补记时间：2026-11-17 17:10:13 +08:00（中国标准时间）。使用者：成员 A；工具／模型：Codex，具体会话模型标识待从客户端核实。
+- 实际提交时间：`2026-11-17T17:09:59+08:00`（`git show -s --format=%cI HEAD`；作者时间与提交时间相同）。
+- 完整 commit ID：`6931e2746286bf2eefc7cb6d3879bca1428d2ef5`。
+- 提交说明原文：`初始化第4题项目结构、课程要求与双人协作记录`。
+- 提交身份：作者及提交者均为 `Zhang XiaoLong <xiaolong23@mails.tsinghua.edu.cn>`；只设置了仓库本地 Git 配置，全局配置未修改。父提交为原有 `77d99e402ec606fd325268864bf7dd2cc9b1fb56`，未重写历史。
+- 智能体执行验证：提交前 `git diff --cached --check` 无空白错误；暂存清单恰为 `.gitignore`、`AGENTS.md`、`AI_LOG.md`、`README.md`、`data/.gitkeep`、`docs/algorithm.md`、`docs/requirements.md`、`l0_smoothing/.gitkeep`、`results/.gitkeep`、`tests/.gitkeep`，无其他未暂存或未跟踪文件。文档 UTF-8、末尾换行、行尾空白及四个目录占位检查通过；日志、文档、数据、结果和未来 Git 导出文件未被忽略。提交后、此次补记前 `git status` 显示工作树干净、`main` 比 `origin/main` 超前 1 个提交；未推送远程。未运行算法或实验测试，成员人工核验仍待完成。
+- 本条补记发生在上述提交之后，**不在该提交的内容中**；按成员指示保持未提交，随后续有意义的提交保存，不改写已有提交。
+
+## L0 平滑核心模块实现（提交前记录）
+
+- 本条记录时间：2026-11-17 17:22:16 +08:00（中国标准时间；用户发出本轮指令的准确时间未取得）。
+- 使用者：成员 A（本轮提供公式与步骤；课程登记姓名仍待填写）。工具／模型：Codex；具体会话模型标识待从客户端核实。
+- 类型与任务：IDE／Agent 代码生成。按成员 A 本轮给出的 `[0,1]` 灰度／RGB 浮点输入、周期前向差分、跨通道联合阈值、FFT 闭式更新及 `β←κβ` 停止条件，实现纯数组 L0 平滑核心；图像读写、界面和应用实验未进入本轮。
+- 采用与实现：`l0_smoothing/core.py` 接收二维灰度或三维 RGB，复制为 float64；按 `q≤λ/β` 同时清零所有通道的两个方向，使用前向差分频率响应及其共轭进行 FFT 更新，不裁剪迭代值；返回结果、有效参数、迭代次数和耗时。`docs/algorithm.md` 标明代码与公式对应关系。实现边界选择为 `λ>0`、`κ>1`、`βmax>2λ`，使至少执行一轮；这不是课程新增要求。
+- 修正情况：首轮小规模测试通过，本轮未发现明确算法错误；不编造人工纠错经历。此为智能体实现与验证，不代表成员已经理解或人工确认。
+- 智能体执行验证：在 Python 3.13.14、NumPy 2.5.4 下运行 `python -m unittest discover -s tests -v`，6 项测试全部通过（0.088 秒）：显式周期边界、彩色联合阈值及等号边界、灰度／RGB 常量图与输入不变、非方形 RGB、独立 2×3 线性系统对照 FFT 更新（绝对误差容限 `1e-12`）、无效输入与参数拒绝。测试输入与期望值保存在 `tests/test_core.py`。
+- 默认参数调用：输入 `np.array([[0.0,1.0,0.25],[0.75,0.5,0.125]], dtype=np.float64)`，执行 `smooth_l0(x)`；记录结果为形状 `(2,3)`、`float64`、22 轮、参数 `λ=0.02, κ=2.0, βmax=100000.0`、输出全为有限值、输入未改变、调用耗时 `0.004156099981628358` 秒。命令：`python -c "import numpy as np; from l0_smoothing import smooth_l0; x=np.array([[0.0,1.0,0.25],[0.75,0.5,0.125]],dtype=np.float64); before=x.copy(); r=smooth_l0(x); print('shape',r.image.shape,'dtype',r.image.dtype,'iterations',r.iterations,'parameters',r.parameters,'finite',bool(np.isfinite(r.image).all()),'input_unchanged',bool(np.array_equal(x,before)),'elapsed_seconds',r.elapsed_seconds)"`。
+- 成员人工核验：**待完成**。本轮提交的真实时间、完整 commit ID 和提交说明：**提交成功后从 Git 补记**。上一轮未提交的初始化提交补记保持原文，计划与本轮有意义提交一并保存。
 
 ## 历史记录待补充清单
 
