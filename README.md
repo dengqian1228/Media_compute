@@ -26,7 +26,10 @@
 | `data/structure_smoothing/` | 三幅真实图像的下载原件、预处理输入、来源／许可与 SHA-256 清单。 |
 | `results/structure_smoothing/` | 18 组参数实验、CSV、全图／局部对照和复现抽查。 |
 | `scripts/structure_smoothing_experiment.py` | 归档输入预处理、参数网格运行及结果审计。 |
-| `requirements.txt` | 本轮实际验证环境所用的 NumPy、Pillow 版本。 |
+| `results/edge_comparison/` | 原图与全部平滑结果的 Canny 边缘图、全图／局部对照和复现检查。 |
+| `scripts/edge_comparison.py` | 对已保存结果做固定参数的 Canny 检测及逐像素复核。 |
+| `docs/basic30_checklist.md` | 基础 30 分逐项证据与待人工核验事项。 |
+| `requirements.txt` | 实际运行环境使用的 NumPy、Pillow、OpenCV 版本。 |
 
 课程原始 PDF 位于项目上一级目录，未复制进仓库。`docs/requirements.md` 标注了所依据的文件和页码。
 
@@ -35,14 +38,15 @@
 - 已保留原有仓库及历史。L0 平滑纯数组核心模块、8 位灰度／RGB 读写、结果保存和按记录复现已由智能体实现；自动验证通过，成员人工核验待完成。
 - 本轮在 Python 3.13.14、NumPy 2.5.4、Pillow 13.0.0 下运行了 `python -m unittest discover -s tests -v`，10 项测试通过；此前两幅中文路径合成样例已完成流程验证。其他环境尚未验证。
 - 三幅真实图像（两幅 RGB、一幅灰度）的 λ×κ 共 18 组结构平滑实验已由智能体运行；来源、许可、预处理、全部结果、对照图、CSV 和复现抽查见 [实验记录](results/structure_smoothing/README.md)。成员人工核验待完成。
-- 界面、边缘提取、JPEG 去伪影、Demo、报告仍待完成；合成样例输出只作为流程验证。
+- 已由智能体对三幅原图及 18 组已保存的平滑图执行统一参数 Canny，保存 21 张边缘图及全图／局部对照，复算像素一致；见 [边缘实验记录](results/edge_comparison/README.md) 和 [基础 30 分逐项核对](docs/basic30_checklist.md)。成员人工核验待完成。
+- 界面、JPEG 去伪影、Demo、报告仍待完成；合成样例输出只作为流程验证。
 - 既往 AI 对话、成员 B 身份及成员 A 的课程登记姓名仍待补充；`AI_LOG.md` 中的“待补充”不表示交付要求已满足。
 - 成员 A 已确认本仓库使用 `Zhang XiaoLong <xiaolong23@mails.tsinghua.edu.cn>` 作为 Git 提交身份；仅仓库本地配置已设置。实际提交状态以 `git log` 和 `git status` 为准。
 
 ## 后续阶段
 
 1. 双方阅读论文与课程要求，并人工核对核心代码、读写复现流程及自动验证结果。
-2. 在已完成多图像结构平滑参数对照的基础上，由成员复核输入、算法和结果；后续再开展相同参数的原图／平滑图边缘对照。
+2. 由成员复核输入、算法、平滑及固定 Canny 参数的边缘对照结果，补全基础 30 分的人工核验记录。
 3. 成员 B 完成额外功能、指标和局部结果对照。
 4. 整合 Demo、报告与交付材料，核对日志、Git 历史和双人展示内容。
 

@@ -1,0 +1,8 @@
+{
+  "actor": "智能体执行验证",
+  "paired_settings_equal": true,
+  "reproduced_edge_maps": 21,
+  "pixel_comparison": "decoded uint8 pixels exactly equal after recomputation",
+  "source_bytes_equal": true,
+  "passed": true
+}

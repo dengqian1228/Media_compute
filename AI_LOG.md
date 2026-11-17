@@ -107,3 +107,22 @@
 - 智能体执行验证：`python -m unittest discover -s tests -v` 10 项通过；`prepare` 重跑时三份原件 SHA-256、预处理输入与清单一致。执行 `python -m scripts.structure_smoothing_experiment check 'results/structure_smoothing/experiment-20261117T102719Z-1b827758b270'`，18 条参数网格和对应文件审计通过；三幅图各抽一组重跑，解码像素差数均为 0、float64 最大绝对误差均为 0。两次检查目录均保留，最新结果见 `checks-20261117T103151Z-6c9b13781aa8/checks.json`。检查只由智能体执行，成员人工核验仍待完成。
 - 实际过程中的非算法问题：初次在受限网络环境调用 `Invoke-WebRequest` 读取官网页面失败；经授权的网络访问成功读取 HTML 并下载三份原图。首次联合文档补丁因期望行上下文不匹配而未应用；改用准确上下文后更新。未据这些失败命令产生实验结论。
 - 上一轮 `3f5e245fc25cf45a16c30233838ec37802520973` 的提交后日志补记保留原文，计划随本次有意义的实验提交保存。本次提交时间、完整 commit ID 和说明：**提交成功后从 Git 补记**；不会回写旧提交。
+
+## 三幅图像结构平滑实验提交结果（提交后补记；待后续提交保存）
+
+- 补记时间：2026-11-17 18:36:52 +08:00（中国标准时间）。使用者：成员 A；工具／模型：Codex，具体会话模型标识待从客户端核实。
+- 实际提交时间：`2026-11-17T18:36:34+08:00`（Git 作者时间与提交者时间相同）。
+- 完整 commit ID：`dd5904e66032582f53163bd59a854b1b9229e3cd`。
+- 提交说明原文：`完成三幅图像结构平滑参数对照与复现抽查`。
+- 作者及提交者：`Zhang XiaoLong <xiaolong23@mails.tsinghua.edu.cn>`；父提交 `3f5e245fc25cf45a16c30233838ec37802520973`，没有改写历史，也没有推送远程。
+- 智能体执行验证：提交前 `git diff --cached --check` 无空白错误，暂存 122 个本轮相关文件，未暂存与未跟踪文件数均为 0。`python -m unittest discover -s tests -v` 10 项通过；原图 SHA-256 和预处理清单匹配；18 组 CSV 网格、保存路径与产物检查通过；三幅图的抽查复现均 `passed=true`、最大浮点误差 0、显示像素差数 0。`git show HEAD:AI_LOG.md` 确认上一轮提交后的补记已纳入此次提交；本条补记前工作树干净，`main` 比 `origin/main` 超前 4 个提交。成员人工核验仍待完成。
+- 本条提交后补记**不在** `dd5904e66032582f53163bd59a854b1b9229e3cd` 中，按项目规则随后续有意义的提交保存，不回写或改写本次提交。
+
+## 固定参数 Canny 边缘提取对照（提交前记录）
+
+- 记录时间：2026-11-17 18:57:27 +08:00（中国标准时间；用户发出本轮指令的准确时刻未取得）。使用者：成员 A；工具／模型：Codex，具体会话模型标识待从客户端核实。类型与任务：IDE／Agent 代码生成与实验记录；本轮围绕三幅原图及全部平滑结果的同参边缘对照，不开展界面或额外功能。
+- 采用与来源：复用 `results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/` 中的三幅预处理输入及 18 组保存的 `output.png`，未重跑 L0 平滑。依据 OpenCV 官方 Canny 和色彩转换文档，RGB 8 位统一使用 `cv2.COLOR_RGB2GRAY`，灰度 L 原值直通；全部 21 次检测固定阈值 60／120、Sobel 孔径 3、L2 梯度，不额外模糊或拉伸。先核对保存 PNG 与 `output.npy` 的显示量化规则、平滑参数和输入摘要。实际安装并使用 `opencv-python-headless==5.0.0.93`，Python 3.13.14、NumPy 2.5.4、Pillow 13.0.0；版本写入 `edge_experiment.json`。
+- 运行命令：`python -m scripts.edge_comparison run --source-experiment 'results/structure_smoothing/experiment-20261117T102719Z-1b827758b270' --low 60 --high 120 --aperture 3 --l2`；输出为 `results/edge_comparison/edges-20261117T105442Z-a63edf132bc2/`。三幅图各保存原图与六组平滑图的边缘 PNG、标参全图和同区域局部图；`edges.csv` 含 21 条源图及输出路径、SHA-256、检测参数和边缘像素数。观察见 `results/edge_comparison/README.md`：细碎边缘随平滑减少，主要岩石／窗框／主花轮廓在适中参数下仍可见，λ=0.08 造成木头内缘、砖缝、花盘和部分花瓣／小花轮廓丢失。边缘数量减少未被当作质量更好的充分证据。
+- 智能体执行验证：`python -m scripts.edge_comparison check 'results/edge_comparison/edges-20261117T105442Z-a63edf132bc2'` 检查每图原图和六组结果的四项 Canny 参数完全一致、源图 SHA-256 一致，并对全部 21 张保存图重算，解码后像素逐点相同；记录为 `checks-20261117T105525Z-c171e487404d/checks.json`，`passed=true`。另执行 `python -m unittest discover -s tests -v`，已有 10 项测试通过；核对 21 张边缘图和 6 张对照图存在。以上仅为智能体执行验证，成员人工核验待完成。
+- 基础 30 分的三项逐项证据与待成员核验事项见 `docs/basic30_checklist.md`，不能据自动检查预先标记课程评分通过。上一轮 `dd5904e66032582f53163bd59a854b1b9229e3cd` 的提交后日志补记保留原文，随本次有意义提交保存。本次真实提交信息将在提交成功后从 Git 读取并另行补记。
+- 复核记录字段时，发现仅标注 `uint8` 的允许域还不足以给出每张检测图的实际数值范围；已在 `edges.csv` 中补入 21 条转换后灰度的 `gray_min`、`gray_max`，并更新后续运行脚本。再次执行同一 `check` 命令，记录 `checks-20261117T105846Z-26a6d96aa39e/checks.json` 仍为 `passed=true`；先前成功检查记录保留。
