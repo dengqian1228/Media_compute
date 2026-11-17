@@ -221,3 +221,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 本课程项目需要随仓库保留的文档、来源记录、输入与实验材料。
+# 放在末尾，避免上方通用的 *.log 等规则误忽略交付记录。
+!AI_LOG.md
+!AGENTS.md
+!docs/
+!docs/**
+!data/
+!data/**
+!results/
+!results/**
+# 即使位于上述目录，构建与解释器缓存仍属临时文件。
+docs/_build/
+**/__pycache__/
+**/.ipynb_checkpoints/
