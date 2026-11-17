@@ -1,0 +1,39 @@
+{
+  "record_version": 1,
+  "kind": "run",
+  "created_at": "2026-11-17T10:27:34.105965+00:00",
+  "input": {
+    "source_path": "C:\\Users\\ROG\\Desktop\\大作业要求_20261016更新\\Media_compute\\data\\structure_smoothing\\inputs\\brick_window_gray.png",
+    "copy": "input.png",
+    "file_sha256": "83aaa29ba99ad7578f19241c0c386ceed01c7a92837e96d664074416c66710c4",
+    "pixel_sha256": "412bd3b6e9f094211b6268a2c58d277d91b3a30dc1ae3327d4c0ab114572603a",
+    "mode": "L",
+    "shape": [
+      349,
+      512
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      349,
+      512
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "6a112e085bd070fea694afe482fe78fe4f87ceacc06fdd49cc6b37a123afa638"
+  },
+  "parameters": {
+    "lambda": 0.005,
+    "kappa": 1.5,
+    "beta_max": 100000.0
+  },
+  "iterations": 40,
+  "elapsed_seconds": 1.1395222999854013,
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.5.4",
+    "pillow": "13.0.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

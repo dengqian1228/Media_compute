@@ -1,0 +1,59 @@
+{
+  "record_version": 1,
+  "kind": "replay",
+  "created_at": "2026-11-17T10:31:57.536442+00:00",
+  "input": {
+    "source_path": "C:\\Users\\ROG\\Desktop\\大作业要求_20261016更新\\Media_compute\\results\\structure_smoothing\\experiment-20261117T102719Z-1b827758b270\\beach\\run-20261117T102722Z-48c70459bb0d\\input.png",
+    "copy": "input.png",
+    "file_sha256": "1b8589bc94ce6fb87338366f65c83efdb6518948f930f822e118af9c69d3b24d",
+    "pixel_sha256": "47df18c0e028a15d8a8049f9d1cc38ec6f280a12116dffb6f3a779c58c830580",
+    "mode": "RGB",
+    "shape": [
+      341,
+      512,
+      3
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      341,
+      512,
+      3
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "333c8869609dd82eed39002fe99d66ed4ab215811bdf36f95eade8cdc1488985"
+  },
+  "parameters": {
+    "lambda": 0.005,
+    "kappa": 1.5,
+    "beta_max": 100000.0
+  },
+  "iterations": 40,
+  "elapsed_seconds": 5.4919010999728926,
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.5.4",
+    "pillow": "13.0.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "comparison": {
+    "reference_record": "C:\\Users\\ROG\\Desktop\\大作业要求_20261016更新\\Media_compute\\results\\structure_smoothing\\experiment-20261117T102719Z-1b827758b270\\beach\\run-20261117T102722Z-48c70459bb0d\\run.json",
+    "input_decoded_pixels_equal": true,
+    "input_file_bytes_equal": true,
+    "float_atol": 1e-12,
+    "max_float_abs_error": 0.0,
+    "mean_float_abs_error": 0.0,
+    "float_within_tolerance": true,
+    "different_pixel_count": 0,
+    "max_pixel_channel_error": 0,
+    "display_pixels_equal": true,
+    "environment_versions_equal": {
+      "python": true,
+      "numpy": true,
+      "pillow": true
+    },
+    "passed": true
+  }
+}

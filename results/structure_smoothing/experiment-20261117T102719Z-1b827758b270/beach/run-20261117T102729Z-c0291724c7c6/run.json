@@ -1,0 +1,41 @@
+{
+  "record_version": 1,
+  "kind": "run",
+  "created_at": "2026-11-17T10:27:29.557417+00:00",
+  "input": {
+    "source_path": "C:\\Users\\ROG\\Desktop\\大作业要求_20261016更新\\Media_compute\\data\\structure_smoothing\\inputs\\beach.png",
+    "copy": "input.png",
+    "file_sha256": "1b8589bc94ce6fb87338366f65c83efdb6518948f930f822e118af9c69d3b24d",
+    "pixel_sha256": "47df18c0e028a15d8a8049f9d1cc38ec6f280a12116dffb6f3a779c58c830580",
+    "mode": "RGB",
+    "shape": [
+      341,
+      512,
+      3
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      341,
+      512,
+      3
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "42adbb0afa1085a83c63e9c1c4b7e4c0ffa674b8053c533564a2c847f7e7653f"
+  },
+  "parameters": {
+    "lambda": 0.005,
+    "kappa": 2.0,
+    "beta_max": 100000.0
+  },
+  "iterations": 24,
+  "elapsed_seconds": 1.7640396999777295,
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.5.4",
+    "pillow": "13.0.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

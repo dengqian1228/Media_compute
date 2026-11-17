@@ -1,0 +1,107 @@
+{
+  "max_side": 512,
+  "resampling": "Pillow LANCZOS",
+  "images": {
+    "beach": {
+      "filename": "beach.png",
+      "sha256": "9c03c82a6f28dd71e8d68339e82512eaaeaa183e1afa96e28ea4da5de5fd9312",
+      "mode": "RGB",
+      "source_page": "https://jiaya.me/file/archive/projects/L0smoothing/ImageSmoothing.htm",
+      "download_url": "https://jiaya.me/file/archive/projects/L0smoothing/results/Smoothing/beach/beach.png",
+      "author": "未在官网页面注明",
+      "license": "未在官网页面注明；公开再分发前须核实授权",
+      "source_size": [
+        800,
+        533
+      ],
+      "source_mode": "RGB",
+      "input_file": "data/structure_smoothing/inputs/beach.png",
+      "input_size": [
+        512,
+        341
+      ],
+      "input_mode": "RGB",
+      "input_sha256": "1b8589bc94ce6fb87338366f65c83efdb6518948f930f822e118af9c69d3b24d",
+      "preprocessing": [
+        "Apply EXIF orientation if present",
+        "convert to 8-bit RGB with Pillow",
+        "resize within 512x512, preserving aspect ratio, LANCZOS",
+        "save as PNG; no crop or contrast adjustment"
+      ],
+      "roi_fraction_xyxy": [
+        0.31,
+        0.3,
+        0.56,
+        0.63
+      ]
+    },
+    "brick_window_gray": {
+      "filename": "Brick_wall_and_window.jpg",
+      "sha256": "4f9cb1f35b75bc8309cc31c2e05f12772e7df0a602ddec05058e47e6d300de91",
+      "mode": "L",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Brick_wall_and_window.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brick_wall_and_window.jpg",
+      "author": "Tarasna0922",
+      "license": "CC BY-SA 4.0; derived grayscale and smoothed images retain this license",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_size": [
+        3225,
+        2200
+      ],
+      "source_mode": "RGB",
+      "input_file": "data/structure_smoothing/inputs/brick_window_gray.png",
+      "input_size": [
+        512,
+        349
+      ],
+      "input_mode": "L",
+      "input_sha256": "83aaa29ba99ad7578f19241c0c386ceed01c7a92837e96d664074416c66710c4",
+      "preprocessing": [
+        "Apply EXIF orientation if present",
+        "convert to 8-bit L with Pillow",
+        "resize within 512x512, preserving aspect ratio, LANCZOS",
+        "save as PNG; no crop or contrast adjustment"
+      ],
+      "roi_fraction_xyxy": [
+        0.32,
+        0.28,
+        0.57,
+        0.61
+      ]
+    },
+    "sunflower": {
+      "filename": "Sunflower_in_a_field.jpg",
+      "sha256": "8782a4e489f826be45c20574fd94aa3a7c7632ed71fc4d07388916dcb8be4100",
+      "mode": "RGB",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sunflower_in_a_field.jpg",
+      "download_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunflower_in_a_field.jpg",
+      "author": "Timovn",
+      "license": "CC BY 4.0; resize/smoothing changes are noted",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_size": [
+        4608,
+        3456
+      ],
+      "source_mode": "RGB",
+      "input_file": "data/structure_smoothing/inputs/sunflower.png",
+      "input_size": [
+        512,
+        384
+      ],
+      "input_mode": "RGB",
+      "input_sha256": "6a63e5365fd2bb506ecf3da0a941229b0efc873d1ed28e00638132fb487ac3ba",
+      "preprocessing": [
+        "Apply EXIF orientation if present",
+        "convert to 8-bit RGB with Pillow",
+        "resize within 512x512, preserving aspect ratio, LANCZOS",
+        "save as PNG; no crop or contrast adjustment"
+      ],
+      "roi_fraction_xyxy": [
+        0.45,
+        0.46,
+        0.7,
+        0.79
+      ]
+    }
+  }
+}

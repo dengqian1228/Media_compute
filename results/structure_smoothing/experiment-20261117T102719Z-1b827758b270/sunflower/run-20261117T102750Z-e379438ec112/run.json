@@ -1,0 +1,41 @@
+{
+  "record_version": 1,
+  "kind": "run",
+  "created_at": "2026-11-17T10:27:50.803570+00:00",
+  "input": {
+    "source_path": "C:\\Users\\ROG\\Desktop\\大作业要求_20261016更新\\Media_compute\\data\\structure_smoothing\\inputs\\sunflower.png",
+    "copy": "input.png",
+    "file_sha256": "6a63e5365fd2bb506ecf3da0a941229b0efc873d1ed28e00638132fb487ac3ba",
+    "pixel_sha256": "7005c1bee58e57c4915b265caaa0589372b3c94fffa3fba61b73a43cc860dde6",
+    "mode": "RGB",
+    "shape": [
+      384,
+      512,
+      3
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      384,
+      512,
+      3
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "f2aea8502966af06b77b2b36ecb59e2b95e89272122a2ef4871e1e07fee60f4c"
+  },
+  "parameters": {
+    "lambda": 0.08,
+    "kappa": 2.0,
+    "beta_max": 100000.0
+  },
+  "iterations": 20,
+  "elapsed_seconds": 1.3625621999963187,
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.5.4",
+    "pillow": "13.0.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

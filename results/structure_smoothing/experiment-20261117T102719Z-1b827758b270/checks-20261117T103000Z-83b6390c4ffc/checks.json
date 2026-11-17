@@ -1,0 +1,36 @@
+{
+  "actor": "智能体执行验证",
+  "audited_rows": 18,
+  "grid_complete": true,
+  "artifact_checks": "input SHA-256, parameters, iterations, elapsed, float dtype/shape/finite, display mode/shape",
+  "replays": [
+    {
+      "image": "beach",
+      "lambda": 0.005,
+      "kappa": 1.5,
+      "replay_record": "checks-20261117T103000Z-83b6390c4ffc/replay-20261117T103003Z-2ce6b273646d/run.json",
+      "passed": true,
+      "max_float_abs_error": 0.0,
+      "different_pixel_count": 0
+    },
+    {
+      "image": "brick_window_gray",
+      "lambda": 0.02,
+      "kappa": 2.0,
+      "replay_record": "checks-20261117T103000Z-83b6390c4ffc/replay-20261117T103004Z-ad27513f1cdd/run.json",
+      "passed": true,
+      "max_float_abs_error": 0.0,
+      "different_pixel_count": 0
+    },
+    {
+      "image": "sunflower",
+      "lambda": 0.08,
+      "kappa": 1.5,
+      "replay_record": "checks-20261117T103000Z-83b6390c4ffc/replay-20261117T103006Z-3b468023030d/run.json",
+      "passed": true,
+      "max_float_abs_error": 0.0,
+      "different_pixel_count": 0
+    }
+  ],
+  "passed": true
+}

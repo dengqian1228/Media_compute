@@ -75,6 +75,16 @@
 - 过程中的非算法失败：首次 PowerShell 汇总 JSON 的管道语法错误；改用 `Get-ChildItem | ForEach-Object | Format-Table` 后读出四条记录，并另查两次复现的误差。没有据失败命令产生实验结论。
 - 成员人工核验：**待完成**。上一轮核心模块提交后的补记保持原文，计划与本次有意义提交一并保存。本次提交的真实时间、完整 commit ID 和提交说明：**成功提交后从 Git 补记**。
 
+## 图像读写与复现提交结果（提交后补记；待后续提交保存）
+
+- 补记时间：2026-11-17 17:58:29 +08:00（中国标准时间）。使用者：成员 A；工具／模型：Codex，具体会话模型标识待从客户端核实。
+- 实际提交时间：`2026-11-17T17:58:16+08:00`（从 Git 读取；作者时间与提交时间相同）。
+- 完整 commit ID：`3f5e245fc25cf45a16c30233838ec37802520973`。
+- 提交说明原文：`实现8位图像读写、结果保存与记录复现`。
+- 作者及提交者：`Zhang XiaoLong <xiaolong23@mails.tsinghua.edu.cn>`；父提交为 `4136d119191d673a2abd994dcd682a02dc473514`，历史未改写。
+- 智能体执行验证：提交前 `git diff --cached --check` 无空白错误，暂存 36 个本轮相关文件且没有额外未暂存或未跟踪项目文件；`python -m unittest discover -s tests -v` 的 10 项测试通过。两幅中文路径合成输入及六份实际记录已保存；四次复现均为最大浮点误差 0、不同显示像素 0。对六份记录的输入解码像素摘要、float64 输出形状和显示 PNG 像素摘要的复核均通过。原 PDF 第 7 页上标核对为 `βmax=10^5`。`git show HEAD:AI_LOG.md` 确认上一轮核心模块提交后的补记已纳入本次提交；提交后、此次补记前工作树干净，`main` 比 `origin/main` 超前 3 个提交，未推送远程。成员人工核验仍待完成；界面、边缘提取及批量应用实验尚未开展。
+- 本条提交后补记**不在**上述提交中，按项目规则随后续有意义的提交保存，不改写已完成提交。
+
 ## 历史记录待补充清单
 
 | 待补充内容 | 当前状态 |
@@ -87,3 +97,13 @@
 | 双方对算法和结果的人工理解、核对与签认 | 尚未开展，后续按实际情况记录。 |
 
 建议后续记录格式：`S01`、`S02` 为普通问答编号；每段按时间原样附“用户／AI”轮次；代码生成提交另列“提交时间、完整 commit ID、message”；在对应记录下写“采用、修正与验证”。编号只是索引，不能替代完整内容。
+
+## 三幅图像结构平滑与参数对照（提交前记录）
+
+- 记录时间：2026-11-17 18:34:10 +08:00（中国标准时间；本轮用户指令发出时刻未取得）。使用者：成员 A；工具／模型：Codex，具体会话模型标识待从客户端核实。类型与任务：IDE／Agent 生成实验脚本、下载和预处理输入、运行参数对照、制作图版、审计记录及撰写观察。此条按代码生成提交关联；若把本轮对话另作普通问答归档，完整问答及准确时间仍须据客户端补充。
+- 用户本轮范围：自行检索三幅细纹理且有主边界的图像（含官网输入 `beach.png`，另两幅许可明确），每图运行 λ={0.005,0.02,0.08}、κ={1.5,2}、βmax=1e5，保存全部结果／记录、全图与同区域局部、CSV，基于实际结果分析并抽查复现；暂不做边缘提取、界面和 JPEG 去伪影。
+- 采用与来源：官网 HTML 源码明确将 `results/Smoothing/beach/beach.png` 列在 Input Images 下；官网未标图片许可，未使用同表 `*_s.png` 输出。另选 Wikimedia Commons 的 `Brick wall and window.jpg`（Tarasna0922，CC BY-SA 4.0）和 `Sunflower in a field.jpg`（Timovn，CC BY 4.0）。原件、链接、许可、SHA-256 和实际预处理见 `data/structure_smoothing/README.md`、`manifest.json`。下载原图后保留原件；砖墙转 L 灰度，其余保留 RGB，三图等比例 LANCZOS 缩至长边 512，未裁剪或调对比度。
+- 运行与结果：执行 `python -m scripts.structure_smoothing_experiment prepare`、`python -m scripts.structure_smoothing_experiment run`，得到 `results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/`。18 组全部调用现有 `run_and_save`；每组的输入副本、float64 NPY、显示 PNG、JSON 环境及参数记录保留，`runs.csv` 汇总。三幅图各有全图和同一区域局部图；λ=0.08 的明显过度平滑结果没有筛除。观察及参数作用见 `results/structure_smoothing/README.md`，是智能体执行分析，非成员人工验收。
+- 智能体执行验证：`python -m unittest discover -s tests -v` 10 项通过；`prepare` 重跑时三份原件 SHA-256、预处理输入与清单一致。执行 `python -m scripts.structure_smoothing_experiment check 'results/structure_smoothing/experiment-20261117T102719Z-1b827758b270'`，18 条参数网格和对应文件审计通过；三幅图各抽一组重跑，解码像素差数均为 0、float64 最大绝对误差均为 0。两次检查目录均保留，最新结果见 `checks-20261117T103151Z-6c9b13781aa8/checks.json`。检查只由智能体执行，成员人工核验仍待完成。
+- 实际过程中的非算法问题：初次在受限网络环境调用 `Invoke-WebRequest` 读取官网页面失败；经授权的网络访问成功读取 HTML 并下载三份原图。首次联合文档补丁因期望行上下文不匹配而未应用；改用准确上下文后更新。未据这些失败命令产生实验结论。
+- 上一轮 `3f5e245fc25cf45a16c30233838ec37802520973` 的提交后日志补记保留原文，计划随本次有意义的实验提交保存。本次提交时间、完整 commit ID 和说明：**提交成功后从 Git 补记**；不会回写旧提交。
