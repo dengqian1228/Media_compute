@@ -16,29 +16,48 @@
 | 路径 | 用途 |
 | --- | --- |
 | `docs/requirements.md` | 带 PDF 页码的课程要求和实施建议。 |
-| `docs/algorithm.md` | 下一阶段的学习与核对提纲。 |
+| `docs/algorithm.md` | 学习提纲、核心代码与公式对应关系。 |
 | `AI_LOG.md` | 两位成员共用的 AI 使用总日志。 |
 | `AGENTS.md` | 项目智能体工作规则。 |
-| `l0_smoothing/` | 按成员 A 本轮描述实现的纯数组 L0 平滑核心模块。 |
-| `tests/` | 核心模块的小规模自动验证。 |
-| `data/` | 后续输入图像及来源记录，当前为空。 |
-| `results/` | 后续实验配置、输出与分析材料，当前为空。 |
+| `l0_smoothing/` | L0 核心模块、8 位图像读写、单图命令行运行与复现。 |
+| `tests/` | 核心和读写复现流程的小规模自动验证。 |
+| `data/验证样例/` | 本轮合成的灰度与 RGB 流程验证输入及来源说明。 |
+| `results/验证运行/` | 本轮实际运行和复现的输入副本、输出及 JSON 记录。 |
+| `requirements.txt` | 本轮实际验证环境所用的 NumPy、Pillow 版本。 |
 
 课程原始 PDF 位于项目上一级目录，未复制进仓库。`docs/requirements.md` 标注了所依据的文件和页码。
 
 ## 当前进度
 
-- 已检查已有仓库，保留原有提交历史和文件；本轮仅进行初始化文档与目录整理。
-- L0 平滑纯数组核心模块已由智能体按成员 A 提供的公式和步骤实现；自动验证通过，成员人工核验待完成。图像读写、应用实验、Demo、报告仍待完成。
-- 本轮在 Python 3.13.14、NumPy 2.5.4 下运行了 `python -m unittest discover -s tests -v`，6 项测试通过。该记录只说明本轮测试环境，不代表其他环境已验证。
+- 已保留原有仓库及历史。L0 平滑纯数组核心模块、8 位灰度／RGB 读写、结果保存和按记录复现已由智能体实现；自动验证通过，成员人工核验待完成。
+- 本轮在 Python 3.13.14、NumPy 2.5.4、Pillow 13.0.0 下运行了 `python -m unittest discover -s tests -v`，10 项测试通过；两幅中文路径合成样例也实际完成运行与复现。其他环境尚未验证。
+- 界面、边缘提取、批量或应用实验、Demo、报告仍待完成；合成样例输出只作为流程验证。
 - 既往 AI 对话、成员 B 身份及成员 A 的课程登记姓名仍待补充；`AI_LOG.md` 中的“待补充”不表示交付要求已满足。
 - 成员 A 已确认本仓库使用 `Zhang XiaoLong <xiaolong23@mails.tsinghua.edu.cn>` 作为 Git 提交身份；仅仓库本地配置已设置。实际提交状态以 `git log` 和 `git status` 为准。
 
 ## 后续阶段
 
-1. 双方阅读论文与课程要求，并人工核对本轮核心代码、公式对应关系及自动验证结果。
-2. 后续完成图像读写、结果保存与参数复现，再开展多组图像的平滑和边缘对照实验。
-3. 成员 B 完成额外功能、指标和局部结果对照；保存输入来源、配置、命令、时间和结果。
+1. 双方阅读论文与课程要求，并人工核对核心代码、读写复现流程及自动验证结果。
+2. 后续开展多组实际图像的平滑和边缘对照实验，记录输入来源、参数、运行命令与结果。
+3. 成员 B 完成额外功能、指标和局部结果对照。
 4. 整合 Demo、报告与交付材料，核对日志、Git 历史和双人展示内容。
 
-当前核心接口为 `l0_smoothing.smooth_l0(image, lambda_=0.02, kappa=2.0, beta_max=1e5)`：输入为 `[0,1]` 的 `H×W` 灰度或 `H×W×3` RGB 浮点数组；返回对象包含 `image`、`parameters`、`iterations` 和 `elapsed_seconds`。实现约定和公式映射见 [docs/algorithm.md](docs/algorithm.md)。本轮只交付核心模块，不进入图像读写或应用实验阶段。
+核心接口为 `l0_smoothing.smooth_l0(image, lambda_=0.02, kappa=2.0, beta_max=1e5)`：输入为 `[0,1]` 的 `H×W` 灰度或 `H×W×3` RGB 浮点数组；返回对象包含 `image`、`parameters`、`iterations` 和 `elapsed_seconds`。实现约定和公式映射见 [docs/algorithm.md](docs/algorithm.md)。
+
+## 单图运行与复现
+
+本轮使用的依赖版本见 [requirements.txt](requirements.txt)。命令应在项目根目录运行；本轮环境已安装这些依赖，未验证重新安装过程。下面第一条是实际执行过的灰度样例命令，彩色样例只需改输入路径和参数。
+
+```powershell
+python -m l0_smoothing run 'data/验证样例/灰度样例.png' --output-dir 'results/验证运行' --lambda 0.02 --kappa 2 --beta-max 100000
+```
+
+每次运行会新建 `run-UTC时间-随机标识/`，打印其中 `run.json` 的完整路径。目录含原输入文件副本、`output.npy`（未裁剪的 float64 结果）、`output.png`（仅显示时裁剪到 `[0,1]` 并量化为 8 位）及 `run.json`（输入摘要、参数、迭代次数、耗时和环境版本）。只支持 Pillow 读取为 8 位 `L` 或 `RGB` 的图像，其他模式会报错。
+
+把上条命令输出的真实 `run.json` 路径作为复现输入：
+
+```powershell
+python -m l0_smoothing replay 'results/验证运行/<实际运行目录>/run.json' --output-dir 'results/验证运行'
+```
+
+复现默认读取记录内的输入副本；可加 `--input` 指定另一文件。程序先核对图像模式、形状及解码后的像素，再按记录的参数重算。`run.json` 记录输入文件字节是否相同，但同像素的不同 PNG 编码不会单独造成失败；浮点结果按最大绝对误差 `1e-12` 比较，显示结果按解码后像素精确比较。可用 `--float-atol` 调整浮点容差。每次复现也新建目录并写入比较结果；返回码 0 表示匹配，1 表示输出不匹配，2 表示输入、记录或参数错误。已有目录不会被覆盖。
