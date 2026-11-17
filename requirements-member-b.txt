@@ -1,0 +1,4 @@
+# 成员B本轮实际使用，Python 3.10.12；成员A环境见原requirements.txt。
+numpy==2.2.4
+Pillow==11.3.0
+opencv-python==4.13.0.92

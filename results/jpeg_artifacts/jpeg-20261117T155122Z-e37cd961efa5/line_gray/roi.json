@@ -1,0 +1,10 @@
+{
+  "xyxy": [
+    94,
+    52,
+    190,
+    148
+  ],
+  "same_for_all_qualities_and_parameters": true,
+  "reason": "fixed before runs; includes prominent boundaries and thin/internal structures"
+}

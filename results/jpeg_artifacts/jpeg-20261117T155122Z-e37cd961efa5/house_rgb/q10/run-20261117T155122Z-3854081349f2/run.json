@@ -1,0 +1,41 @@
+{
+  "record_version": 1,
+  "kind": "run",
+  "created_at": "2026-11-17T15:51:22.671930+00:00",
+  "input": {
+    "source_path": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q10/compressed.jpg",
+    "copy": "input.jpg",
+    "file_sha256": "a1330fd1d254feaf1c9934ae7cf151460920d3f2712e9e3bcc18328d5762b1aa",
+    "pixel_sha256": "5267d22f3e0b6059af2b4ab1094177ec1adfc025ca199f1f7f85766f9acab8f5",
+    "mode": "RGB",
+    "shape": [
+      256,
+      256,
+      3
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      256,
+      256,
+      3
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "368405cb465d5a738249ddf75c923b561b6e4988f140907bbfe11cab4686726c"
+  },
+  "parameters": {
+    "lambda": 0.008,
+    "kappa": 2.0,
+    "beta_max": 100000.0
+  },
+  "iterations": 23,
+  "elapsed_seconds": 0.27212202199916646,
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  }
+}

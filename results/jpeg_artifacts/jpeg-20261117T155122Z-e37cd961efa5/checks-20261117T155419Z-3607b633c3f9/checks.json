@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-11-17T15:54:20.526784+00:00",
+  "actor": "智能体执行验证",
+  "command": "/tmp/media-compute-venv/bin/python -m scripts.jpeg_artifacts check results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5",
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "opencv": "4.13.0"
+  },
+  "audited_rows": 30,
+  "artifact_hashes_verified": 126,
+  "metrics_recomputed": true,
+  "replays": [
+    {
+      "image": "house_rgb",
+      "record": "checks-20261117T155419Z-3607b633c3f9/replay-20261117T155420Z-0a56c899506d/run.json",
+      "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/run-20261117T155124Z-134aa4f8ea68/run.json",
+      "input_decoded_pixels_equal": true,
+      "input_file_bytes_equal": true,
+      "float_atol": 1e-12,
+      "max_float_abs_error": 0.0,
+      "mean_float_abs_error": 0.0,
+      "float_within_tolerance": true,
+      "different_pixel_count": 0,
+      "max_pixel_channel_error": 0,
+      "display_pixels_equal": true,
+      "environment_versions_equal": {
+        "python": true,
+        "numpy": true,
+        "pillow": true
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "record": "checks-20261117T155419Z-3607b633c3f9/replay-20261117T155420Z-fba2bac9d08e/run.json",
+      "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q30/run-20261117T155128Z-b631c23f9d17/run.json",
+      "input_decoded_pixels_equal": true,
+      "input_file_bytes_equal": true,
+      "float_atol": 1e-12,
+      "max_float_abs_error": 0.0,
+      "mean_float_abs_error": 0.0,
+      "float_within_tolerance": true,
+      "different_pixel_count": 0,
+      "max_pixel_channel_error": 0,
+      "display_pixels_equal": true,
+      "environment_versions_equal": {
+        "python": true,
+        "numpy": true,
+        "pillow": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

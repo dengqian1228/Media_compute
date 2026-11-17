@@ -1,0 +1,775 @@
+{
+  "actor": "智能体独立核对；成员B 蒋天乐 2023010721；非成员人工核验",
+  "created_at": "2026-11-17T15:53:07.492826+00:00",
+  "command": [
+    "/tmp/media-compute-venv/bin/python",
+    "results/member_b_verification/jpeg-independent-20261117T155211Z/verify_metrics.py"
+  ],
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0"
+  },
+  "experiment": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5",
+  "metrics_csv_sha256": "2cc64f8e264bbd410ef0681f93a86e3afc0fe339db368cd86021c3e6fce222c8",
+  "independence": "NumPy Gaussian weights and valid separable convolution; no cv2 filtering or l0_smoothing.metrics import",
+  "protocol": "uint8 decoded pixels; data_range=255; 11x11 Gaussian sigma1.5; population moments; valid centres only; RGB channel average; ROI separately cropped before metric",
+  "rows_checked": 30,
+  "max_psnr_abs_error_db": 0.0,
+  "max_ssim_abs_error": 2.0516921495072893e-13,
+  "negative_psnr_runs": 8,
+  "negative_ssim_runs": 5,
+  "checks": [
+    {
+      "image": "house_rgb",
+      "quality": 10,
+      "stage": "jpeg",
+      "lambda": null,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 27.14029009306266,
+        "ssim": 0.8878150069222626,
+        "roi_psnr_db": 24.970443807064264,
+        "roi_ssim": 0.8188336836695866
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 5.440092820663267e-15,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 4.107825191113079e-15
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 10,
+      "stage": "l0",
+      "lambda": 0.0005,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 27.14710805645049,
+        "ssim": 0.8885237183151262,
+        "roi_psnr_db": 24.980214273827976,
+        "roi_ssim": 0.8207002382913415
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 5.440092820663267e-15,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 1.2212453270876722e-15
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 10,
+      "stage": "l0",
+      "lambda": 0.002,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 27.264889976602866,
+        "ssim": 0.8995064293637858,
+        "roi_psnr_db": 25.11940423197544,
+        "roi_ssim": 0.8360972321742938
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.5987211554602254e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 4.551914400963142e-15
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 10,
+      "stage": "l0",
+      "lambda": 0.008,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 27.87874346818697,
+        "ssim": 0.9319634426636868,
+        "roi_psnr_db": 25.87452921930353,
+        "roi_ssim": 0.9133128975704307
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 3.5416114485542494e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 7.216449660063518e-15
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 10,
+      "stage": "l0",
+      "lambda": 0.03,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 28.40010530962171,
+        "ssim": 0.9495737271266385,
+        "roi_psnr_db": 26.9631201197583,
+        "roi_ssim": 0.957724175260159
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 6.050715484207103e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 6.8833827526759706e-15
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 30,
+      "stage": "jpeg",
+      "lambda": null,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 30.993111027648975,
+        "ssim": 0.9317671691660884,
+        "roi_psnr_db": 28.665375178256866,
+        "roi_ssim": 0.8968147853615845
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 4.340972026284362e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 1.3877787807814457e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 30,
+      "stage": "l0",
+      "lambda": 0.0005,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 31.08685349600501,
+        "ssim": 0.9390472617839194,
+        "roi_psnr_db": 28.7567037038184,
+        "roi_ssim": 0.9051798623951472
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 4.574118861455645e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 1.554312234475219e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 30,
+      "stage": "l0",
+      "lambda": 0.002,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 31.354523773587644,
+        "ssim": 0.9530515755870947,
+        "roi_psnr_db": 28.989002071128283,
+        "roi_ssim": 0.9266371800823705
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 3.83026943495679e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 9.992007221626409e-16
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 30,
+      "stage": "l0",
+      "lambda": 0.008,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 31.989305151202643,
+        "ssim": 0.9651783042499228,
+        "roi_psnr_db": 30.11493900921584,
+        "roi_ssim": 0.9621189369914772
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 3.452793606584237e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 1.3766765505351941e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 30,
+      "stage": "l0",
+      "lambda": 0.03,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 31.800044513121293,
+        "ssim": 0.9581013986613329,
+        "roi_psnr_db": 30.442299994291563,
+        "roi_ssim": 0.9763397152577838
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 7.016609515630989e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 6.5503158452884236e-15
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 70,
+      "stage": "jpeg",
+      "lambda": null,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 35.33608403824366,
+        "ssim": 0.9595764083124494,
+        "roi_psnr_db": 33.196935185371075,
+        "roi_ssim": 0.9396422685788396
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.41886502547095e-13,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 6.439293542825908e-15
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 70,
+      "stage": "l0",
+      "lambda": 0.0005,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 35.53408780072856,
+        "ssim": 0.9676301973661537,
+        "roi_psnr_db": 33.33221472736886,
+        "roi_ssim": 0.9488104583540512
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.454392162258955e-13,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 1.6653345369377348e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 70,
+      "stage": "l0",
+      "lambda": 0.002,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 36.01102506954454,
+        "ssim": 0.9765896644360641,
+        "roi_psnr_db": 33.99888079416536,
+        "roi_ssim": 0.9655448843386188
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.517674874662589e-13,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 1.765254609153999e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 70,
+      "stage": "l0",
+      "lambda": 0.008,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 35.485657961638545,
+        "ssim": 0.9750119355265435,
+        "roi_psnr_db": 33.65932427636066,
+        "roi_ssim": 0.9816454709842958
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 7.582823258189819e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 1.6431300764452317e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "house_rgb",
+      "quality": 70,
+      "stage": "l0",
+      "lambda": 0.03,
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "recomputed": {
+        "psnr_db": 33.668362911238276,
+        "ssim": 0.9607055352057686,
+        "roi_psnr_db": 31.256909554628386,
+        "roi_ssim": 0.9792373976749532
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.0957901253050295e-13,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 9.992007221626409e-16
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 10,
+      "stage": "jpeg",
+      "lambda": null,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 28.766711259051576,
+        "ssim": 0.9212297213892062,
+        "roi_psnr_db": 25.947227893466813,
+        "roi_ssim": 0.8266522609383775
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 6.838973831690964e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 6.084022174945858e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 10,
+      "stage": "l0",
+      "lambda": 0.0005,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 28.91457697899057,
+        "ssim": 0.9277327232821988,
+        "roi_psnr_db": 26.0355429269586,
+        "roi_ssim": 0.8377143919563536
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 5.88418203051333e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 7.538414337204813e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 10,
+      "stage": "l0",
+      "lambda": 0.002,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 29.32465531105635,
+        "ssim": 0.9522711181316886,
+        "roi_psnr_db": 26.186801552829344,
+        "roi_ssim": 0.8634954433818242
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 5.928590951498336e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 8.415490526658687e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 10,
+      "stage": "l0",
+      "lambda": 0.008,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 29.371340398913787,
+        "ssim": 0.9478764833659151,
+        "roi_psnr_db": 25.794093316488798,
+        "roi_ssim": 0.803379647913127
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.0325074129013956e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 8.992806499463768e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 10,
+      "stage": "l0",
+      "lambda": 0.03,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 28.37914828286747,
+        "ssim": 0.9487249484292472,
+        "roi_psnr_db": 25.424596439602336,
+        "roi_ssim": 0.8051253683658623
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 5.062616992290714e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 2.3314683517128287e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 30,
+      "stage": "jpeg",
+      "lambda": null,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 33.41762367251353,
+        "ssim": 0.9612503715377989,
+        "roi_psnr_db": 30.503891007131333,
+        "roi_ssim": 0.9131990603036297
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 2.0516921495072893e-13,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 3.697042672001771e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 30,
+      "stage": "l0",
+      "lambda": 0.0005,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 33.58806246246777,
+        "ssim": 0.9687872875210464,
+        "roi_psnr_db": 30.633106740917633,
+        "roi_ssim": 0.9258831105515218
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.8252066524837574e-13,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 8.903988657493755e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 30,
+      "stage": "l0",
+      "lambda": 0.002,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 33.24157755709333,
+        "ssim": 0.9717601240227606,
+        "roi_psnr_db": 30.54964229291391,
+        "roi_ssim": 0.9011194526411047
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 7.993605777301127e-15,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 6.072919944699606e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 30,
+      "stage": "l0",
+      "lambda": 0.008,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 32.80213010467244,
+        "ssim": 0.9543175668906803,
+        "roi_psnr_db": 29.18674988214967,
+        "roi_ssim": 0.8153992244983334
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 2.7755575615628914e-15,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 4.8183679268731794e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 30,
+      "stage": "l0",
+      "lambda": 0.03,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 29.32658973634784,
+        "ssim": 0.9492491735185168,
+        "roi_psnr_db": 28.063038292982302,
+        "roi_ssim": 0.813799229475071
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 6.794564910705958e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 7.127631818093505e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 70,
+      "stage": "jpeg",
+      "lambda": null,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 39.15547565029659,
+        "ssim": 0.9834874309702615,
+        "roi_psnr_db": 35.70053083507697,
+        "roi_ssim": 0.9628348019764419
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.2434497875801753e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 2.220446049250313e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 70,
+      "stage": "l0",
+      "lambda": 0.0005,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 39.27423692626123,
+        "ssim": 0.9907182286566287,
+        "roi_psnr_db": 36.12425999739773,
+        "roi_ssim": 0.9760871941301333
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 2.098321516541546e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 4.6629367034256575e-15
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 70,
+      "stage": "l0",
+      "lambda": 0.002,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 36.31328860437276,
+        "ssim": 0.9802615912905496,
+        "roi_psnr_db": 34.199204277859586,
+        "roi_ssim": 0.9254301976084509
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 3.197442310920451e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 3.064215547965432e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 70,
+      "stage": "l0",
+      "lambda": 0.008,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 34.558211597433186,
+        "ssim": 0.9580244603342396,
+        "roi_psnr_db": 30.677383331903894,
+        "roi_ssim": 0.8285070032027981
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 1.9262369477246466e-13,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 1.5987211554602254e-14
+      },
+      "passed": true
+    },
+    {
+      "image": "line_gray",
+      "quality": 70,
+      "stage": "l0",
+      "lambda": 0.03,
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "recomputed": {
+        "psnr_db": 27.547971142955618,
+        "ssim": 0.9453201516946095,
+        "roi_psnr_db": 28.1139706048749,
+        "roi_ssim": 0.8146570947566925
+      },
+      "absolute_errors": {
+        "psnr_db": 0.0,
+        "ssim": 2.6201263381153694e-14,
+        "roi_psnr_db": 0.0,
+        "roi_ssim": 5.773159728050814e-14
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

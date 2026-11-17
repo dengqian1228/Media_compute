@@ -1,0 +1,57 @@
+{
+  "record_version": 1,
+  "kind": "replay",
+  "created_at": "2026-11-17T15:54:38.584993+00:00",
+  "input": {
+    "source_path": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q30/run-20261117T155128Z-b631c23f9d17/input.jpg",
+    "copy": "input.jpg",
+    "file_sha256": "a5ad8b738601cd5326b2a7fe2b342e1913adec685bf5574a667f1c4cb8930f75",
+    "pixel_sha256": "d10005cded1789725e985d06c621412109385e3e6282374db9bf711496b67e03",
+    "mode": "L",
+    "shape": [
+      256,
+      256
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      256,
+      256
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "7fa58a18a685c53f2b1939839217750d34ac1cdcd6ab149f084a7381222b1de6"
+  },
+  "parameters": {
+    "lambda": 0.002,
+    "kappa": 2.0,
+    "beta_max": 100000.0
+  },
+  "iterations": 25,
+  "elapsed_seconds": 0.06863140699988435,
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
+  "comparison": {
+    "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q30/run-20261117T155128Z-b631c23f9d17/run.json",
+    "input_decoded_pixels_equal": true,
+    "input_file_bytes_equal": true,
+    "float_atol": 1e-12,
+    "max_float_abs_error": 0.0,
+    "mean_float_abs_error": 0.0,
+    "float_within_tolerance": true,
+    "different_pixel_count": 0,
+    "max_pixel_channel_error": 0,
+    "display_pixels_equal": true,
+    "environment_versions_equal": {
+      "python": true,
+      "numpy": true,
+      "pillow": true
+    },
+    "passed": true
+  }
+}

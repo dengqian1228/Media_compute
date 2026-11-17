@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-11-17T15:51:22.528018+00:00",
+  "actor": "智能体执行生成；成员B任务，蒋天乐 2023010721",
+  "source": "scripts/jpeg_artifacts.py:draw_clean, generator version 1; original deterministic Pillow geometric drawings",
+  "external_assets": false,
+  "randomness": "none; fixed integer coordinates; 3x supersampling then LANCZOS",
+  "preprocessing": "clean images are directly rendered PNGs; no prior JPEG encoding",
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
+  "images": {
+    "house_rgb": {
+      "file": "house_rgb.png",
+      "file_sha256": "8606ed5e5f9289d0b8291a200de8792f127f5d1c52e56de17b387415a25df6a5",
+      "mode": "RGB",
+      "size": [
+        256,
+        256
+      ],
+      "pixel_sha256": "6d9d5e7daecbc2994de26428c079a6f8984d6be2f9908e863d77700281046e34",
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ]
+    },
+    "line_gray": {
+      "file": "line_gray.png",
+      "file_sha256": "3c29f68646e3362a9b0f0c2c3b51fb639ade9828ee9644e17bb1f70e45ab191c",
+      "mode": "L",
+      "size": [
+        256,
+        256
+      ],
+      "pixel_sha256": "153f86d79e6c4a4f5d52068790b36ef8d97d194ea31db9f6ee06b2c217f8c05d",
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ]
+    }
+  }
+}

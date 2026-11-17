@@ -1,0 +1,3 @@
+# Python csv writes RFC-style CRLF. Keep archived bytes/hashes unchanged while
+# checking meaningful whitespace; do not flag the CR part of a CSV line ending.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
