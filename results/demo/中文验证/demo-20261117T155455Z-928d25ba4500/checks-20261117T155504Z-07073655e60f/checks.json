@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-11-17T15:55:04.701343+00:00",
+  "actor": "智能体执行验证",
+  "command": [
+    "/tmp/media-compute-venv/bin/python",
+    "-m",
+    "scripts.demo",
+    "check",
+    "results/demo/中文验证/demo-20261117T155455Z-928d25ba4500"
+  ],
+  "artifact_count": 11,
+  "embedded_images": 6,
+  "browser_visual_check": "not performed; HTML resources parsed and decoded without browser",
+  "replays": [
+    {
+      "kind": "jpeg",
+      "record": "checks-20261117T155504Z-07073655e60f/replay-20261117T155504Z-44dce915a7da/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/中文验证/demo-20261117T155455Z-928d25ba4500/jpeg/run-20261117T155455Z-da77e59b4510/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    }
+  ],
+  "passed": true
+}

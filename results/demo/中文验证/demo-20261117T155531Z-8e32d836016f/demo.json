@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-11-17T15:55:32.037827+00:00",
+  "actor": "智能体执行；成员B 蒋天乐 2023010721",
+  "command": [
+    "/tmp/media-compute-venv/bin/python",
+    "-m",
+    "scripts.demo",
+    "--mode",
+    "smooth",
+    "--input",
+    "data/structure_smoothing/inputs/brick_window_gray.png",
+    "--lambda",
+    ".02",
+    "--output-dir",
+    "results/demo/中文验证"
+  ],
+  "cwd": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute",
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "opencv": "4.13.0",
+    "libjpeg": "6.2"
+  },
+  "mode": "smooth",
+  "records": {
+    "smooth": {
+      "record": "smooth/run-20261117T155531Z-27ba196b4f66/run.json",
+      "roi_xyxy": [
+        128,
+        87,
+        332,
+        226
+      ],
+      "canny": {
+        "low": 60,
+        "high": 120,
+        "aperture": 3,
+        "l2": true
+      },
+      "input_edges": "smooth/input_edges.png",
+      "output_edges": "smooth/output_edges.png",
+      "source_note": "自选输入；来源和使用许可由运行者登记。"
+    }
+  },
+  "artifact_sha256": {
+    "index.html": "990218dd818ed722d30eecea4a5bb9c7a63e105de21e8120f63631d660708d99",
+    "smooth/crop-0.png": "cc2635fe8113362df751f52f5fec0c836146a6394b62d0dfd1c118643d1e651f",
+    "smooth/crop-1.png": "e3e569032a755bb3075f6df130b3bd82f2fe529175c3ce63b57119408fdba2a9",
+    "smooth/crop-2.png": "8a271fad1eb53f96f4c1935aa37420b82cf1cc655a6d55edb99744b37e3f1856",
+    "smooth/crop-3.png": "4d6a51d283dbdb10f6625b0a323df8e316ecbee562e4e397761d279f58062e5e",
+    "smooth/input_edges.png": "d677a38347423fae9d824b7283edc05499e5733a332123f0f8d68e0ca1e18730",
+    "smooth/output_edges.png": "d2a9b4f3115380130e625168e515ab606178147a5678fbbea01a0b2a1b46e908",
+    "smooth/run-20261117T155531Z-27ba196b4f66/input.png": "83aaa29ba99ad7578f19241c0c386ceed01c7a92837e96d664074416c66710c4",
+    "smooth/run-20261117T155531Z-27ba196b4f66/output.npy": "3c150788fd822eb5cc7aacb47f016330c5a51c2168c40beb2523238bab5617e2",
+    "smooth/run-20261117T155531Z-27ba196b4f66/output.png": "8a47d2407ab8e905513fc3f3797cfed528897e26fac12302520ca2d41a3ab0c9",
+    "smooth/run-20261117T155531Z-27ba196b4f66/run.json": "35a7eef2d9d17b82f25f549fd91a6924360645690e8c625ee5926d947178494a"
+  },
+  "total_elapsed_seconds": 0.8227554799996142,
+  "html": "index.html"
+}

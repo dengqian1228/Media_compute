@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-11-17T15:54:55.723698+00:00",
+  "actor": "智能体执行；成员B 蒋天乐 2023010721",
+  "command": [
+    "/tmp/media-compute-venv/bin/python",
+    "-m",
+    "scripts.demo",
+    "--mode",
+    "jpeg",
+    "--clipart",
+    "line_gray",
+    "--quality",
+    "70",
+    "--lambda",
+    ".03",
+    "--output-dir",
+    "results/demo/中文验证"
+  ],
+  "cwd": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute",
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "opencv": "4.13.0",
+    "libjpeg": "6.2"
+  },
+  "mode": "jpeg",
+  "records": {
+    "jpeg": {
+      "record": "jpeg/run-20261117T155455Z-da77e59b4510/run.json",
+      "clipart": "line_gray",
+      "clean": "jpeg/clean.png",
+      "compressed": "jpeg/compressed.jpg",
+      "jpeg_settings": {
+        "quality": 70,
+        "optimize": false,
+        "progressive": false
+      },
+      "libjpeg": "6.2",
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "metrics": {
+        "jpeg": {
+          "full": {
+            "psnr_db": 39.15547565029659,
+            "ssim": 0.9834874309702739
+          },
+          "roi": {
+            "psnr_db": 35.70053083507697,
+            "ssim": 0.9628348019764641
+          }
+        },
+        "restored": {
+          "full": {
+            "psnr_db": 27.547971142955618,
+            "ssim": 0.9453201516946357
+          },
+          "roi": {
+            "psnr_db": 28.1139706048749,
+            "ssim": 0.8146570947567502
+          }
+        }
+      }
+    }
+  },
+  "artifact_sha256": {
+    "index.html": "05fb542a880d0f83cb74c7b9c96e3b19f59a0ead168b48a6b2350ffb4363c0e8",
+    "jpeg/clean.png": "3c29f68646e3362a9b0f0c2c3b51fb639ade9828ee9644e17bb1f70e45ab191c",
+    "jpeg/compressed.jpg": "10370cebccdd5cbbb0afef50fe805e23bdc4675e0f26949324558ed7f2fcdc58",
+    "jpeg/crop-0.png": "c8fa0be88de60564b4e5e8e94031814767e7555212b3da2fc565482f7468957e",
+    "jpeg/crop-1.png": "1390fc8aa68a7c8a5faf328f5937c9e40517f5ca0f9ff0f7ed93b4c01826ea68",
+    "jpeg/crop-2.png": "9b8e5f6204b8e2471a93500ce659199a4858350cf817d0526baf7df60024e739",
+    "jpeg/metrics.json": "fc8ae79fd2f123030c13b13c0447be71d606f18a5a92f4e5a64ae1d918d66f4d",
+    "jpeg/run-20261117T155455Z-da77e59b4510/input.jpg": "10370cebccdd5cbbb0afef50fe805e23bdc4675e0f26949324558ed7f2fcdc58",
+    "jpeg/run-20261117T155455Z-da77e59b4510/output.npy": "a995f2a5f4881268fc98639f9ecf5cdf2007cc2b5e7a90e53fe06864ae3936d0",
+    "jpeg/run-20261117T155455Z-da77e59b4510/output.png": "023f6de561199981cd99c7e83d86e75ed537e411265aad225c5612bbaae75c22",
+    "jpeg/run-20261117T155455Z-da77e59b4510/run.json": "7d3a24c4259fdbaadf76995128e4a6f4609c8740a780420cd24c193de6115b1f"
+  },
+  "total_elapsed_seconds": 0.3945054000005257,
+  "html": "index.html"
+}

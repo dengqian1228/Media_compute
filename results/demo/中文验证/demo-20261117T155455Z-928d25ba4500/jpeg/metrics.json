@@ -1,0 +1,41 @@
+{
+  "reference": "clean.png",
+  "protocol": {
+    "input": "decoded uint8 L or RGB pixels; saved display PNG for recovery",
+    "data_range": 255,
+    "psnr": "10*log10(255**2 / mean((reference-candidate)**2)); all channels",
+    "ssim": "single-scale; 11x11 Gaussian sigma=1.5; population moments",
+    "ssim_k1": 0.01,
+    "ssim_k2": 0.03,
+    "ssim_border": "valid only; discard 5 pixels on every side",
+    "ssim_channels": "arithmetic mean of per-channel scores for RGB",
+    "ssim_scale": "no downsampling; no luminance conversion",
+    "reference": "https://www.cns.nyu.edu/~lcv/ssim/"
+  },
+  "roi_xyxy": [
+    94,
+    52,
+    190,
+    148
+  ],
+  "jpeg": {
+    "full": {
+      "psnr_db": 39.15547565029659,
+      "ssim": 0.9834874309702739
+    },
+    "roi": {
+      "psnr_db": 35.70053083507697,
+      "ssim": 0.9628348019764641
+    }
+  },
+  "restored": {
+    "full": {
+      "psnr_db": 27.547971142955618,
+      "ssim": 0.9453201516946357
+    },
+    "roi": {
+      "psnr_db": 28.1139706048749,
+      "ssim": 0.8146570947567502
+    }
+  }
+}

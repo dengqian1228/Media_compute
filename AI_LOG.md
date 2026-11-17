@@ -144,3 +144,29 @@
 - 阶段 1 收尾补充（精确执行时间见以下各 JSON 产物的 created_at）：独立审计 `results/member_b_verification/jpeg-independent-20261117T155211Z/metrics_audit.json` 对 30 行全图／ROI 共 120 个指标使用独立 NumPy valid 高斯卷积重算，PSNR 差 0，SSIM 最大差 2.052e-13。新增 `results/jpeg_artifacts/verification-20261117T155416Z-4f67e314feae/checks.json` 验证重复 prepare 不覆盖，临时副本缺 JPEG／篡改 CSV／篡改 NPY 三种情况均拒绝；最新完整检查 `checks-20261117T155437Z-a961900a59ca/checks.json` 通过。14 项测试通过。代码检查发现运行目录字段应记录真实 `Path.cwd()`，已修正后续记录，并增加源脚本摘要及审计参数网格／输入字节摘要检查；既有实验确实从根目录运行，未改写归档产物。局部图标题使用全图指标这一限制已在实验 README 明确说明。origin 已按用户指定更新为同仓库 SSH 地址，SSH 只读访问成功。
 
 - 2026-11-17T23:55:39+08:00：首次暂存后空白检查将新CSV的标准CRLF行尾报告为 trailing whitespace，提交命令因此未执行。为保持实验字节摘要不变，新增 `.gitattributes` 仅允许CSV的CRLF行尾，同时继续检查其他行尾空白；未改动CSV或已有实验hash。阶段提交重试前再次核对暂存差异。
+
+
+## 成员 B 阶段 1 提交结果（提交后从 Git 读取）
+
+- 补记时间：2026-11-17T23:57:23+08:00。使用者：成员B 蒋天乐 2023010721；工具／模型同本轮记录。
+- 真实提交信息（依次为完整 hash、作者时间、提交时间、作者、提交者、说明原文）：
+
+```text
+40c574cd18b184d3e92687c483f39aa1569a549e
+2026-11-17T23:55:45+08:00
+2026-11-17T23:55:45+08:00
+蒋天乐 <jtl23@mails.tsinghua.edu.cn>
+蒋天乐 <jtl23@mails.tsinghua.edu.cn>
+实现Clip-art JPEG去伪影、指标实验与独立复核
+```
+
+- 暂存空白检查通过后提交；成员 A 起始 HEAD 是父提交，未重写历史。采用每条提交命令的 `-c user.name`／`-c user.email` 指定成员B身份，未改写成员A的身份记录。本条随后续阶段保存。
+
+## 成员 B：本地 Demo（阶段 2）
+
+- 记录时间：2026-11-17T23:57:23+08:00；使用者：成员B 蒋天乐 2023010721。IDE／Agent 代码生成；实际委派 `/root/demo` 实现 `scripts/demo.py`、运行记录和 `docs/demo.md`，根Agent复核代码及 `--help` 并实际运行 `check`。
+- 采用：CLI调用本组核心，生成带内嵌图片的离线HTML结果页；无UI依赖、无需网络。照片平滑默认λ=.02、JPEG默认λ=.008/Q30，各自可调；固定Canny60/120、孔径3、L2；JPEG清晰真值相同，PSNR/SSIM与阶段1口径一致。离线页仅显示保存结果，参数重算通过CLI。
+- 实际运行：`python -m scripts.demo --mode all --output-dir results/demo/中文验证`，完整页 `demo-20261117T155441Z-d0d62b1d3d75/index.html`，14张内嵌图，总2.221秒；`--mode jpeg --clipart line_gray --quality 70 --lambda .03` 保存失败例 `demo-20261117T155455Z-928d25ba4500`；`--mode smooth --input data/structure_smoothing/inputs/brick_window_gray.png --lambda .02` 保存灰度平滑 `demo-20261117T155531Z-8e32d836016f`。三者均在 `results/demo/中文验证/`，真实解释器／命令／环境／耗时见各 `demo.json`。
+- 智能体执行验证：三组 `python -m scripts.demo check <实际目录>` 均通过，内嵌图逐张解析解码、hash、Canny及指标重算通过；各核心replay浮点误差0、显示像素差0。根Agent独立完整检查记录为 `results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/checks-20261117T155551Z-e7599afeabc2/checks.json`。4项非法参数返回码2，见 `results/demo/argument_checks.json`。
+- 实际修正：单模式beta_max检查改为只约束已启用阶段lambda，避免未运行模式默认lambda干扰；核心算法不变。
+- 限制：当前没有图形浏览器，未声称浏览器视觉／投影／现场运行／录像或成员人工检查通过；课堂前由两人实际运行并排练。报告／展示Agent已在根Agent检查Demo通过后启动。阶段2尚未提交，成功后补记真实提交。

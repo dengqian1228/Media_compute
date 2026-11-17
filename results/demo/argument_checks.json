@@ -1,0 +1,46 @@
+{
+  "actor": "智能体执行验证",
+  "command_python": "/tmp/media-compute-venv/bin/python",
+  "cases": [
+    {
+      "arguments": [
+        "--mode",
+        "jpeg",
+        "--quality",
+        "100"
+      ],
+      "returncode": 2,
+      "error": "demo.py: error: --quality must be in 1..95"
+    },
+    {
+      "arguments": [
+        "--mode",
+        "smooth",
+        "--kappa",
+        "1"
+      ],
+      "returncode": 2,
+      "error": "demo.py: error: --kappa must be greater than 1"
+    },
+    {
+      "arguments": [
+        "--mode",
+        "jpeg",
+        "--lambda",
+        "nan"
+      ],
+      "returncode": 2,
+      "error": "demo.py: error: --jpeg-lambda must be finite and positive"
+    },
+    {
+      "arguments": [
+        "--mode",
+        "all",
+        "--lambda",
+        ".01"
+      ],
+      "returncode": 2,
+      "error": "demo.py: error: --lambda with all is ambiguous; use --smooth-lambda and --jpeg-lambda"
+    }
+  ]
+}
