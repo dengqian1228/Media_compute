@@ -4,7 +4,7 @@
 
 ## 运行环境
 
-在项目根目录使用 Python 3.10 或以上版本。成员 B 实际验证环境是 Python 3.10.12、NumPy 2.2.4、Pillow 11.3.0、opencv-python 4.13.0.92（cv2 4.13.0）。依赖见 `requirements-member-b.txt`；成员 A 原环境记录保留在原 `requirements.txt`。本轮直接使用机器已有的依赖建立 `/tmp/media-compute-venv`，未将全新依赖安装声称为已验证。
+在项目根目录使用 Python 3.10 或以上版本。成员 B 实际验证环境是 Python 3.10.12、NumPy 2.2.4、Pillow 11.3.0、opencv-python 4.13.0.92（cv2 4.13.0）。依赖见 `requirements-member-b.txt`；成员 A 原环境记录保留在原 `requirements.txt`。初次验证使用已有依赖建立的 `/tmp/media-compute-venv`；随后由主智能体创建不含系统依赖的 `/tmp/media-compute-clean`，从网络安装固定依赖，并由 Demo 智能体实际验证全部 14 项测试和默认完整 Demo。
 
 ```bash
 python -m pip install -r requirements-member-b.txt
@@ -12,7 +12,7 @@ python -m scripts.demo --help
 python -m scripts.demo --mode all
 ```
 
-Windows 使用对应 Python 命令；当前机器的实际执行器为 `/tmp/media-compute-venv/bin/python`。程序不联网、不启动服务器。第一条安装命令是交付环境准备方法，本轮未在干净环境重新安装。
+Windows 使用对应 Python 命令；当前机器先后使用 `/tmp/media-compute-venv/bin/python` 和 `/tmp/media-compute-clean/bin/python`。程序运行不联网、不启动服务器。固定依赖已在 Python 3.10.12、Linux/WSL2 的干净虚拟环境完成安装与运行验证；Windows 安装和图形浏览器仍待成员在展示电脑核验。
 
 每次运行在 `results/demo/demo-<UTC时间>-<随机标识>/` 新建目录。终端打印 `index.html` 和 `demo.json` 路径。使用浏览器直接打开 `index.html`；14 张图和样式均内嵌，移动这个 HTML 文件也可查看。调整参数需要重新运行 CLI，离线页仅展示本次真实结果，不在浏览器中重新计算。
 
@@ -66,3 +66,7 @@ python -m scripts.demo check 'results/demo/<实际demo目录>'
 参数拒绝已实际检查：`--quality 100`、`--kappa 1`、`--lambda nan` 及 `all --lambda .01` 均返回码 2。检查发现单模式 βmax 原先误受另一个未运行模式的默认 λ 约束，已修正为仅检查启用阶段的 λ；不是算法核心修改。
 
 本机没有图形浏览器，验证范围是 CLI、产物、内嵌图片解析和数值复现，未声称已完成浏览器视觉核验、投影适配、现场运行或录像。课堂前两人应在展示电脑打开上述离线页、实际运行一次 CLI、确认显示缩放和耗时。现场 CLI 出现问题时可打开已归档完整演示页和失败例页，明确说明它们是本轮预计算结果。
+
+## 干净环境补充验证
+
+在 `include-system-site-packages=false` 的独立虚拟环境 `/tmp/media-compute-clean` 中安装 `requirements-member-b.txt` 后，实际执行 `python -m unittest discover -s tests -v`，14 项测试通过（2.130 秒）。实际执行 `python -m scripts.demo --mode all --output-dir results/demo/全新环境验证`，得到 [完整演示页](../results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/index.html)；随后对该目录执行 `python -m scripts.demo check <实际目录>`，产物、指标、14 张内嵌图及两次核心复现均通过。完整环境、包路径、安装执行者与命令、实际耗时和检查路径见 [clean_environment_verification.json](../results/demo/clean_environment_verification.json)。这次补充验证保留原先三个 Demo 目录，未覆盖历史结果。

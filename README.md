@@ -1,15 +1,32 @@
 # 媒体计算课程大作业：L0 梯度最小化图像结构平滑与边缘提取
 
-本项目拟完成课程第 4 题：自行实现 L0 梯度最小化结构平滑，并比较平滑前后的边缘提取结果；额外功能为 Clip-art JPEG 压缩伪影处理。具体评分和交付要求见 [docs/requirements.md](docs/requirements.md)。选题归属及成员信息尚待填写或确认。
+本项目实现课程第 4 题：自行实现 L0 梯度最小化结构平滑，并比较平滑前后的边缘提取结果；额外功能为 Clip-art JPEG 压缩伪影处理。具体评分和交付要求见 [docs/requirements.md](docs/requirements.md)。选题正式归属及成员 A 的课程登记信息仍待确认。
 
-## 双人暂定分工
+## 双人分工
 
-| 成员 | 姓名 | 暂定工作 |
+| 成员 | 姓名 | 工作范围 |
 | --- | --- | --- |
-| 成员 A（本轮提出任务者） | 课程登记姓名待填写；Git 提交身份 `Zhang XiaoLong` 已由本人确认 | L0 平滑核心算法；λ、κ 控制和多组图像实验；灰度、彩色图像读写与结果复现；相同参数的原图／平滑图边缘检测对照；提供基础算法与实验说明。 |
+| 成员 A | 课程登记姓名待填写；Git 提交身份 `Zhang XiaoLong` 已由本人确认 | L0 平滑核心算法；λ、κ 控制和多组图像实验；灰度、彩色图像读写与结果复现；相同参数的原图／平滑图边缘检测对照；提供基础算法与实验说明。 |
 | 成员 B | 蒋天乐，学号 2023010721 | Clip-art JPEG 压缩伪影处理；PSNR、SSIM 及全图、局部对照；Demo、报告和交付材料整合。 |
 
-双方各自记录 AI 使用情况，共同理解算法、交叉检查结果并准备答辩。分工可在实际协作后更新；上述分工不是已完成声明。
+以上为协作范围；代码、实验和材料由 AI Agent 辅助实现并验证，详见 AI_LOG.md。双方的人工理解、结果核验与课堂展示由本人完成，不把自动检查当作成员已理解或课程已获分。
+
+## 快速开始与材料入口
+
+在项目根目录、Python 3.10+ 环境中运行（本轮验证为 Linux / Python 3.10.12）：
+
+```bash
+python -m pip install -r requirements-member-b.txt
+python -m scripts.demo --mode all
+```
+
+终端打印离线 `index.html` 的路径，直接用浏览器打开。CLI 实际计算本组算法；调整参数后重新运行，离线页只显示本次结果。默认照片 λ=.02、JPEG λ=.008 / Q30，κ=2，βmax=1e5。
+
+- [Demo 操作与已归档离线页](docs/demo.md)
+- [课程报告](docs/report.md) · [可打印报告 HTML](docs/report.html)
+- [9 分钟双人展示](docs/presentation.md) · [离线幻灯片](docs/presentation.html) · [讲稿与排练安排](docs/presentation_notes.md)
+- [JPEG 全图、局部和指标实验](results/jpeg_artifacts/README.md) · [成员 B 独立核对记录](results/member_b_verification/README.md)
+- [交付核对表](docs/delivery_checklist.md) · [AI 使用日志](AI_LOG.md)
 
 ## 目录
 
@@ -29,32 +46,35 @@
 | `results/edge_comparison/` | 原图与全部平滑结果的 Canny 边缘图、全图／局部对照和复现检查。 |
 | `scripts/edge_comparison.py` | 对已保存结果做固定参数的 Canny 检测及逐像素复核。 |
 | `docs/basic30_checklist.md` | 基础 30 分逐项证据与待人工核验事项。 |
-| `requirements.txt` | 实际运行环境使用的 NumPy、Pillow、OpenCV 版本。 |
+| `requirements.txt` | 成员 A 归档环境，原文件保留。 |
+| `requirements-member-b.txt` | 成员 B 本轮实际使用的固定依赖版本。 |
+| `scripts/jpeg_artifacts.py`、`l0_smoothing/metrics.py` | JPEG 生成、批量实验、PSNR／SSIM 和审计。 |
+| `data/jpeg_artifacts/`、`results/jpeg_artifacts/` | 干净 Clip-art 来源、JPEG 与 24 组真实恢复和正负结果。 |
+| `scripts/demo.py`、`results/demo/` | CLI 三功能 Demo、离线结果页、复现检查。 |
+| `docs/report.md`、`docs/presentation.md` | 报告和展示可编辑稿；同名 HTML 供离线阅读／展示。 |
 
-课程原始 PDF 位于项目上一级目录，未复制进仓库。`docs/requirements.md` 标注了所依据的文件和页码。
+课程原始 PDF 未复制进仓库；本轮上一级目录未附三份 PDF。`docs/requirements.md` 保留此前整理时的文件与页码，本轮未声称重新逐页复核原件。
 
 ## 当前进度
 
-- 已保留原有仓库及历史。L0 平滑纯数组核心模块、8 位灰度／RGB 读写、结果保存和按记录复现已由智能体实现；自动验证通过，成员人工核验待完成。
-- 本轮在 Python 3.13.14、NumPy 2.5.4、Pillow 13.0.0 下运行了 `python -m unittest discover -s tests -v`，10 项测试通过；此前两幅中文路径合成样例已完成流程验证。其他环境尚未验证。
-- 三幅真实图像（两幅 RGB、一幅灰度）的 λ×κ 共 18 组结构平滑实验已由智能体运行；来源、许可、预处理、全部结果、对照图、CSV 和复现抽查见 [实验记录](results/structure_smoothing/README.md)。成员人工核验待完成。
-- 已由智能体对三幅原图及 18 组已保存的平滑图执行统一参数 Canny，保存 21 张边缘图及全图／局部对照，复算像素一致；见 [边缘实验记录](results/edge_comparison/README.md) 和 [基础 30 分逐项核对](docs/basic30_checklist.md)。成员人工核验待完成。
-- 界面、JPEG 去伪影、Demo、报告仍待完成；合成样例输出只作为流程验证。
-- 既往 AI 对话、成员 B 身份及成员 A 的课程登记姓名仍待补充；`AI_LOG.md` 中的“待补充”不表示交付要求已满足。
-- 成员 A 已确认本仓库使用 `Zhang XiaoLong <xiaolong23@mails.tsinghua.edu.cn>` 作为 Git 提交身份；仅仓库本地配置已设置。实际提交状态以 `git log` 和 `git status` 为准。
+- 成员 A 的核心、读写和复现、三幅图 18 组平滑与 21 张固定参数 Canny 实验保留。成员 B 本轮独立审计产物、重算全部 Canny，并抽查三组核心复现：显示像素差 0，最大浮点误差约 1.395e-14（容差1e-12）。
+- JPEG 额外功能已有 2 图 × 3 质量 × 4 λ 共 24 组，全部正负结果保留，PSNR/SSIM 全图及固定 ROI 指标有 30 行；独立重算最大 SSIM 差约 2.052e-13。见实验 README。
+- 三功能 Demo 支持灰度／RGB、自选平滑输入及 λ／κ／JPEG 质量；生成可离线移动的内嵌图片结果页。14 项自动测试通过。本轮环境与成员 A 原环境分开记录，没有覆盖原依赖。
+- 报告及双人9分钟展示材料按实际数据编写；具体交付检查见核对表。上述是智能体实现与验证，课程评分、成员人工核验及课堂展示均待本人完成。
+- 成员 B 登记为蒋天乐，2023010721；本轮确认的 Git 身份为 `蒋天乐 <jtl23@mails.tsinghua.edu.cn>`。成员 A 的登记姓名／学号仍待补，不能据其 Git 身份推测。
+- 当前目标仓库为 `git@github.com:dengqian1228/Media_compute.git`；真实历史以 `git log` 为准。既往普通 AI 问答、两人人工核验、最终场次与展示电脑适配仍需按实际补齐。
 
-## 后续阶段
+## 成员本人待完成
 
-1. 双方阅读论文与课程要求，并人工核对核心代码、读写复现流程及自动验证结果。
-2. 由成员复核输入、算法、平滑及固定 Canny 参数的边缘对照结果，补全基础 30 分的人工核验记录。
-3. 成员 B 完成额外功能、指标和局部结果对照。
-4. 整合 Demo、报告与交付材料，核对日志、Git 历史和双人展示内容。
+1. 两人核对整体算法、代码、正反例及固定 Canny 比较，按实际观察填写人工核验结果。
+2. 在展示电脑运行 Demo、打开离线材料，按9分钟安排排练；现场展示由本人完成。
+3. 补成员 A 课程登记信息、此前完整 AI 问答和最终通知；不能把待补项填成已通过。
 
 核心接口为 `l0_smoothing.smooth_l0(image, lambda_=0.02, kappa=2.0, beta_max=1e5)`：输入为 `[0,1]` 的 `H×W` 灰度或 `H×W×3` RGB 浮点数组；返回对象包含 `image`、`parameters`、`iterations` 和 `elapsed_seconds`。实现约定和公式映射见 [docs/algorithm.md](docs/algorithm.md)。
 
 ## 单图运行与复现
 
-本轮使用的依赖版本见 [requirements.txt](requirements.txt)。命令应在项目根目录运行；本轮环境已安装这些依赖，未验证重新安装过程。下面第一条是实际执行过的灰度样例命令，彩色样例只需改输入路径和参数。
+成员 A 原运行环境见 [requirements.txt](requirements.txt)，成员 B 当前环境见 [requirements-member-b.txt](requirements-member-b.txt)。命令在项目根目录运行。下面第一条来自成员 A 的实际灰度样例，彩色样例可改输入路径和参数。
 
 ```powershell
 python -m l0_smoothing run 'data/验证样例/灰度样例.png' --output-dir 'results/验证运行' --lambda 0.02 --kappa 2 --beta-max 100000

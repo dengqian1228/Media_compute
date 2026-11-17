@@ -1,0 +1,772 @@
+{
+  "created_at": "2026-11-17T16:06:15.995690+00:00",
+  "actor": "智能体执行交付核对；非成员人工核验",
+  "command": [
+    "/tmp/media-compute-clean/bin/python",
+    "-m",
+    "scripts.delivery_check"
+  ],
+  "cwd": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute",
+  "repository": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute",
+  "base_commit": "b74eabc09cb9629542ec4831331b3bdda2ddf156",
+  "member_review": "pending; both members must review algorithm, outputs and classroom environment",
+  "classroom_presentation": "pending; to be delivered by the two members",
+  "checks": [
+    {
+      "name": "member_a_originals_unchanged",
+      "passed": true,
+      "detail": {
+        "unchanged_paths": [
+          "l0_smoothing/core.py",
+          "l0_smoothing/workflow.py",
+          "l0_smoothing/__init__.py",
+          "l0_smoothing/__main__.py",
+          "scripts/structure_smoothing_experiment.py",
+          "scripts/edge_comparison.py",
+          "tests/test_core.py",
+          "tests/test_workflow.py",
+          "data/structure_smoothing",
+          "data/验证样例",
+          "results/structure_smoothing",
+          "results/edge_comparison",
+          "results/验证运行",
+          "docs/algorithm.md",
+          "AGENTS.md"
+        ],
+        "compared_with": "b74eabc09cb9629542ec4831331b3bdda2ddf156"
+      }
+    },
+    {
+      "name": "required_documents_exist",
+      "passed": true,
+      "detail": [
+        "docs/report.md",
+        "docs/report.html",
+        "docs/presentation.md",
+        "docs/presentation.html",
+        "docs/presentation_notes.md",
+        "docs/presentation_assets.json",
+        "docs/demo.md",
+        "docs/delivery_checklist.md",
+        "docs/report_render.json"
+      ]
+    },
+    {
+      "name": "experiments_and_clean_environment_evidence",
+      "passed": true,
+      "detail": {
+        "archived_success_records": [
+          "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/checks-20261117T155153Z-cf79f5edeb1b/checks.json",
+          "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/checks-20261117T155214Z-e4c4790de04b/checks.json",
+          "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/checks-20261117T155419Z-3607b633c3f9/checks.json",
+          "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/checks-20261117T155437Z-a961900a59ca/checks.json",
+          "results/member_b_verification/audit-20261117T155020560962Z/audit.json",
+          "results/member_b_verification/jpeg-independent-20261117T155211Z/metrics_audit.json"
+        ],
+        "jpeg_artifacts_verified": 126,
+        "clean_environment_record": "results/demo/clean_environment_verification.json",
+        "clean_demo_check": "results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/checks-20261117T155821Z-11f14d5e4138/checks.json",
+        "repeated_algorithm_runs": false
+      }
+    },
+    {
+      "name": "new_markdown_local_links",
+      "passed": true,
+      "detail": {
+        "documents": [
+          "README.md",
+          "data/jpeg_artifacts/README.md",
+          "docs/delivery_checklist.md",
+          "docs/demo.md",
+          "docs/presentation.md",
+          "docs/presentation_notes.md",
+          "docs/report.md",
+          "results/jpeg_artifacts/README.md",
+          "results/member_b_verification/README.md",
+          "results/member_b_verification/audit-20261117T155020560962Z/audit.md",
+          "results/member_b_verification/jpeg-independent-20261117T155211Z/audit.md"
+        ],
+        "local_links_checked": 87,
+        "links": [
+          {
+            "document": "README.md",
+            "target": "docs/requirements.md"
+          },
+          {
+            "document": "README.md",
+            "target": "docs/demo.md"
+          },
+          {
+            "document": "README.md",
+            "target": "docs/report.md"
+          },
+          {
+            "document": "README.md",
+            "target": "docs/report.html"
+          },
+          {
+            "document": "README.md",
+            "target": "docs/presentation.md"
+          },
+          {
+            "document": "README.md",
+            "target": "docs/presentation.html"
+          },
+          {
+            "document": "README.md",
+            "target": "docs/presentation_notes.md"
+          },
+          {
+            "document": "README.md",
+            "target": "results/jpeg_artifacts/README.md"
+          },
+          {
+            "document": "README.md",
+            "target": "results/member_b_verification/README.md"
+          },
+          {
+            "document": "README.md",
+            "target": "docs/delivery_checklist.md"
+          },
+          {
+            "document": "README.md",
+            "target": "AI_LOG.md"
+          },
+          {
+            "document": "README.md",
+            "target": "docs/algorithm.md"
+          },
+          {
+            "document": "README.md",
+            "target": "requirements.txt"
+          },
+          {
+            "document": "README.md",
+            "target": "requirements-member-b.txt"
+          },
+          {
+            "document": "data/jpeg_artifacts/README.md",
+            "target": "manifest.json"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "../results/jpeg_artifacts/README.md"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "../results/member_b_verification/jpeg-independent-20261117T155211Z/audit.md"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "report.md"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "report.html"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "demo.md"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "presentation.html"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "presentation.md"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "presentation_notes.md"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "../results/member_b_verification/audit-20261117T155020560962Z/audit.md"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "../results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/checks-20261117T155437Z-a961900a59ca/checks.json"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "../results/demo/clean_environment_verification.json"
+          },
+          {
+            "document": "docs/delivery_checklist.md",
+            "target": "../AI_LOG.md"
+          },
+          {
+            "document": "docs/demo.md",
+            "target": "../results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/index.html"
+          },
+          {
+            "document": "docs/demo.md",
+            "target": "../results/demo/中文验证/demo-20261117T155455Z-928d25ba4500/index.html"
+          },
+          {
+            "document": "docs/demo.md",
+            "target": "../results/demo/中文验证/demo-20261117T155531Z-8e32d836016f/index.html"
+          },
+          {
+            "document": "docs/demo.md",
+            "target": "../results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/checks-20261117T155504Z-a3b1770669f6/checks.json"
+          },
+          {
+            "document": "docs/demo.md",
+            "target": "../results/demo/中文验证/demo-20261117T155455Z-928d25ba4500/checks-20261117T155504Z-07073655e60f/checks.json"
+          },
+          {
+            "document": "docs/demo.md",
+            "target": "../results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/index.html"
+          },
+          {
+            "document": "docs/demo.md",
+            "target": "../results/demo/clean_environment_verification.json"
+          },
+          {
+            "document": "docs/presentation.md",
+            "target": "presentation.html"
+          },
+          {
+            "document": "docs/presentation.md",
+            "target": "presentation_notes.md"
+          },
+          {
+            "document": "docs/presentation.md",
+            "target": "../data/structure_smoothing/README.md"
+          },
+          {
+            "document": "docs/presentation.md",
+            "target": "../data/jpeg_artifacts/README.md"
+          },
+          {
+            "document": "docs/presentation.md",
+            "target": "../results/structure_smoothing/README.md"
+          },
+          {
+            "document": "docs/presentation.md",
+            "target": "../results/edge_comparison/README.md"
+          },
+          {
+            "document": "docs/presentation.md",
+            "target": "../results/jpeg_artifacts/README.md"
+          },
+          {
+            "document": "docs/presentation.md",
+            "target": "presentation_assets.json"
+          },
+          {
+            "document": "docs/presentation_notes.md",
+            "target": "presentation.html"
+          },
+          {
+            "document": "docs/presentation_notes.md",
+            "target": "presentation.md"
+          },
+          {
+            "document": "docs/presentation_notes.md",
+            "target": "../results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/index.html"
+          },
+          {
+            "document": "docs/presentation_notes.md",
+            "target": "../results/demo/中文验证/demo-20261117T155455Z-928d25ba4500/index.html"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "requirements.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../data/structure_smoothing/README.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../data/jpeg_artifacts/manifest.json"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/member_b_verification/jpeg-independent-20261117T155211Z/audit.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/beach/full_comparison.png"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/brick_window_gray/same_region_zoom.png"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/edge_comparison/edges-20261117T105442Z-a63edf132bc2/brick_window_gray/same_region_edge_zoom.png"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/runs.csv"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/full_comparison.png"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/same_region_zoom.png"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q70/full_comparison.png"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/demo/clean_environment_verification.json"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/index.html"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "demo.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/member_b_verification/audit-20261117T155020560962Z/audit.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../AI_LOG.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../AI_LOG.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../data/structure_smoothing/README.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../data/jpeg_artifacts/manifest.json"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/structure_smoothing/README.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/edge_comparison/README.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/jpeg_artifacts/README.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/member_b_verification/README.md"
+          },
+          {
+            "document": "docs/report.md",
+            "target": "../results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/metrics.csv"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "../../data/jpeg_artifacts/README.md"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5/metrics.csv"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q10/full_comparison.png"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q10/same_region_zoom.png"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/full_comparison.png"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/same_region_zoom.png"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5/line_gray/q70/full_comparison.png"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5/line_gray/q70/same_region_zoom.png"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "jpeg-20261117T155122Z-e37cd961efa5/checks-20261117T155153Z-cf79f5edeb1b/checks.json"
+          },
+          {
+            "document": "results/jpeg_artifacts/README.md",
+            "target": "verification-20261117T155416Z-4f67e314feae/checks.json"
+          },
+          {
+            "document": "results/member_b_verification/README.md",
+            "target": "audit-20261117T155020560962Z/audit.md"
+          },
+          {
+            "document": "results/member_b_verification/README.md",
+            "target": "audit-20261117T155020560962Z/audit.json"
+          },
+          {
+            "document": "results/member_b_verification/README.md",
+            "target": "verify_existing.py"
+          },
+          {
+            "document": "results/member_b_verification/audit-20261117T155020560962Z/audit.md",
+            "target": "audit.json"
+          },
+          {
+            "document": "results/member_b_verification/jpeg-independent-20261117T155211Z/audit.md",
+            "target": "metrics_audit.json"
+          },
+          {
+            "document": "results/member_b_verification/jpeg-independent-20261117T155211Z/audit.md",
+            "target": "verify_metrics.py"
+          }
+        ]
+      }
+    },
+    {
+      "name": "report_offline_images_and_current_render",
+      "passed": true,
+      "detail": {
+        "file": "docs/report.html",
+        "images_decoded": 6,
+        "slide_seconds": [],
+        "self_contained_resources": true,
+        "decoded_image_fingerprints": [
+          {
+            "mode": "RGB",
+            "size": [
+              2098,
+              764
+            ],
+            "pixel_sha256": "08689c6dc10847cac9317c39ddfe5c435ef84d323225cccab4e292943759c7f8"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              2098,
+              1002
+            ],
+            "pixel_sha256": "fc059bb6774cce6eef2ba486a27cbfbdd7d10044f6f97e14c567a9e31bebceed"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              2098,
+              1002
+            ],
+            "pixel_sha256": "82ff15387ab83730b55ebf60c5e11ea4618ff699921ddd898f87d6d7bf3cb31a"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              1592,
+              320
+            ],
+            "pixel_sha256": "36299cf19e6cdc429c485e7479d04cc6e4eb7abf461e1491675fda7b0d47a382"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              1592,
+              320
+            ],
+            "pixel_sha256": "80743a7f200a1ff27921406f4e39a9528204d74107e1e671424bae396382fb9a"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              1592,
+              320
+            ],
+            "pixel_sha256": "c245afdf2088207292d1174472f7d21d8bdaf388cfd14d9a764894ec71c5479c"
+          }
+        ]
+      }
+    },
+    {
+      "name": "presentation_assets_and_9_minute_schedule",
+      "passed": true,
+      "detail": {
+        "file": "docs/presentation.html",
+        "images_decoded": 24,
+        "slide_seconds": [
+          35,
+          50,
+          60,
+          70,
+          55,
+          50,
+          55,
+          55,
+          75,
+          35
+        ],
+        "self_contained_resources": true,
+        "decoded_image_fingerprints": [
+          {
+            "mode": "RGB",
+            "size": [
+              128,
+              113
+            ],
+            "pixel_sha256": "de196385973517d76d3771496979cd5e785186fb8b4ddb34155da2d420130763"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              128,
+              113
+            ],
+            "pixel_sha256": "b217bf72d0024363418e62e7619fea1deaebd8b835aae903559e162ce718b467"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              128,
+              113
+            ],
+            "pixel_sha256": "ce8c8a30a73d5e414beebd73c80dec8a45f6063aacd37f5e04070592458a5fdb"
+          },
+          {
+            "mode": "L",
+            "size": [
+              128,
+              115
+            ],
+            "pixel_sha256": "049198346a8ca50eeaa215136c573423f871e3edb5a3bb8344c11df54a300d13"
+          },
+          {
+            "mode": "L",
+            "size": [
+              128,
+              115
+            ],
+            "pixel_sha256": "b8e419f6d8f61ea8beef43e6c83365db2ce67788d9f94d39ec3bd3159bc8fc78"
+          },
+          {
+            "mode": "L",
+            "size": [
+              128,
+              115
+            ],
+            "pixel_sha256": "1993cd983a7f49c68890300b349dd66eeb44788b1432ac9bcbcafca5ad949fdc"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              128,
+              126
+            ],
+            "pixel_sha256": "acba64cd6b8f593db5cac324b46909f10eef80b1df600bae64f108a13d4a04ce"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              128,
+              126
+            ],
+            "pixel_sha256": "73905dca03b882b2fdc198a49f5f749ff88552dd079971364c699497d33d2882"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              128,
+              126
+            ],
+            "pixel_sha256": "e696a6630c39ef766e5ba9986f3d5d5ffcd001fb8534080def45a2a89fe8efca"
+          },
+          {
+            "mode": "L",
+            "size": [
+              512,
+              349
+            ],
+            "pixel_sha256": "28bbab2093d75dd5ff830dba6fbbc4b52697cecdf0c7e3b566fa3d16aae55daa"
+          },
+          {
+            "mode": "L",
+            "size": [
+              512,
+              349
+            ],
+            "pixel_sha256": "4ffb988717cbd7ffd6072703e2688e0cae640374c9292bac4895067186a31281"
+          },
+          {
+            "mode": "L",
+            "size": [
+              512,
+              349
+            ],
+            "pixel_sha256": "6838c5bb348bee8ca1af18d5918b812c88082f34896baaebfa08c36e65cd082b"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              256,
+              256
+            ],
+            "pixel_sha256": "cdddd5c94e76d051e47b471d6c2eb86b59a5c5d53eccd1ccdd675e0b677f1508"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              256,
+              256
+            ],
+            "pixel_sha256": "acb20c622d75b7e12e4bbb6419bb3153f1a010907551f94bb9502dcc3bcd7b8d"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              256,
+              256
+            ],
+            "pixel_sha256": "866020f6a3dc16ff509b61d42ef3cc835401b78b5658a84251bbc1b66f20b91a"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              96,
+              96
+            ],
+            "pixel_sha256": "6ffc35f99a265072485a4436326e35e9ddaabf4f7c19cf016aa77328072b345c"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              96,
+              96
+            ],
+            "pixel_sha256": "fa8841b6493f3f88ad53af094f39619791b92b9094990466ff15ff1917a310ab"
+          },
+          {
+            "mode": "RGB",
+            "size": [
+              96,
+              96
+            ],
+            "pixel_sha256": "baef89cb34640d24dac761e8da1f101f2ff22f78dd2eb3788d8c7d681338efc3"
+          },
+          {
+            "mode": "L",
+            "size": [
+              256,
+              256
+            ],
+            "pixel_sha256": "373980f46d0d2f6dbb5f2714fb07a243796c33cace566410c93dc7ea119d1043"
+          },
+          {
+            "mode": "L",
+            "size": [
+              256,
+              256
+            ],
+            "pixel_sha256": "a65778864c0147918c026aa287a204faacacc7a66a93e0c23c89dee1a23dee53"
+          },
+          {
+            "mode": "L",
+            "size": [
+              256,
+              256
+            ],
+            "pixel_sha256": "99a8f4cfe9af2563be63a6df20b2e4d70c40fd7029211b6305af2c0d2b098fb2"
+          },
+          {
+            "mode": "L",
+            "size": [
+              96,
+              96
+            ],
+            "pixel_sha256": "5b4a468bf388922358f3856beea99acba85bce098467ccafa2a80578baf4037d"
+          },
+          {
+            "mode": "L",
+            "size": [
+              96,
+              96
+            ],
+            "pixel_sha256": "75d138ef930f3a428e4865485c9abd7f5f605f049edeb8124dff439af88d72d1"
+          },
+          {
+            "mode": "L",
+            "size": [
+              96,
+              96
+            ],
+            "pixel_sha256": "512e0d09b7994bd458aa5b47217f83c7b6c17c71ee5824b820928fe125013773"
+          }
+        ],
+        "speaker_seconds": {
+          "A": 270,
+          "B": 270
+        },
+        "asset_sources_verified": 24
+      }
+    },
+    {
+      "name": "representative_report_metrics_match_csv",
+      "passed": true,
+      "detail": {
+        "representative_metrics": [
+          {
+            "image": "house_rgb",
+            "quality": 30,
+            "lambda": null,
+            "psnr_db": 30.993111027648975,
+            "ssim": 0.9317671691661318,
+            "roi_psnr_db": 28.665375178256866,
+            "roi_ssim": 0.8968147853615707
+          },
+          {
+            "image": "house_rgb",
+            "quality": 30,
+            "lambda": 0.008,
+            "psnr_db": 31.989305151202643,
+            "ssim": 0.9651783042498883,
+            "roi_psnr_db": 30.11493900921584,
+            "roi_ssim": 0.9621189369914634
+          },
+          {
+            "image": "line_gray",
+            "quality": 70,
+            "lambda": null,
+            "psnr_db": 39.15547565029659,
+            "ssim": 0.9834874309702739,
+            "roi_psnr_db": 35.70053083507697,
+            "roi_ssim": 0.9628348019764641
+          },
+          {
+            "image": "line_gray",
+            "quality": 70,
+            "lambda": 0.03,
+            "psnr_db": 27.547971142955618,
+            "ssim": 0.9453201516946357,
+            "roi_psnr_db": 28.1139706048749,
+            "roi_ssim": 0.8146570947567502
+          }
+        ],
+        "rows": 30,
+        "appendix_formatted_rows_verified": 30,
+        "negative_psnr_runs": 8,
+        "negative_ssim_runs": 5
+      }
+    }
+  ],
+  "passed": true
+}

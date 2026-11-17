@@ -1,0 +1,93 @@
+{
+  "created_at": "2026-11-17T15:58:48.321281+00:00",
+  "actor": "智能体执行验证；成员B 蒋天乐 2023010721；非成员人工核验",
+  "installation": {
+    "actor": "主智能体 /root 执行并告知安装成功；Demo智能体检查环境及包实际路径",
+    "venv_creation_command": "python3 -m venv --without-pip /tmp/media-compute-clean",
+    "install_command_reported": "python3 -m pip --python /tmp/media-compute-clean/bin/python install -r requirements-member-b.txt",
+    "source": "network package installation by root; no credentials retained",
+    "requirements": "requirements-member-b.txt",
+    "include_system_site_packages": false,
+    "pyvenv_cfg": "home = /usr/bin\ninclude-system-site-packages = false\nversion = 3.10.12\n",
+    "exact_install_start_time": "未由Demo智能体取得；本记录时间为补充验证结束后真实时间",
+    "install_command_confirmed_by_root": true,
+    "install_result_reported_by_root": "Successfully installed Pillow-11.3.0 numpy-2.2.4 opencv-python-4.13.0.92",
+    "warning_reported_by_root": "pip cache directory was not writable; cache automatically disabled. Installation succeeded."
+  },
+  "environment": {
+    "python": "3.10.12",
+    "executable": "/tmp/media-compute-clean/bin/python",
+    "prefix": "/tmp/media-compute-clean",
+    "base_prefix": "/usr",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "opencv": "4.13.0",
+    "opencv_package": "4.13.0.92",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "package_paths": {
+      "numpy": "/tmp/media-compute-clean/lib/python3.10/site-packages/numpy/__init__.py",
+      "pillow": "/tmp/media-compute-clean/lib/python3.10/site-packages/PIL/__init__.py",
+      "opencv": "/tmp/media-compute-clean/lib/python3.10/site-packages/cv2/__init__.py"
+    }
+  },
+  "cwd": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute",
+  "unit_tests": {
+    "command": [
+      "/tmp/media-compute-clean/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "passed": true,
+    "tests_run": 14,
+    "reported_seconds": 2.13
+  },
+  "demo": {
+    "command": [
+      "/tmp/media-compute-clean/bin/python",
+      "-m",
+      "scripts.demo",
+      "--mode",
+      "all",
+      "--output-dir",
+      "results/demo/全新环境验证"
+    ],
+    "record": "results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/demo.json",
+    "html": "results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/index.html",
+    "total_elapsed_seconds": 2.7541835179999907
+  },
+  "check": {
+    "command": [
+      "/tmp/media-compute-clean/bin/python",
+      "-m",
+      "scripts.demo",
+      "check",
+      "results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc"
+    ],
+    "record": "results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/checks-20261117T155821Z-11f14d5e4138/checks.json",
+    "passed": true,
+    "embedded_images": 14,
+    "replays": [
+      {
+        "kind": "smooth",
+        "max_float_abs_error": 0.0,
+        "different_pixel_count": 0,
+        "passed": true
+      },
+      {
+        "kind": "jpeg",
+        "max_float_abs_error": 0.0,
+        "different_pixel_count": 0,
+        "passed": true
+      }
+    ]
+  },
+  "limits": [
+    "Linux/WSL2 Python3.10.12 only; Windows installation not verified.",
+    "No graphical browser, projection, classroom delivery or human review performed.",
+    "Original three archived demo runs were preserved unchanged."
+  ]
+}

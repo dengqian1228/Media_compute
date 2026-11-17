@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-11-17T15:58:23.103944+00:00",
+  "actor": "智能体执行验证",
+  "command": [
+    "/tmp/media-compute-clean/bin/python",
+    "-m",
+    "scripts.demo",
+    "check",
+    "results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc"
+  ],
+  "artifact_count": 21,
+  "embedded_images": 14,
+  "browser_visual_check": "not performed; HTML resources parsed and decoded without browser",
+  "replays": [
+    {
+      "kind": "smooth",
+      "record": "checks-20261117T155821Z-11f14d5e4138/replay-20261117T155822Z-ea571a184a66/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/smooth/run-20261117T155745Z-2b21341b64bd/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "kind": "jpeg",
+      "record": "checks-20261117T155821Z-11f14d5e4138/replay-20261117T155822Z-79eb909a1724/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/jpeg/run-20261117T155747Z-6f7fb71ac20a/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    }
+  ],
+  "passed": true
+}

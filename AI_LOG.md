@@ -170,3 +170,41 @@
 - 智能体执行验证：三组 `python -m scripts.demo check <实际目录>` 均通过，内嵌图逐张解析解码、hash、Canny及指标重算通过；各核心replay浮点误差0、显示像素差0。根Agent独立完整检查记录为 `results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/checks-20261117T155551Z-e7599afeabc2/checks.json`。4项非法参数返回码2，见 `results/demo/argument_checks.json`。
 - 实际修正：单模式beta_max检查改为只约束已启用阶段lambda，避免未运行模式默认lambda干扰；核心算法不变。
 - 限制：当前没有图形浏览器，未声称浏览器视觉／投影／现场运行／录像或成员人工检查通过；课堂前由两人实际运行并排练。报告／展示Agent已在根Agent检查Demo通过后启动。阶段2尚未提交，成功后补记真实提交。
+
+
+## 成员 B 阶段 2 提交结果与干净环境补测
+
+- 补记时间：2026-11-17T23:59:37+08:00。使用者：成员B 蒋天乐 2023010721；IDE／Agent，工具／模型同本轮。
+- 阶段2提交成功后从Git读取（完整hash、作者时间、提交时间、作者、提交者、说明原文）：
+
+```text
+8c19f4bcb41e8b7ce17e5e316729ff9854875ae5
+2026-11-17T23:57:28+08:00
+2026-11-17T23:57:28+08:00
+蒋天乐 <jtl23@mails.tsinghua.edu.cn>
+蒋天乐 <jtl23@mails.tsinghua.edu.cn>
+增加三功能本地Demo与离线展示结果页
+```
+
+- 根Agent执行 `python3 -m venv --without-pip /tmp/media-compute-clean`，再执行 `python3 -m pip --python /tmp/media-compute-clean/bin/python install -r requirements-member-b.txt`，网络下载并成功安装固定三包。venv 的 include-system-site-packages=false；安装有pip缓存不可写警告后自动禁用缓存，不影响安装成功。本次没有把新环境包写入系统环境。
+- 实际委派 `/root/demo` 在该干净环境运行14项测试（全部通过，2.130秒）、默认all Demo和check。输出 `results/demo/全新环境验证/demo-20261117T155744Z-eac941107dcc/`；总2.754秒、照片核心1.046秒、JPEG核心.279秒，14内嵌图、Canny和指标重算通过，两组核心replay浮点和像素误差0。实际命令、包路径、运行环境和结果见 `results/demo/clean_environment_verification.json`；先前三个Demo产物未改写。
+- `docs/demo.md` 已据补测更新，仍明确Windows／图形浏览器／投影和现场操作未验证。报告与展示正在整理，不将本次机器验证写作成员本人核验。
+
+
+## 成员 B：报告与双人展示材料（阶段 3）
+
+- 记录时间：2026-11-18T00:06:04+08:00（Asia/Shanghai +08:00；本轮跨2026-11-17／18，按真实记录时间保存）；使用者：蒋天乐 2023010721。IDE／Agent代码及文档生成，工具／模型同本轮。
+- 实际委派：`/root/audit_a` 整理完整课程报告、30行JPEG附表和HTML渲染器；`/root/jpeg_experiment` 整理10页幻灯片、讲稿、来源／ROI清单及生成器。根Agent读取报告正文和附表、逐页文字及操作稿，独立运行生成器和渲染器，再核对实际记录。没有把这些任务描述写成成员曾经发出的历史学生请求。
+- 采用：`docs/report.md` 与内嵌6张图的 `docs/report.html`；`docs/presentation.md/.html`、`presentation_notes.md`、`presentation_assets.json`，10页24张真实来源图，A前5页/B后5页，各270秒、总540秒。材料包括目标函数、固定β辅助目标、周期差分／伴随、联合阈值等号、FFT／β流程，三图参数和固定Canny、JPEG正反例、指标口径及效率限制；不只展示网格最优结果。
+- 验证：根Agent执行 `python -m scripts.generate_presentation`，10页／24图解码与540秒自检通过；执行 `python -m scripts.render_report`，报告源及HTML摘要、6图解码和证据链接通过。另在干净环境执行 `python3 -m pip --python /tmp/media-compute-clean/bin/python install -r requirements-docs.txt`，成功安装可选markdown-it-py4.2.0及mdurl0.1.2；随后用clean解释器重新渲染通过。该依赖只用于重建报告HTML，阅读报告和运行Demo不需要。最新渲染记录为 `docs/report_render.json`。
+- 实际修正：初稿报告沿用了“B身份尚未确认”的早期状态，根Agent指出与用户已确认信息及两次真实提交不符，已更新为确认身份及阶段1/2真实hash；不是成员人工纠错经历。补入固定β的辅助目标，便于对应阈值与FFT子问题。运行环境说明已加入真实的干净环境补测，原环境／跨机器耗时不混比。
+- 共享文档：README登记B姓名学号及提交邮箱，添加Demo／报告／展示／交付入口，更新实际进度；requirements保留课程摘录与页码并更新当前状态，明确本轮没有原PDF；`docs/delivery_checklist.md`列出评分项证据及人工待补内容。成员A课程姓名学号、此前AI问答、本人理解／人工核验／排练／现场展示仍保持待完成。
+- 浏览器限制：报告/幻灯片为可离线打印的HTML；本轮只做内容、结构、资源与数据检查，未声称真实浏览器视觉、全屏、打印、投影或本人展示通过。展示稿是待排练安排，不是已发生的课堂经历。
+
+## 成员 B：交付技术核对（阶段 4，提交前）
+
+- 记录时间：2026-11-18T00:06:04+08:00。根Agent实际委派 `/root/demo` 实现 `scripts/delivery_check.py` 与 `scripts/export_history.py`，随后审读两个工具。交付检查不重跑全部算法，核对已保存的真实证据与当前文件；历史导出要求工作树干净、输出在仓库外、拒绝覆盖，使用完整引用历史，验证bundle并从包裸克隆／fsck／比对main与HEAD。
+- 根Agent执行 `python -m scripts.delivery_check`，记录 `results/delivery/checks-20261117T160508Z-96bb04e3554d/checks.json` 七项通过：成员A核心／工作流／输入和实验相对起点b74eabc未变、材料齐全、真实实验／干净环境证据、Markdown链接、报告源HTML与图片、幻灯片来源像素及ROI与9分钟安排、关键指标和30行附表对CSV。根Agent另执行git diff检查受保护路径差异为空，确认b74eabc仍是HEAD祖先。
+- 导出／最终提交／推送：此条写入时尚未最终执行；成功后从Git和导出回执读取实际结果再补记，不预填hash或远端成功状态。
+
+- 2026-11-18T00:06:36+08:00：交付工具停止修改后，根Agent再次执行交付核对，最新 `results/delivery/checks-20261117T160615Z-e7f14d011ca5/checks.json` 七项通过；新增七个Python文件 py_compile 通过。`results/delivery/tool-validation.json` 保存工具Agent在/tmp合成仓库的导出／verify／裸克隆／fsck及拒绝覆盖／仓库内输出／未提交改动、内嵌图与外部图拒绝验证；这些是测试夹具，不是本项目伪造提交。最终材料提交前 `git diff --check` 通过。

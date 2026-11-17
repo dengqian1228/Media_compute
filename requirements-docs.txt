@@ -1,0 +1,4 @@
+# Optional HTML report authoring dependency; reading HTML and running Demo do not need markdown-it-py.
+# Pillow used to validate embedded PNGs is supplied by the member B runtime list.
+-r requirements-member-b.txt
+markdown-it-py==4.2.0

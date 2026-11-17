@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-11-17T16:05:35.809066+00:00",
+  "actor": "智能体执行工具验证；只在/tmp合成测试仓库提交，未改变项目历史",
+  "results": [
+    {
+      "case": "clean_synthetic_repo_bundle_export_verify_bare_clone_fsck",
+      "passed": true,
+      "head": "3f4baf487c3f4bb3fd9985fe84ba0ca8b5ea763f"
+    },
+    {
+      "case": "refuse_overwrite",
+      "passed": true,
+      "reason": "refusing to overwrite existing output: /tmp/media-export-fixture-j9g231x0/export/git-history.txt"
+    },
+    {
+      "case": "refuse_output_inside_repo",
+      "passed": true,
+      "reason": "output directory must be outside the repository"
+    },
+    {
+      "case": "refuse_untracked_changes",
+      "passed": true,
+      "reason": "tracked or untracked changes exist; commit requested work before final history export"
+    },
+    {
+      "case": "offline_embedded_png_decoding",
+      "passed": true
+    },
+    {
+      "case": "refuse_external_html_image",
+      "passed": true,
+      "reason": "document image is not an embedded base64 image"
+    }
+  ],
+  "passed": true
+}

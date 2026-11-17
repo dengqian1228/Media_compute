@@ -1,0 +1,326 @@
+{
+  "generator": "scripts/generate_presentation.py",
+  "slides": 10,
+  "total_seconds": 540,
+  "speaker_seconds": {
+    "A": 270,
+    "B": 270
+  },
+  "assets": [
+    {
+      "source": "data/structure_smoothing/inputs/beach.png",
+      "source_sha256": "1b8589bc94ce6fb87338366f65c83efdb6518948f930f822e118af9c69d3b24d",
+      "roi_xyxy": [
+        159,
+        102,
+        287,
+        215
+      ],
+      "display": "沙滩 · 原图局部",
+      "embedded_size": [
+        128,
+        113
+      ]
+    },
+    {
+      "source": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/beach/run-20261117T102729Z-c0291724c7c6/output.png",
+      "source_sha256": "3f3786f918281f70cbce9c28d41c9a81d171903dfd6ee29d56cd31e09115d179",
+      "roi_xyxy": [
+        159,
+        102,
+        287,
+        215
+      ],
+      "display": "λ=.005，同一局部",
+      "embedded_size": [
+        128,
+        113
+      ]
+    },
+    {
+      "source": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/beach/run-20261117T102732Z-bdbe116e5828/output.png",
+      "source_sha256": "4b6a911d59584d3cbf18a08e467f6130d1b2454fdc81bdd458d868dacd5d1345",
+      "roi_xyxy": [
+        159,
+        102,
+        287,
+        215
+      ],
+      "display": "λ=.08，同一局部",
+      "embedded_size": [
+        128,
+        113
+      ]
+    },
+    {
+      "source": "data/structure_smoothing/inputs/brick_window_gray.png",
+      "source_sha256": "83aaa29ba99ad7578f19241c0c386ceed01c7a92837e96d664074416c66710c4",
+      "roi_xyxy": [
+        164,
+        98,
+        292,
+        213
+      ],
+      "display": "灰度砖墙 · 原图局部",
+      "embedded_size": [
+        128,
+        115
+      ]
+    },
+    {
+      "source": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/brick_window_gray/run-20261117T102736Z-4e4d85dcb234/output.png",
+      "source_sha256": "8a06b07a4c77a5b78978f0d3fa78d0c13d0824d6a655de4b59c3cae1c10cd4ea",
+      "roi_xyxy": [
+        164,
+        98,
+        292,
+        213
+      ],
+      "display": "λ=.005，同一局部",
+      "embedded_size": [
+        128,
+        115
+      ]
+    },
+    {
+      "source": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/brick_window_gray/run-20261117T102738Z-eb5cb66548b8/output.png",
+      "source_sha256": "1ad728f3cd4a7f3ef4b0d860476ae17f9dde96163236dedb4e97e276c6310129",
+      "roi_xyxy": [
+        164,
+        98,
+        292,
+        213
+      ],
+      "display": "λ=.08，同一局部",
+      "embedded_size": [
+        128,
+        115
+      ]
+    },
+    {
+      "source": "data/structure_smoothing/inputs/sunflower.png",
+      "source_sha256": "6a63e5365fd2bb506ecf3da0a941229b0efc873d1ed28e00638132fb487ac3ba",
+      "roi_xyxy": [
+        230,
+        177,
+        358,
+        303
+      ],
+      "display": "向日葵 · 原图局部",
+      "embedded_size": [
+        128,
+        126
+      ]
+    },
+    {
+      "source": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/sunflower/run-20261117T102747Z-7fe57b3d76d8/output.png",
+      "source_sha256": "988674a963aa3137173807e7ea3d2e470715e6b52966c16687cbb44fa588b586",
+      "roi_xyxy": [
+        230,
+        177,
+        358,
+        303
+      ],
+      "display": "λ=.005，同一局部",
+      "embedded_size": [
+        128,
+        126
+      ]
+    },
+    {
+      "source": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/sunflower/run-20261117T102750Z-e379438ec112/output.png",
+      "source_sha256": "8afcde2161a835e046f1236707d8d26f18df21d7f542ad00de0819102ee76d50",
+      "roi_xyxy": [
+        230,
+        177,
+        358,
+        303
+      ],
+      "display": "λ=.08，同一局部",
+      "embedded_size": [
+        128,
+        126
+      ]
+    },
+    {
+      "source": "results/edge_comparison/edges-20261117T105442Z-a63edf132bc2/brick_window_gray/input_edges.png",
+      "source_sha256": "4e4d8ff139002960abd64726d44912ad855bbd6b1c78b7a519591606f0d40460",
+      "roi_xyxy": null,
+      "display": "原图 Canny",
+      "embedded_size": [
+        512,
+        349
+      ]
+    },
+    {
+      "source": "results/edge_comparison/edges-20261117T105442Z-a63edf132bc2/brick_window_gray/lambda-0.02_kappa-2_edges.png",
+      "source_sha256": "98264ca5bb8b3d6850b8c5df610a0fcf744daf9a24f04cfcfd3ba77d47bf9d22",
+      "roi_xyxy": null,
+      "display": "λ=.02，κ=2 后 Canny",
+      "embedded_size": [
+        512,
+        349
+      ]
+    },
+    {
+      "source": "results/edge_comparison/edges-20261117T105442Z-a63edf132bc2/brick_window_gray/lambda-0.08_kappa-2_edges.png",
+      "source_sha256": "149cfbd0de59dacf05704306a9de2e4a10d2eb72359573dda3cd98a9669cced0",
+      "roi_xyxy": null,
+      "display": "λ=.08，κ=2 后 Canny",
+      "embedded_size": [
+        512,
+        349
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/clean.png",
+      "source_sha256": "8606ed5e5f9289d0b8291a200de8792f127f5d1c52e56de17b387415a25df6a5",
+      "roi_xyxy": null,
+      "display": "干净参考 · 全图",
+      "embedded_size": [
+        256,
+        256
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/compressed.jpg",
+      "source_sha256": "1dcf5a44fb745efeb703e7916a4fb8a70bacff2c0d1ea70cf0abb4e88e9f480c",
+      "roi_xyxy": null,
+      "display": "JPEG Q=30 · 全图",
+      "embedded_size": [
+        256,
+        256
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/run-20261117T155124Z-0592ad8e2b8a/output.png",
+      "source_sha256": "33748cb19bd16d0d3ce2d4a6de35780f1cc2566c9c0710770fb4d9ad65eb0518",
+      "roi_xyxy": null,
+      "display": "本组 L0，λ=0.008 · 全图",
+      "embedded_size": [
+        256,
+        256
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/clean.png",
+      "source_sha256": "8606ed5e5f9289d0b8291a200de8792f127f5d1c52e56de17b387415a25df6a5",
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "display": "干净参考 · 同一局部",
+      "embedded_size": [
+        96,
+        96
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/compressed.jpg",
+      "source_sha256": "1dcf5a44fb745efeb703e7916a4fb8a70bacff2c0d1ea70cf0abb4e88e9f480c",
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "display": "JPEG Q=30 · 同一局部",
+      "embedded_size": [
+        96,
+        96
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/run-20261117T155124Z-0592ad8e2b8a/output.png",
+      "source_sha256": "33748cb19bd16d0d3ce2d4a6de35780f1cc2566c9c0710770fb4d9ad65eb0518",
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "display": "本组 L0，λ=0.008 · 同一局部",
+      "embedded_size": [
+        96,
+        96
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/clean.png",
+      "source_sha256": "3c29f68646e3362a9b0f0c2c3b51fb639ade9828ee9644e17bb1f70e45ab191c",
+      "roi_xyxy": null,
+      "display": "干净参考 · 全图",
+      "embedded_size": [
+        256,
+        256
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q70/compressed.jpg",
+      "source_sha256": "10370cebccdd5cbbb0afef50fe805e23bdc4675e0f26949324558ed7f2fcdc58",
+      "roi_xyxy": null,
+      "display": "JPEG Q=70 · 全图",
+      "embedded_size": [
+        256,
+        256
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q70/run-20261117T155130Z-0cbb00c67ceb/output.png",
+      "source_sha256": "023f6de561199981cd99c7e83d86e75ed537e411265aad225c5612bbaae75c22",
+      "roi_xyxy": null,
+      "display": "本组 L0，λ=0.03 · 全图",
+      "embedded_size": [
+        256,
+        256
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/clean.png",
+      "source_sha256": "3c29f68646e3362a9b0f0c2c3b51fb639ade9828ee9644e17bb1f70e45ab191c",
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "display": "干净参考 · 同一局部",
+      "embedded_size": [
+        96,
+        96
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q70/compressed.jpg",
+      "source_sha256": "10370cebccdd5cbbb0afef50fe805e23bdc4675e0f26949324558ed7f2fcdc58",
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "display": "JPEG Q=70 · 同一局部",
+      "embedded_size": [
+        96,
+        96
+      ]
+    },
+    {
+      "source": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q70/run-20261117T155130Z-0cbb00c67ceb/output.png",
+      "source_sha256": "023f6de561199981cd99c7e83d86e75ed537e411265aad225c5612bbaae75c22",
+      "roi_xyxy": [
+        94,
+        52,
+        190,
+        148
+      ],
+      "display": "本组 L0，λ=0.03 · 同一局部",
+      "embedded_size": [
+        96,
+        96
+      ]
+    }
+  ]
+}

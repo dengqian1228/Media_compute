@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-11-17T16:05:08.032989+00:00",
+  "actor": "智能体执行文档渲染与结构检查；非浏览器视觉或成员人工核验",
+  "command": [
+    "/tmp/media-compute-clean/bin/python",
+    "-m",
+    "scripts.render_report"
+  ],
+  "python": "3.10.12",
+  "optional_documentation_package": {
+    "markdown-it-py": "4.2.0"
+  },
+  "source": "docs/report.md",
+  "source_sha256": "e8f1a02d4796b052f07f5ce609c41989673d5228e657d42083032875a6ce5afb",
+  "html": "docs/report.html",
+  "html_sha256": "fab2e38ed61ead74e1efe00020d2c9193a7ae424b36d6c07df428937ca3485c2",
+  "embedded_figures": [
+    {
+      "path": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/beach/full_comparison.png",
+      "sha256": "ba52e1cceabf3a3862dfce365eff92fd2f26c76f0f2f13d9c8cc1e7261d4f89b"
+    },
+    {
+      "path": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/brick_window_gray/same_region_zoom.png",
+      "sha256": "980e7c2c0606360832aa91b3b42eaacd2015c6a8fc5d2ba0636f04a2995e45db"
+    },
+    {
+      "path": "results/edge_comparison/edges-20261117T105442Z-a63edf132bc2/brick_window_gray/same_region_edge_zoom.png",
+      "sha256": "4e826d0203895a9adb90faf3bd67fa4315bdb19fa7ee0fbe26cad71e7f2184ca"
+    },
+    {
+      "path": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/full_comparison.png",
+      "sha256": "ff7daf270e425fc42127a0f30919d365475afcbd3e4d5af6a823fbbb045a0916"
+    },
+    {
+      "path": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/house_rgb/q30/same_region_zoom.png",
+      "sha256": "05e5158623ecb77ce0b9049d3a31b9b3eefbeca3d6d2e746fee9efe848599f81"
+    },
+    {
+      "path": "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/line_gray/q70/full_comparison.png",
+      "sha256": "2624e6dd2908e992fe9f686b4c53ab14367acc0514c66583a0ffb0fce03187f0"
+    }
+  ],
+  "embedded_pngs_decoded": 6,
+  "local_evidence_links_checked": [
+    "AI_LOG.md",
+    "data/jpeg_artifacts/manifest.json",
+    "data/structure_smoothing/README.md",
+    "docs/demo.md",
+    "docs/requirements.md",
+    "results/demo/clean_environment_verification.json",
+    "results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/index.html",
+    "results/edge_comparison/README.md",
+    "results/jpeg_artifacts/README.md",
+    "results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5/metrics.csv",
+    "results/member_b_verification/README.md",
+    "results/member_b_verification/audit-20261117T155020560962Z/audit.md",
+    "results/member_b_verification/jpeg-independent-20261117T155211Z/audit.md",
+    "results/structure_smoothing/README.md",
+    "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/runs.csv"
+  ],
+  "external_loads_required": false,
+  "browser_visual_check": false,
+  "passed": true
+}
