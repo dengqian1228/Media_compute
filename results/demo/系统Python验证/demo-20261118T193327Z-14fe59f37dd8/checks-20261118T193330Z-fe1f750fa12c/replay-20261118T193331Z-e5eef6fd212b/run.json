@@ -1,0 +1,59 @@
+{
+  "record_version": 1,
+  "kind": "replay",
+  "created_at": "2026-11-18T19:33:31.469345+00:00",
+  "input": {
+    "source_path": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8/smooth/run-20261118T193328Z-c3d2fcfa8d50/input.png",
+    "copy": "input.png",
+    "file_sha256": "1b8589bc94ce6fb87338366f65c83efdb6518948f930f822e118af9c69d3b24d",
+    "pixel_sha256": "47df18c0e028a15d8a8049f9d1cc38ec6f280a12116dffb6f3a779c58c830580",
+    "mode": "RGB",
+    "shape": [
+      341,
+      512,
+      3
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      341,
+      512,
+      3
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "b96668bde7e5f12b85a76c6aaad208241366a7dec629bc52d6c210400dfeda5f"
+  },
+  "parameters": {
+    "lambda": 0.02,
+    "kappa": 2.0,
+    "beta_max": 100000.0
+  },
+  "iterations": 22,
+  "elapsed_seconds": 0.8054094169983728,
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
+  "comparison": {
+    "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8/smooth/run-20261118T193328Z-c3d2fcfa8d50/run.json",
+    "input_decoded_pixels_equal": true,
+    "input_file_bytes_equal": true,
+    "float_atol": 1e-12,
+    "max_float_abs_error": 0.0,
+    "mean_float_abs_error": 0.0,
+    "float_within_tolerance": true,
+    "different_pixel_count": 0,
+    "max_pixel_channel_error": 0,
+    "display_pixels_equal": true,
+    "environment_versions_equal": {
+      "python": true,
+      "numpy": true,
+      "pillow": true
+    },
+    "passed": true
+  }
+}

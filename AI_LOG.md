@@ -250,3 +250,23 @@ Zhang XiaoLong <xiaolong23@mails.tsinghua.edu.cn>
 - 智能体执行验证：以.venv解释器运行 `python -m scripts.demo --mode all --output-dir results/demo/持久环境验证`，输出 `results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/`；实际总耗时2.726秒。对该目录执行check成功，14张内嵌图、指标和Canny检查通过，两组核心复现浮点误差0、显示差像素0。详见 `results/demo/persistent_environment_verification.json`。仅验证本轮Demo，不声称重复了全部14项单元测试、图形浏览器或用户本人核验。
 - 实际非算法失败：Demo及check已成功后，首次汇总脚本因把相对输出路径直接对绝对根目录调用relative_to而报ValueError；统一resolve后读取同一批真实产物成功保存汇总，未重跑或覆盖原结果。
 - 本轮提交：准备保存启动说明修正、真实验证与本条记录；提交成功后读取实际hash／时间／说明补记，不预填。此前上一级目录history.bundle及回执对应2026-11-18旧HEAD，仍保留作历史快照；本轮完成后另存新的历史导出，避免把旧包称为含本轮修正。
+
+
+## 成员 B：按本人要求直接使用系统 Python，停用虚拟环境方案
+
+- 记录时间：2026-11-19T03:34:37+08:00（Asia/Shanghai +08:00）；使用者：蒋天乐2023010721；工具Codex IDE／Agent，具体会话模型标识未提供。用户明确补充原文：`我要求不用虚拟环境`。本要求覆盖上一段的.venv方案，以下为本轮最终采用方式，历史方案和真实运行不改写。
+- 上一步启动说明及验证已在用户补充要求前实际提交；从Git读取的信息如下，仅记录真实发生的过渡方案，不将其作为当前推荐：
+
+```text
+ebcdea7893d9c03c9595c1eb75e8d0d739516f1a
+2026-11-19T03:32:02+08:00
+蒋天乐 <jtl23@mails.tsinghua.edu.cn>
+修正Demo持久环境启动说明并验证运行
+```
+
+- 根Agent检查系统 `/usr/bin/python3`：`sys.prefix == sys.base_prefix == /usr`，非虚拟环境；已有NumPy2.2.4、Pillow11.3.0、OpenCV4.13.0。本轮系统方案没有重新安装依赖，也未改变系统包。当前启动命令为 `python3 -m scripts.demo --mode all`。仅在缺依赖时按说明使用系统 `python3 -m pip install --user -r requirements-member-b.txt`。
+- 实际使用系统解释器运行all及check，结果 `results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8/`，总2.204秒；14张内嵌图、Canny和指标检查通过，两组核心复现浮点误差0、显示差像素0。汇总见 `results/demo/system_python_verification.json`，其中 `is_virtualenv=false`、`dependency_install_performed=false`，没有把旧环境运行冒充系统环境结果。
+- 本轮新建的项目.venv已实际删除；未删除用户原有环境、旧实验或本组核心。再次委派 `/root/demo_startup_docs` 修正README、Demo操作说明和报告当前运行步骤；历史环境验证记录保留作溯源，不当作当前启动要求。报告HTML按修改后的正文重新生成。
+- 全部检查由智能体执行；用户人工浏览、讲解和现场核验未登记为完成。本轮仅修正启动说明和补充真实环境验证，不声称重跑全部参数网格或14项单元测试。
+
+- 2026-11-19T03:35:19+08:00：系统Python执行交付检查，`results/delivery/checks-20261118T193446Z-ca3442b9be0d/checks.json` 七项通过；确认系统解释器非虚拟环境、项目.venv不存在、文档空白检查通过。本次只修改启动文档并保存真实验证，没有修改Python算法代码；提交实际hash以Git记录及本轮新目录history-export.json为准。

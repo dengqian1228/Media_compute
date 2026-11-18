@@ -1,0 +1,91 @@
+{
+  "created_at": "2026-11-18T19:33:32.073451+00:00",
+  "actor": "智能体执行验证；成员B 蒋天乐2023010721；成员人工核验待完成",
+  "user_constraint": "不使用虚拟环境，直接使用系统Python",
+  "executable": "/usr/bin/python3",
+  "prefix": "/usr",
+  "base_prefix": "/usr",
+  "is_virtualenv": false,
+  "dependency_install_performed": false,
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "opencv": "4.13.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "scripts.demo",
+    "--mode",
+    "all",
+    "--output-dir",
+    "results/demo/系统Python验证"
+  ],
+  "demo_record": "results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8/demo.json",
+  "html": "results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8/index.html",
+  "total_elapsed_seconds": 2.2037171620013396,
+  "check_command": [
+    "/usr/bin/python3",
+    "-m",
+    "scripts.demo",
+    "check",
+    "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8"
+  ],
+  "check_record": "results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8/checks-20261118T193330Z-fe1f750fa12c/checks.json",
+  "embedded_images": 14,
+  "replays": [
+    {
+      "kind": "smooth",
+      "record": "checks-20261118T193330Z-fe1f750fa12c/replay-20261118T193331Z-e5eef6fd212b/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8/smooth/run-20261118T193328Z-c3d2fcfa8d50/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "kind": "jpeg",
+      "record": "checks-20261118T193330Z-fe1f750fa12c/replay-20261118T193331Z-c5df2a2ddcfa/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/系统Python验证/demo-20261118T193327Z-14fe59f37dd8/jpeg/run-20261118T193329Z-69857cbe72fa/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    }
+  ],
+  "passed": true,
+  "notes": [
+    "直接使用机器已有依赖，未安装或更改系统包。",
+    "使用系统python3运行all及check，无虚拟环境；未声称浏览器或成员本人核验。"
+  ]
+}

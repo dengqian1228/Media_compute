@@ -198,43 +198,46 @@ house Q30 λ=0.008 的全图 PSNR 提高约0.9962 dB，局部提高约1.4496 dB�
 
 ## 6. 运行、复现与 Demo
 
-在项目根目录，用 Python3.10+ 建议创建独立环境。成员B依赖清单单独保留，避免替换成员A的原 `requirements.txt`：
+在项目根目录直接使用系统 Python3.10+，当前启动方案不创建或激活虚拟环境。成员B依赖清单单独保留，避免替换成员A的原 `requirements.txt`。已有依赖可直接运行 Demo：
 
 ```bash
-python -m venv .venv
-# Linux/WSL：source .venv/bin/activate
-# Windows PowerShell：.venv\Scripts\Activate.ps1
-python -m pip install -r requirements-member-b.txt
-python -m unittest discover -s tests -v
-python -m scripts.jpeg_artifacts prepare
-python -m scripts.jpeg_artifacts run
-python -m scripts.demo --mode all
+python3 -m scripts.demo --mode all
 ```
 
-主要实验使用机器已有依赖及 `/tmp/media-compute-venv/bin/python`；本轮又在独立 `/tmp/media-compute-clean` 环境安装 `requirements-member-b.txt` 的三个固定包，14项测试通过，完整Demo及其检查通过（14张内嵌图、两项核心复现均像素差0），真实结果见 [干净环境验证记录](../results/demo/clean_environment_verification.json)。这是Linux/WSL下的安装验证，Windows环境仍待本人检查。安装完成后，实验与 Demo 运行不联网。重新生成的目录名、耗时可不同；PNG/JPEG 编码跨库版本也可能不同，应优先复现归档输入副本。真实参数实验及检查命令：
+2026-11-19 补充验证已用系统 `/usr/bin/python3` 直接执行完整 Demo 与 `check`，未安装新依赖；14 张内嵌图和两组核心复现通过，浮点及显示像素误差均为 0，见 [系统 Python 验证记录](../results/demo/system_python_verification.json)。该解释器的 `sys.prefix` 与 `sys.base_prefix` 均为 `/usr`。
+
+若提示缺少依赖，才执行 `python3 -m pip install --user -r requirements-member-b.txt`，然后重试。测试和完整 JPEG 实验可分别使用：
 
 ```bash
-python -m scripts.structure_smoothing_experiment check results/structure_smoothing/experiment-20261117T102719Z-1b827758b270
-python -m scripts.edge_comparison check results/edge_comparison/edges-20261117T105442Z-a63edf132bc2
-python -m scripts.jpeg_artifacts check results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5
-python results/member_b_verification/verify_existing.py
+python3 -m unittest discover -s tests -v
+python3 -m scripts.jpeg_artifacts prepare
+python3 -m scripts.jpeg_artifacts run
 ```
 
-单图支持 `python -m l0_smoothing run <8位L或RGB文件> --output-dir <目录> --lambda 0.02 --kappa 2`；对实际打印的 `run.json` 执行 `python -m l0_smoothing replay <run.json> --output-dir <新目录>`。工作流先检查输入解码像素，再比较输出浮点绝对误差及显示像素；默认容差1e-12。Windows旧绝对来源路径只作记录，默认重跑使用相邻输入副本。
+Windows 使用系统 `python` 替换命令中的 `python3`。以下临时环境路径仅为历史验证记录，不作为当前启动方法。主要实验使用机器已有依赖及 `/tmp/media-compute-venv/bin/python`；本轮又在独立 `/tmp/media-compute-clean` 环境安装 `requirements-member-b.txt` 的三个固定包，14项测试通过，完整Demo及其检查通过（14张内嵌图、两项核心复现均像素差0），真实结果见 [干净环境验证记录](../results/demo/clean_environment_verification.json)。这是Linux/WSL下的安装验证，Windows环境仍待本人检查。安装完成后，实验与 Demo 运行不联网。重新生成的目录名、耗时可不同；PNG/JPEG 编码跨库版本也可能不同，应优先复现归档输入副本。真实参数实验及检查命令：
+
+```bash
+python3 -m scripts.structure_smoothing_experiment check results/structure_smoothing/experiment-20261117T102719Z-1b827758b270
+python3 -m scripts.edge_comparison check results/edge_comparison/edges-20261117T105442Z-a63edf132bc2
+python3 -m scripts.jpeg_artifacts check results/jpeg_artifacts/jpeg-20261117T155122Z-e37cd961efa5
+python3 results/member_b_verification/verify_existing.py
+```
+
+单图支持 `python3 -m l0_smoothing run <8位L或RGB文件> --output-dir <目录> --lambda 0.02 --kappa 2`；对实际打印的 `run.json` 执行 `python3 -m l0_smoothing replay <run.json> --output-dir <新目录>`。工作流先检查输入解码像素，再比较输出浮点绝对误差及显示像素；默认容差1e-12。Windows旧绝对来源路径只作记录，默认重跑使用相邻输入副本。
 
 Demo 通过命令真实调用本组核心，生成包含原图、平滑、同参Canny、JPEG真值/压缩/恢复及局部指标的离线页。使用浏览器打开终端打印的 `index.html`；图像和样式内嵌，页面用于展示本次结果，改参数需重新运行CLI。照片与JPEG分别使用不同λ：
 
 ```bash
-python -m scripts.demo --mode all --smooth-lambda 0.02 --jpeg-lambda 0.008 --quality 30
-python -m scripts.demo --mode jpeg --clipart line_gray --quality 70 --lambda 0.03
-python -m scripts.demo check results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75
+python3 -m scripts.demo --mode all --smooth-lambda 0.02 --jpeg-lambda 0.008 --quality 30
+python3 -m scripts.demo --mode jpeg --clipart line_gray --quality 70 --lambda 0.03
+python3 -m scripts.demo check results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75
 ```
 
 归档 [完整Demo](../results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/index.html) 包含14张内嵌图；总耗时及核心耗时见上表。参数、命令、环境和摘要在同目录 `demo.json`，智能体检查记录包括 `checks-20261117T155551Z-e7599afeabc2/checks.json`。还保留灰度单模式与JPEG失败例。详细说明见 [Demo运行说明](demo.md)。
 
 本机没有图形浏览器；已验证CLI、HTML结构、内嵌图解码和数值重跑，没有声称完成浏览器视觉、投影适配、现场演示或录像。9分钟双人展示材料由本轮整理，现场操作与讲解由两位成员本人完成。课堂前应在展示电脑实际运行一次并打开离线页；失败时可打开归档页，说明它是预计算结果。
 
-本报告的可打印HTML由 `docs/report.md` 生成，正文和6张图内嵌，无需服务器、脚本或远程样式。只有重新生成报告HTML才需可选文档依赖 `python -m pip install -r requirements-docs.txt`，再执行 `python -m scripts.render_report`；阅读报告和运行Demo无需 `markdown-it-py`。本轮渲染使用的真实版本及图像摘要见 `docs/report_render.json`，没有将可选文档依赖的全新安装声称为已验证。证据链接需连同仓库核查，不影响单独阅读HTML正文。
+本报告的可打印HTML由 `docs/report.md` 生成，正文和6张图内嵌，无需服务器、脚本或远程样式。只有重新生成报告HTML才需可选文档依赖 `python3 -m pip install --user -r requirements-docs.txt`，再执行 `python3 -m scripts.render_report`；阅读报告和运行Demo无需 `markdown-it-py`。本轮渲染使用的真实版本及图像摘要见 `docs/report_render.json`，没有将可选文档依赖的全新安装声称为已验证。证据链接需连同仓库核查，不影响单独阅读HTML正文。
 
 ## 7. 验证、实际修正与局限
 

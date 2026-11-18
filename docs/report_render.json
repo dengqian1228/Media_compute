@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-17T16:05:08.032989+00:00",
+  "created_at": "2026-11-18T19:34:15.993297+00:00",
   "actor": "智能体执行文档渲染与结构检查；非浏览器视觉或成员人工核验",
   "command": [
-    "/tmp/media-compute-clean/bin/python",
+    "/usr/bin/python3",
     "-m",
     "scripts.render_report"
   ],
@@ -11,9 +11,9 @@
     "markdown-it-py": "4.2.0"
   },
   "source": "docs/report.md",
-  "source_sha256": "e8f1a02d4796b052f07f5ce609c41989673d5228e657d42083032875a6ce5afb",
+  "source_sha256": "6548169f1e64010ecf84006cac9822e5e0b3ac0fb83a8e00e6401fd1b07efc97",
   "html": "docs/report.html",
-  "html_sha256": "fab2e38ed61ead74e1efe00020d2c9193a7ae424b36d6c07df428937ca3485c2",
+  "html_sha256": "075dd24dc7ff1ba01ea95b47ac61022ee9b69ba2cd702b791205e52dd8239cc9",
   "embedded_figures": [
     {
       "path": "results/structure_smoothing/experiment-20261117T102719Z-1b827758b270/beach/full_comparison.png",
@@ -48,6 +48,7 @@
     "docs/demo.md",
     "docs/requirements.md",
     "results/demo/clean_environment_verification.json",
+    "results/demo/system_python_verification.json",
     "results/demo/中文验证/demo-20261117T155441Z-d0d62b1d3d75/index.html",
     "results/edge_comparison/README.md",
     "results/jpeg_artifacts/README.md",
