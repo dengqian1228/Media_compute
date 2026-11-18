@@ -240,3 +240,13 @@ Zhang XiaoLong <xiaolong23@mails.tsinghua.edu.cn>
 ```
 
 - 起始历史未重写，B的阶段1直接衔接此提交；A课程登记姓名和学号仍未知。此前普通问答待从原始会话补齐，Git历史不能替代问答全文。
+
+
+## 成员 B：修正 Demo 临时环境启动路径
+
+- 记录时间：2026-11-19T03:31:39+08:00（Asia/Shanghai +08:00；用户发出报错的精确时间未取得）。使用者：蒋天乐2023010721；工具：Codex IDE／Agent，具体会话模型标识未提供。任务：用户运行此前AI给出的 `/tmp/media-compute-clean/bin/python -m scripts.demo --mode all`，终端返回 `-bash: /tmp/media-compute-clean/bin/python: No such file or directory`；本轮检查确认旧临时路径不存在，项目起始工作区干净。此前将临时测试解释器当成后续启动命令的建议不可靠，已修正。
+- 实际实施：根Agent执行 `python3 -m venv --without-pip .venv`，再执行 `python3 -m pip --python .venv/bin/python install -r requirements-member-b.txt`；安装Pillow11.3.0、NumPy2.2.4、opencv-python4.13.0.92成功。缓存不可写导致pip禁用缓存，不影响成功；未改系统依赖或本组核心。`git check-ignore .venv/bin/python`确认项目内环境不进入Git。今后在项目根目录使用 `.venv/bin/python -m scripts.demo --mode all`，换机仍需按文档创建该机环境。
+- 实际委派 `/root/demo_startup_docs` 更新README和docs/demo.md：首次安装／以后启动明确分开，当前WSL命令使用持久.venv，/tmp仅作历史记录；原JSON、报告及旧实验未改写。根Agent实际阅读差异并验证。
+- 智能体执行验证：以.venv解释器运行 `python -m scripts.demo --mode all --output-dir results/demo/持久环境验证`，输出 `results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/`；实际总耗时2.726秒。对该目录执行check成功，14张内嵌图、指标和Canny检查通过，两组核心复现浮点误差0、显示差像素0。详见 `results/demo/persistent_environment_verification.json`。仅验证本轮Demo，不声称重复了全部14项单元测试、图形浏览器或用户本人核验。
+- 实际非算法失败：Demo及check已成功后，首次汇总脚本因把相对输出路径直接对绝对根目录调用relative_to而报ValueError；统一resolve后读取同一批真实产物成功保存汇总，未重跑或覆盖原结果。
+- 本轮提交：准备保存启动说明修正、真实验证与本条记录；提交成功后读取实际hash／时间／说明补记，不预填。此前上一级目录history.bundle及回执对应2026-11-18旧HEAD，仍保留作历史快照；本轮完成后另存新的历史导出，避免把旧包称为含本轮修正。

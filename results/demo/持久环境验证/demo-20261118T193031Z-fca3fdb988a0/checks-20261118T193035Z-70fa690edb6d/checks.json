@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-11-18T19:30:37.923986+00:00",
+  "actor": "智能体执行验证",
+  "command": [
+    "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/.venv/bin/python",
+    "-m",
+    "scripts.demo",
+    "check",
+    "results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0"
+  ],
+  "artifact_count": 21,
+  "embedded_images": 14,
+  "browser_visual_check": "not performed; HTML resources parsed and decoded without browser",
+  "replays": [
+    {
+      "kind": "smooth",
+      "record": "checks-20261118T193035Z-70fa690edb6d/replay-20261118T193036Z-acf5ed171e6f/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/smooth/run-20261118T193032Z-fc11fe0fcbaf/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "kind": "jpeg",
+      "record": "checks-20261118T193035Z-70fa690edb6d/replay-20261118T193037Z-2d2604cb4253/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/jpeg/run-20261118T193033Z-b726f6c37e18/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    }
+  ],
+  "passed": true
+}

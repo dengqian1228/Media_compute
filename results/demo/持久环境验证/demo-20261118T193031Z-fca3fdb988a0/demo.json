@@ -1,0 +1,109 @@
+{
+  "created_at": "2026-11-18T19:30:34.233517+00:00",
+  "actor": "智能体执行；成员B 蒋天乐 2023010721",
+  "command": [
+    "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/.venv/bin/python",
+    "-m",
+    "scripts.demo",
+    "--mode",
+    "all",
+    "--output-dir",
+    "results/demo/持久环境验证"
+  ],
+  "cwd": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute",
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "opencv": "4.13.0",
+    "libjpeg": "6.2"
+  },
+  "mode": "all",
+  "records": {
+    "smooth": {
+      "record": "smooth/run-20261118T193032Z-fc11fe0fcbaf/run.json",
+      "roi_xyxy": [
+        128,
+        85,
+        332,
+        221
+      ],
+      "canny": {
+        "low": 60,
+        "high": 120,
+        "aperture": 3,
+        "l2": true
+      },
+      "input_edges": "smooth/input_edges.png",
+      "output_edges": "smooth/output_edges.png",
+      "source_note": "beach：论文官网 Input Images；归档来源见 data/structure_smoothing/README.md，官网未注明图片许可。"
+    },
+    "jpeg": {
+      "record": "jpeg/run-20261118T193033Z-b726f6c37e18/run.json",
+      "clipart": "house_rgb",
+      "clean": "jpeg/clean.png",
+      "compressed": "jpeg/compressed.jpg",
+      "jpeg_settings": {
+        "quality": 30,
+        "optimize": false,
+        "progressive": false,
+        "subsampling": 0
+      },
+      "libjpeg": "6.2",
+      "roi_xyxy": [
+        30,
+        90,
+        126,
+        186
+      ],
+      "metrics": {
+        "jpeg": {
+          "full": {
+            "psnr_db": 30.993111027648975,
+            "ssim": 0.9317671691661318
+          },
+          "roi": {
+            "psnr_db": 28.665375178256866,
+            "ssim": 0.8968147853615707
+          }
+        },
+        "restored": {
+          "full": {
+            "psnr_db": 31.989305151202643,
+            "ssim": 0.9651783042498883
+          },
+          "roi": {
+            "psnr_db": 30.11493900921584,
+            "ssim": 0.9621189369914634
+          }
+        }
+      }
+    }
+  },
+  "artifact_sha256": {
+    "index.html": "d80dc77cf9df0f733a6ae4ba4fcd3aae79766c97385e152753842ca33f630f43",
+    "jpeg/clean.png": "8606ed5e5f9289d0b8291a200de8792f127f5d1c52e56de17b387415a25df6a5",
+    "jpeg/compressed.jpg": "1dcf5a44fb745efeb703e7916a4fb8a70bacff2c0d1ea70cf0abb4e88e9f480c",
+    "jpeg/crop-0.png": "d6206239061f9147fb3862f9f142cf996c3166b9a85c605fa1065ead4d1391f2",
+    "jpeg/crop-1.png": "c60ee745d9aa0ae12a82d30029fc527555f9ce731fbe6b99dfd905f68a5f7c5f",
+    "jpeg/crop-2.png": "0b3f019df54801c59b93eb63624255ce5629e32e74e7763e551740d71bfa7e82",
+    "jpeg/metrics.json": "6c0321ccb7f16cb1a63257958a4173c8f050d89d0e307bcdd1d99183b73517ca",
+    "jpeg/run-20261118T193033Z-b726f6c37e18/input.jpg": "1dcf5a44fb745efeb703e7916a4fb8a70bacff2c0d1ea70cf0abb4e88e9f480c",
+    "jpeg/run-20261118T193033Z-b726f6c37e18/output.npy": "b70438fa245028ee650ef6d50c3a44965313c311a0e77768b252b56930ae0b27",
+    "jpeg/run-20261118T193033Z-b726f6c37e18/output.png": "33748cb19bd16d0d3ce2d4a6de35780f1cc2566c9c0710770fb4d9ad65eb0518",
+    "jpeg/run-20261118T193033Z-b726f6c37e18/run.json": "2733188b3559d60cd61634022375f7136170a37ae6b398c863987e138dc5b12f",
+    "smooth/crop-0.png": "2bbbb7709dd34e6a112f3457c6919fae49aa217df065c61d5ed80973ade84125",
+    "smooth/crop-1.png": "8a31e78e28df92940b5cd7822009913283cb957146178d0aaa52038c819ae296",
+    "smooth/crop-2.png": "cf1f9d7a4f1bd81e58ebf04ee93510b5b9db83adb4a26b23fd6a5a472cfbd62e",
+    "smooth/crop-3.png": "8e4fed376fbff19c95f0f3e859f01a3e0bef5580b7d059f81c82cab87863915e",
+    "smooth/input_edges.png": "f0e1d4a38d4b4e9effd19875223ca8f2abb6c93b4d07285eae648e258175311b",
+    "smooth/output_edges.png": "352991865f425931105d8373c1339fa60bf0dedccd58635796119168fb3a92f7",
+    "smooth/run-20261118T193032Z-fc11fe0fcbaf/input.png": "1b8589bc94ce6fb87338366f65c83efdb6518948f930f822e118af9c69d3b24d",
+    "smooth/run-20261118T193032Z-fc11fe0fcbaf/output.npy": "3f0ec1b9306ba8877f04d81edfd6591e71e0a57529026dc0d79fe02604d0a854",
+    "smooth/run-20261118T193032Z-fc11fe0fcbaf/output.png": "07cf4482b514ff834fb0a7bee4380f22889b03c6c57baca3c4bcf99fe849e092",
+    "smooth/run-20261118T193032Z-fc11fe0fcbaf/run.json": "fbd358b26fabbee3dac0484a971bcebe57bc293e9363f0c21f243f8e687373ac"
+  },
+  "total_elapsed_seconds": 2.7263566720012022,
+  "html": "index.html"
+}

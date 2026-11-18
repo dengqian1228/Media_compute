@@ -13,12 +13,15 @@
 
 ## 快速开始与材料入口
 
-在项目根目录、Python 3.10+ 环境中运行（本轮验证为 Linux / Python 3.10.12）：
+在项目根目录使用 Python 3.10+。当前 Linux／WSL 环境首次安装：
 
 ```bash
-python -m pip install -r requirements-member-b.txt
-python -m scripts.demo --mode all
+python3 -m venv --without-pip .venv
+python3 -m pip --python .venv/bin/python install -r requirements-member-b.txt
+.venv/bin/python -m scripts.demo --mode all
 ```
+
+依赖安装一次即可，以后在项目根目录直接执行最后一条命令。`.venv` 保存在项目目录，不提交到 Git；此前记录中的 `/tmp/media-compute-*` 仅是历史测试环境，可能已被清理，不用作启动路径。Windows 安装与启动方法见下方 Demo 说明。
 
 终端打印离线 `index.html` 的路径，直接用浏览器打开。CLI 实际计算本组算法；调整参数后重新运行，离线页只显示本次结果。默认照片 λ=.02、JPEG λ=.008 / Q30，κ=2，βmax=1e5。
 

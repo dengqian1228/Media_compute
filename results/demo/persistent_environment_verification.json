@@ -1,0 +1,94 @@
+{
+  "created_at": "2026-11-18T19:31:13.614436+00:00",
+  "actor": "智能体执行验证；成员B 蒋天乐2023010721；成员人工核验待完成",
+  "reported_problem": "原建议/tmp/media-compute-clean/bin/python路径不存在；不再以临时环境作为启动路径",
+  "setup_commands": [
+    "python3 -m venv --without-pip .venv",
+    "python3 -m pip --python .venv/bin/python install -r requirements-member-b.txt"
+  ],
+  "setup_passed": true,
+  "executable": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/.venv/bin/python",
+  "venv_configuration": "home = /usr/bin\ninclude-system-site-packages = false\nversion = 3.10.12\n",
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "opencv": "4.13.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
+  "command": [
+    "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/.venv/bin/python",
+    "-m",
+    "scripts.demo",
+    "--mode",
+    "all",
+    "--output-dir",
+    "results/demo/持久环境验证"
+  ],
+  "demo_record": "results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/demo.json",
+  "html": "results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/index.html",
+  "check_command": [
+    "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/.venv/bin/python",
+    "-m",
+    "scripts.demo",
+    "check",
+    "results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0"
+  ],
+  "check_record": "results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/checks-20261118T193035Z-70fa690edb6d/checks.json",
+  "passed": true,
+  "embedded_images": 14,
+  "replays": [
+    {
+      "kind": "smooth",
+      "record": "checks-20261118T193035Z-70fa690edb6d/replay-20261118T193036Z-acf5ed171e6f/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/smooth/run-20261118T193032Z-fc11fe0fcbaf/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    },
+    {
+      "kind": "jpeg",
+      "record": "checks-20261118T193035Z-70fa690edb6d/replay-20261118T193037Z-2d2604cb4253/run.json",
+      "passed": true,
+      "comparison": {
+        "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo/持久环境验证/demo-20261118T193031Z-fca3fdb988a0/jpeg/run-20261118T193033Z-b726f6c37e18/run.json",
+        "input_decoded_pixels_equal": true,
+        "input_file_bytes_equal": true,
+        "float_atol": 1e-12,
+        "max_float_abs_error": 0.0,
+        "mean_float_abs_error": 0.0,
+        "float_within_tolerance": true,
+        "different_pixel_count": 0,
+        "max_pixel_channel_error": 0,
+        "display_pixels_equal": true,
+        "environment_versions_equal": {
+          "python": true,
+          "numpy": true,
+          "pillow": true
+        },
+        "passed": true
+      }
+    }
+  ],
+  "total_elapsed_seconds": 2.7263566720012022,
+  "notes": [
+    ".venv位于项目目录并被Git忽略；保留此前输入、实验和记录。",
+    "Demo及check先前均已成功，第一次汇总记录因相对/绝对路径混用失败；统一resolve后读取既有真实产物补记，没有重跑或改写结果。",
+    "本轮只重跑完整Demo及其数值复现，不宣称图形浏览器或成员本人核验。"
+  ]
+}

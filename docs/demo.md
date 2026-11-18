@@ -4,15 +4,33 @@
 
 ## 运行环境
 
-在项目根目录使用 Python 3.10 或以上版本。成员 B 实际验证环境是 Python 3.10.12、NumPy 2.2.4、Pillow 11.3.0、opencv-python 4.13.0.92（cv2 4.13.0）。依赖见 `requirements-member-b.txt`；成员 A 原环境记录保留在原 `requirements.txt`。初次验证使用已有依赖建立的 `/tmp/media-compute-venv`；随后由主智能体创建不含系统依赖的 `/tmp/media-compute-clean`，从网络安装固定依赖，并由 Demo 智能体实际验证全部 14 项测试和默认完整 Demo。
+在项目根目录使用 Python 3.10 或以上版本。成员 B 实际验证环境是 Python 3.10.12、NumPy 2.2.4、Pillow 11.3.0、opencv-python 4.13.0.92（cv2 4.13.0）。依赖见 `requirements-member-b.txt`；成员 A 原环境记录保留在原 `requirements.txt`。
+
+当前 Linux／WSL 环境首次安装，使用系统已有的 `python3` 和 pip 建立项目内的 `.venv`。这种创建方式也适用于当前缺少 `ensurepip` 的环境：
 
 ```bash
-python -m pip install -r requirements-member-b.txt
-python -m scripts.demo --help
-python -m scripts.demo --mode all
+python3 -m venv --without-pip .venv
+python3 -m pip --python .venv/bin/python install -r requirements-member-b.txt
+.venv/bin/python -m scripts.demo --mode all
 ```
 
-Windows 使用对应 Python 命令；当前机器先后使用 `/tmp/media-compute-venv/bin/python` 和 `/tmp/media-compute-clean/bin/python`。程序运行不联网、不启动服务器。固定依赖已在 Python 3.10.12、Linux/WSL2 的干净虚拟环境完成安装与运行验证；Windows 安装和图形浏览器仍待成员在展示电脑核验。
+安装一次后，以后在项目根目录只需运行：
+
+```bash
+.venv/bin/python -m scripts.demo --mode all
+```
+
+可用 `.venv/bin/python -m scripts.demo --help` 查看参数。`.venv` 保存在项目目录且已被 Git 忽略；不要删除它后仍沿用旧启动路径。此前 `/tmp/media-compute-venv` 和 `/tmp/media-compute-clean` 是历史测试环境，临时目录可能已被清理，不能作为长期启动路径。历史验证记录保留在本文后半部分。
+
+Windows PowerShell 可在项目根目录用标准 Python 建立另一套环境：
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-member-b.txt
+.\.venv\Scripts\python.exe -m scripts.demo --mode all
+```
+
+程序运行不联网、不启动服务器。固定依赖已在 Python 3.10.12、Linux／WSL2 的干净虚拟环境完成安装与运行验证；Windows 安装和图形浏览器仍待成员在展示电脑核验。
 
 每次运行在 `results/demo/demo-<UTC时间>-<随机标识>/` 新建目录。终端打印 `index.html` 和 `demo.json` 路径。使用浏览器直接打开 `index.html`；14 张图和样式均内嵌，移动这个 HTML 文件也可查看。调整参数需要重新运行 CLI，离线页仅展示本次真实结果，不在浏览器中重新计算。
 
@@ -25,7 +43,7 @@ Windows 使用对应 Python 命令；当前机器先后使用 `/tmp/media-comput
 再运行一个保留的失败案例：
 
 ```bash
-python -m scripts.demo --mode jpeg --clipart line_gray --quality 70 --lambda 0.03
+.venv/bin/python -m scripts.demo --mode jpeg --clipart line_gray --quality 70 --lambda 0.03
 ```
 
 观察细灰线消失，并说明强平滑会把真实细线当作低幅度变化清除。这个案例的 PSNR 和 SSIM 均下降，不能只凭画面更平整判断恢复成功。
@@ -33,8 +51,8 @@ python -m scripts.demo --mode jpeg --clipart line_gray --quality 70 --lambda 0.0
 只演示平滑，可使用灰度或彩色的 8 位 L/RGB 文件：
 
 ```bash
-python -m scripts.demo --mode smooth --input data/structure_smoothing/inputs/brick_window_gray.png --lambda 0.02 --kappa 2
-python -m scripts.demo --mode all --smooth-lambda 0.02 --jpeg-lambda 0.008 --quality 30
+.venv/bin/python -m scripts.demo --mode smooth --input data/structure_smoothing/inputs/brick_window_gray.png --lambda 0.02 --kappa 2
+.venv/bin/python -m scripts.demo --mode all --smooth-lambda 0.02 --jpeg-lambda 0.008 --quality 30
 ```
 
 `--lambda` 用于单独的 `smooth` 或 `jpeg` 模式；在 `all` 中必须分别使用 `--smooth-lambda`、`--jpeg-lambda`。JPEG `--quality` 为 1–95，κ>1，λ>0，βmax>2λ。自选平滑输入的来源和许可需要运行者另行登记，不会自动宣称拥有授权。
@@ -46,10 +64,10 @@ python -m scripts.demo --mode all --smooth-lambda 0.02 --jpeg-lambda 0.008 --qua
 `demo.json` 保存真实命令、工作目录、参数相关的运行记录路径、环境、总耗时和产物 SHA-256。对终端输出目录执行：
 
 ```bash
-python -m scripts.demo check 'results/demo/<实际demo目录>'
+.venv/bin/python -m scripts.demo check 'results/demo/<实际demo目录>'
 ```
 
-`check` 核对全部产物摘要，解析离线页且解码每张内嵌 PNG，重算 Canny 和 JPEG 指标，再分别从已保存输入副本运行核心复现。每次新增 `checks-.../checks.json`，不覆盖旧结果。返回码 0 为通过、2 为参数或检查失败。原始算法复现也可直接使用 `python -m l0_smoothing replay <真实run.json路径> --output-dir <新目录>`。
+`check` 核对全部产物摘要，解析离线页且解码每张内嵌 PNG，重算 Canny 和 JPEG 指标，再分别从已保存输入副本运行核心复现。每次新增 `checks-.../checks.json`，不覆盖旧结果。返回码 0 为通过、2 为参数或检查失败。原始算法复现也可直接使用 `.venv/bin/python -m l0_smoothing replay <真实run.json路径> --output-dir <新目录>`。
 
 ## 本轮实际运行与限制
 
