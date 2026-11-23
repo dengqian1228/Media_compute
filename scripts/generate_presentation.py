@@ -80,8 +80,8 @@ def main():
                    figure(EDGES/'brick_window_gray/lambda-0.08_kappa-2_edges.png','λ=.08，κ=2 后 Canny')],'canny')
     slides = [
         {'title':'把细纹理压下去，把主要轮廓留下来','speaker':'A','seconds':35,'clock':'00:00–00:35',
-         'md':'第4题：L0 梯度最小化结构平滑、固定参数边缘对照与 Clip-art JPEG 去伪影。成员 A：姓名、学号待填写；成员 B：蒋天乐 2023010721。当前为待排练稿，现场展示由两位成员本人完成。',
-         'body':'<div class="hero"><p class="eyebrow">媒体计算课程 · 第4题</p><h1>L0 梯度最小化<br>图像结构平滑</h1><p class="large">参数影响 → 边缘对照 → JPEG 去伪影</p><p>成员 A：姓名／学号待填写<br>成员 B：蒋天乐 · 2023010721</p><p class="muted">准备材料与智能体运行结果；人工核验及课堂展示待成员完成。</p></div>'},
+         'md':'第4题：L0 梯度最小化结构平滑、固定参数边缘对照与 Clip-art JPEG 去伪影。成员 A：章小龙 2023010725；成员 B：蒋天乐 2023010721。当前为待排练稿，现场展示由两位成员本人完成。',
+         'body':'<div class="hero"><p class="eyebrow">媒体计算课程 · 第4题</p><h1>L0 梯度最小化<br>图像结构平滑</h1><p class="large">参数影响 → 边缘对照 → JPEG 去伪影</p><p>成员 A：章小龙 · 2023010725<br>成员 B：蒋天乐 · 2023010721</p><p class="muted">准备材料与智能体运行结果；人工核验及课堂展示待成员完成。</p></div>'},
         {'title':'用非零梯度的“位置数”控制结构','speaker':'A','seconds':50,'clock':'00:35–01:25',
          'md':'目标 min_S ||S-I||² + λ C(S)，C(S)=#{p:Σc[(DxS)²+(DyS)²]>0}。保真项限制偏离输入，L0项惩罚存在梯度的位置数。RGB按像素联合统计方向和通道；λ越大惩罚越强，但真正细结构也可能消失。',
          'body':'<div class="formula">min<sub>S</sub> ‖S − I‖² + λ C(S)</div><div class="formula small-formula">C(S) = #{p : Σ<sub>c</sub> [(D<sub>x</sub>S)² + (D<sub>y</sub>S)²] &gt; 0}</div><div class="columns"><div class="card"><h3>保真项</h3><p>让结果接近输入，限制任意改变颜色与结构。</p></div><div class="card"><h3>稀疏梯度</h3><p>统计梯度存在的位置，抑制低幅度纹理；RGB按像素联合判断。</p></div></div><p class="callout">λ 增大：细节更少；也可能把有用的细线、砖缝一起抹去。</p><p class="source">依据 Xu 等，Image Smoothing via L0 Gradient Minimization，2011；本组核心由数组运算实现。</p>'},
@@ -118,7 +118,7 @@ def main():
 '''
     parts=['<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>L0结构平滑 · 双人9分钟展示</title><style>'+css+'</style></head><body>',
            '<nav class="toolbar"><button id="prev">← 上页</button><span id="position">1 / 10</span><button id="next">下页 →</button><button id="fullscreen">全屏 F</button><button onclick="window.print()">打印 / PDF</button><span>← → / 空格翻页 · F全屏 · Home回首页</span></nav><main>']
-    md=['# L0结构平滑：双人9分钟展示材料\n\n状态：待成员核对和排练；这是准备稿，不是课堂展示记录。B：蒋天乐（2023010721）；A课程姓名、学号待填写。\n\n离线版：[presentation.html](presentation.html)。HTML由 `python -m scripts.generate_presentation` 生成，图片嵌入文件，可左右键翻页、F全屏或打印。可编辑源为生成脚本；讲解及备用路径见 [presentation_notes.md](presentation_notes.md)。\n']
+    md=['# L0结构平滑：双人9分钟展示材料\n\n状态：待成员核对和排练；这是准备稿，不是课堂展示记录。B：蒋天乐（2023010721）；A：章小龙（2023010725）。\n\n离线版：[presentation.html](presentation.html)。HTML由 `python -m scripts.generate_presentation` 生成，图片嵌入文件，可左右键翻页、F全屏或打印。可编辑源为生成脚本；讲解及备用路径见 [presentation_notes.md](presentation_notes.md)。\n']
     for i,s in enumerate(slides,1):
         parts.append(f'<section class="slide{" active" if i==1 else ""}" data-seconds="{s["seconds"]}" aria-label="第{i}页"><h2>{i:02d} · {s["title"]}</h2>'+s['body']+f'<footer class="page"><span>成员{s["speaker"]} · 建议 {s["clock"]} · {s["seconds"]}秒</span><span>待排练稿 · 智能体执行结果 · {i}/10</span></footer></section>')
         md.append(f'\n## {i:02d} {s["title"]}\n\n成员{s["speaker"]}｜{s["clock"]}｜{s["seconds"]}秒\n\n{s["md"]}\n')
