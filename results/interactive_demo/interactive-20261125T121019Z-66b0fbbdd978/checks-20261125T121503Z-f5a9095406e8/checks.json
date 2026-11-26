@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-25T12:15:03.446536+00:00",
+  "passed": true,
+  "artifacts_checked": 1591,
+  "frames_checked": 491,
+  "float_and_display_replayed_frames": [
+    20,
+    215,
+    325
+  ],
+  "all_output_rois_canny_and_metrics_recomputed": true,
+  "executed_by": "AI; not human review"
+}

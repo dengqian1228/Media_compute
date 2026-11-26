@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-25T12:57:30.580233+00:00",
+  "passed": true,
+  "played_past_one_second": true,
+  "seek_results": [
+    {
+      "time": 8,
+      "readyState": 4
+    },
+    {
+      "time": 18,
+      "readyState": 4
+    },
+    {
+      "time": 29,
+      "readyState": 4
+    },
+    {
+      "time": 40,
+      "readyState": 4
+    },
+    {
+      "time": 47,
+      "readyState": 4
+    }
+  ],
+  "browser_errors": [],
+  "browser": "159.0.8154.6",
+  "executor": "AI; not PowerPoint/WPS or member review"
+}

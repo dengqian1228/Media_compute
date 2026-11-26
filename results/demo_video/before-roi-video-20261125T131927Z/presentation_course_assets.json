@@ -1,0 +1,161 @@
+{
+  "generated_at": "2026-11-25T12:56:34.637565+00:00",
+  "source_pdf": "docs/L0_图像结构平滑与边缘提取.pdf",
+  "source_pdf_sha256": "fbf6338e131e003bc911fe02632fcbd7d07d3efd9faf9af972a81a5bff3936f4",
+  "experiment": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e",
+  "experiment_sha256": "e1136b081a04f60afff4e3550e0e6c4de75fe3128f9a1e869b643484378405cf",
+  "slides": 10,
+  "speaker_seconds": {
+    "A": 270,
+    "B": 270
+  },
+  "pdf_first_five_pages_render_identical": true,
+  "pptx_A_pages": "raster imports from original PDF; not editable text",
+  "pptx_B_pages": "editable text, individually embedded images",
+  "font_used": "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
+  "assets": [
+    {
+      "page": 6,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/9/9.jpg",
+      "sha256": "052fef5976110a1f03b4749cacad51f6d57f3adc4456dba16781eb36275a0637",
+      "roi_xyxy": null,
+      "label": "author website input"
+    },
+    {
+      "page": 6,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/20/20.jpg",
+      "sha256": "a3e95dd1c2d3030a6d14a3424f59b0d639e3e6c966eac0b753457bbaf41dd779",
+      "roi_xyxy": null,
+      "label": "author website input"
+    },
+    {
+      "page": 7,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/9/9.jpg",
+      "sha256": "052fef5976110a1f03b4749cacad51f6d57f3adc4456dba16781eb36275a0637",
+      "roi_xyxy": null,
+      "label": "官网 JPEG 输入"
+    },
+    {
+      "page": 7,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/9/9.jpg",
+      "sha256": "052fef5976110a1f03b4749cacad51f6d57f3adc4456dba16781eb36275a0637",
+      "roi_xyxy": [
+        180,
+        70,
+        300,
+        190
+      ],
+      "label": "官网 JPEG 输入 / ROI"
+    },
+    {
+      "page": 7,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/9/9_L0.png",
+      "sha256": "b070c3787e20974416e5fb545315a40bc8fac5f0de9f9400058a66167cb58bc6",
+      "roi_xyxy": null,
+      "label": "作者公开结果（非真值）"
+    },
+    {
+      "page": 7,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/9/9_L0.png",
+      "sha256": "b070c3787e20974416e5fb545315a40bc8fac5f0de9f9400058a66167cb58bc6",
+      "roi_xyxy": [
+        180,
+        70,
+        300,
+        190
+      ],
+      "label": "作者公开结果（非真值） / ROI"
+    },
+    {
+      "page": 7,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/9/run-20261125T093230Z-2028566940bd/output.png",
+      "sha256": "7a441f3c6912fd2a52a94f57a816833cf4f4045314be0d2c2d20e286e8c4ec2e",
+      "roi_xyxy": null,
+      "label": "本组 L0 · λ=0.008"
+    },
+    {
+      "page": 7,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/9/run-20261125T093230Z-2028566940bd/output.png",
+      "sha256": "7a441f3c6912fd2a52a94f57a816833cf4f4045314be0d2c2d20e286e8c4ec2e",
+      "roi_xyxy": [
+        180,
+        70,
+        300,
+        190
+      ],
+      "label": "本组 L0 · λ=0.008 / ROI"
+    },
+    {
+      "page": 8,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/20/20.jpg",
+      "sha256": "a3e95dd1c2d3030a6d14a3424f59b0d639e3e6c966eac0b753457bbaf41dd779",
+      "roi_xyxy": null,
+      "label": "官网 JPEG 输入"
+    },
+    {
+      "page": 8,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/20/20_L0.png",
+      "sha256": "16e83d4547465891da93b2947dfe61b39cb0e7a25b0778f044b6297d8c66dfa9",
+      "roi_xyxy": null,
+      "label": "作者公开结果（非真值）"
+    },
+    {
+      "page": 8,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/20/run-20261125T093233Z-02e0f97cec53/output.png",
+      "sha256": "d2a6c51a62a7fa6889d2e251ba7be925a7a50cd5f46c81033d744bd056c216f1",
+      "roi_xyxy": null,
+      "label": "本组 L0 · λ=0.008"
+    },
+    {
+      "page": 8,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/20/20_L0.png",
+      "sha256": "16e83d4547465891da93b2947dfe61b39cb0e7a25b0778f044b6297d8c66dfa9",
+      "roi_xyxy": [
+        180,
+        50,
+        300,
+        170
+      ],
+      "label": "作者：同一局部"
+    },
+    {
+      "page": 8,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/20/run-20261125T093233Z-02e0f97cec53/output.png",
+      "sha256": "d2a6c51a62a7fa6889d2e251ba7be925a7a50cd5f46c81033d744bd056c216f1",
+      "roi_xyxy": [
+        180,
+        50,
+        300,
+        170
+      ],
+      "label": "本组 λ=0.008：同一局部"
+    },
+    {
+      "page": 8,
+      "source": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/20/run-20261125T093235Z-8f9a2e35293c/output.png",
+      "sha256": "2fef68050b078f0eebc3e0cad9ceda16d2b1dbcb7cfb99b22051a9da31488d30",
+      "roi_xyxy": [
+        180,
+        50,
+        300,
+        170
+      ],
+      "label": "本组 λ=0.08：同一局部"
+    },
+    {
+      "page": 9,
+      "source": "docs/media/demo_course_all.png",
+      "sha256": "c10711ab84da20c352c2dcb09ef24aa31ff358a9941951e290242964209b340a",
+      "roi_xyxy": null,
+      "label": "真实浏览器录屏封面"
+    }
+  ],
+  "pdf_sha256": "4d6b61e5b68dcdbcb2ea07a79525646d898d64f9b60cbe9ea1151df5f72ad0c3",
+  "pptx_sha256": "674da6f39b7ea75d881a3157e49215bded6521708c9a92e1b2a718f737ddbf22",
+  "embedded_video": {
+    "path": "docs/media/demo_course_all.mp4",
+    "sha256": "69f42e25e363a88e40805958a5e100b4694c8ec974880d13ab0786f43f17709e",
+    "duration_seconds": 50.36,
+    "slide": 9
+  }
+}

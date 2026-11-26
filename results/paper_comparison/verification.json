@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-25T17:38:35+08:00",
+  "actor": "AI verification; not member review",
+  "experiment": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e",
+  "experiment_check": "results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/checks-20261125T093252Z-d73e3e62bccf/checks.json",
+  "regression_tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "passed": 14,
+    "elapsed_seconds": 1.84
+  },
+  "offline_html_images_decoded": 18,
+  "new_document_links_checked": true,
+  "original_core_and_A_pdf_and_legacy_presentation_unchanged": true,
+  "pdf_B_pages_visually_inspected_by_AI": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "pdf_A_pages_pixel_equal": true,
+  "pptx_structure_and_shape_bounds_checked": true,
+  "powerpoint_or_wps_rendering_tested": false,
+  "browser_rendering_tested": false,
+  "virtualenv_created": false,
+  "git_commit_performed": false
+}

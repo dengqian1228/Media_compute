@@ -1,0 +1,6 @@
+{
+  "status": "aborted_before_demo_execution",
+  "cause": "Python multiline literal converted JavaScript newline escape into an invalid literal newline; start-button handler did not register",
+  "correction": "CONTROL changed to raw string, and browser pageerror logging added",
+  "included_in_final_video": false
+}

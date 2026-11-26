@@ -1,0 +1,41 @@
+{
+  "record_version": 1,
+  "kind": "run",
+  "created_at": "2026-11-25T09:49:35.291417+00:00",
+  "input": {
+    "source_path": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/paper_comparison/video_demo/paper-20261125T094931Z-5866f9217397/9/9.jpg",
+    "copy": "input.jpg",
+    "file_sha256": "052fef5976110a1f03b4749cacad51f6d57f3adc4456dba16781eb36275a0637",
+    "pixel_sha256": "a31504467b138d5a17caf0ae013c3a3c24dd79ef40f4d2d24c1ab33657df098d",
+    "mode": "RGB",
+    "shape": [
+      276,
+      424,
+      3
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      276,
+      424,
+      3
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "03d5962b470c9781b88cb61099b426a85fef6ed8d1a34154fce4693745a6b79f"
+  },
+  "parameters": {
+    "lambda": 0.08,
+    "kappa": 2.0,
+    "beta_max": 100000.0
+  },
+  "iterations": 20,
+  "elapsed_seconds": 0.5583118089998607,
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  }
+}

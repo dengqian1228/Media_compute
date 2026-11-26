@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-11-25T09:51:15.716922+00:00",
+  "actor": "AI automatic verification; not human review",
+  "passed": true,
+  "artifacts_checked": 39,
+  "metric_rows_checked": 8,
+  "replays": [
+    {
+      "case": "9",
+      "record": "checks-20261125T095113Z-efe329c7a3f6/replay-20261125T095114Z-d7385f5ca8b3/run.json",
+      "passed": true
+    },
+    {
+      "case": "20",
+      "record": "checks-20261125T095113Z-efe329c7a3f6/replay-20261125T095115Z-c46fca75e739/run.json",
+      "passed": true
+    }
+  ]
+}

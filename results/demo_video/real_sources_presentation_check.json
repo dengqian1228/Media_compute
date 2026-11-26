@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-25T12:31:08.522601+00:00",
+  "passed": true,
+  "unchanged_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+  ],
+  "pptx_slide_count": 10,
+  "embedded_mp4_identical": true,
+  "slide9_external_relationships": false,
+  "executor": "AI; not Office rendering"
+}

@@ -236,3 +236,6 @@ __marimo__/
 docs/_build/
 **/__pycache__/
 **/.ipynb_checkpoints/
+
+# Office 打开文档时产生的临时锁文件，不属于交付材料。
+~$*

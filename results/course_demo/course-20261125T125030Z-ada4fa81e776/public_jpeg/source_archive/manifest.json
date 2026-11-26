@@ -1,0 +1,154 @@
+{
+  "created_at": "2026-11-25T12:47:24.526720+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "scripts.public_jpeg_demo",
+    "prepare"
+  ],
+  "repository": "https://github.com/hfg-gmuend/openmoji",
+  "revision": "5acb7f049c45c57a98449122d470de9f09bb6794",
+  "license": {
+    "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/LICENSE.txt",
+    "final_url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/LICENSE.txt",
+    "retrieved_at": "2026-11-25T12:47:18.382491+00:00",
+    "file": "LICENSE.txt",
+    "sha256": "5e436ff8ffbb77d8607220e9bce20c8915d860010feeb6c1ebef5a85688e9b39"
+  },
+  "upstream_readme": {
+    "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/README.md",
+    "final_url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/README.md",
+    "retrieved_at": "2026-11-25T12:47:19.235126+00:00",
+    "file": "upstream_README.md",
+    "sha256": "615dced330c529a6cb064b3ba8d7485ade23ec5cc09dabae753d21d71cae7c0f"
+  },
+  "upstream_metadata": {
+    "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/data/openmoji.json",
+    "final_url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/data/openmoji.json",
+    "retrieved_at": "2026-11-25T12:47:22.605033+00:00",
+    "file": "upstream_openmoji.json",
+    "sha256": "278c010292faed1470fe2425004aa0bd0cd2683507591fe3af484bbe28b0c904"
+  },
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "12.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "cairosvg": "2.8.2"
+  },
+  "sources": [
+    {
+      "id": "openmoji_fox",
+      "title": "OpenMoji 狐狸（彩色）",
+      "code": "1F98A",
+      "variant": "color",
+      "mode": "RGB",
+      "roi": [
+        64,
+        64,
+        192,
+        192
+      ],
+      "original": {
+        "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/color/svg/1F98A.svg",
+        "final_url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/color/svg/1F98A.svg",
+        "retrieved_at": "2026-11-25T12:47:23.605393+00:00",
+        "file": "originals/openmoji_fox.svg",
+        "sha256": "b7fe9b1dce87c5e931d7e58ab77bcde8cc6ee7804e41005f199c3097960e225b"
+      },
+      "upstream_metadata": {
+        "emoji": "🦊",
+        "hexcode": "1F98A",
+        "group": "animals-nature",
+        "subgroups": "animal-mammal",
+        "annotation": "fox",
+        "tags": "animal, face",
+        "openmoji_tags": "smart, red, quick, intelligent",
+        "openmoji_author": "Sofie Ascherl",
+        "openmoji_date": "2018-04-18",
+        "skintone": "",
+        "skintone_combination": "",
+        "skintone_base_emoji": "",
+        "skintone_base_hexcode": "",
+        "unicode": 3,
+        "order": 3675
+      },
+      "author": "Sofie Ascherl",
+      "source_page": "https://github.com/hfg-gmuend/openmoji/blob/5acb7f049c45c57a98449122d470de9f09bb6794/color/svg/1F98A.svg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "clean": {
+        "file": "clean/openmoji_fox.png",
+        "sha256": "3def21cfd2a79a0352891950369e277a05a354a4fadf6f4aaa0f6e7505eb7967",
+        "mode": "RGB",
+        "size": [
+          256,
+          256
+        ]
+      },
+      "preprocessing": [
+        "Original OpenMoji SVG bytes unchanged",
+        "CairoSVG svg2png at 256x256 on opaque #ffffff, no JPEG stage",
+        "Pillow convert to 8-bit RGB",
+        "Save lossless PNG as clean reference; no hand drawing, L0, sharpening or denoising"
+      ]
+    },
+    {
+      "id": "openmoji_turtle",
+      "title": "OpenMoji 乌龟（线稿）",
+      "code": "1F422",
+      "variant": "black",
+      "mode": "L",
+      "roi": [
+        80,
+        80,
+        208,
+        208
+      ],
+      "original": {
+        "url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/black/svg/1F422.svg",
+        "final_url": "https://raw.githubusercontent.com/hfg-gmuend/openmoji/5acb7f049c45c57a98449122d470de9f09bb6794/black/svg/1F422.svg",
+        "retrieved_at": "2026-11-25T12:47:24.499428+00:00",
+        "file": "originals/openmoji_turtle.svg",
+        "sha256": "4c617d364f6451249a06ed42e5b97344a1ccd5e19d8bf4d323f3e7cb111cfc22"
+      },
+      "upstream_metadata": {
+        "emoji": "🐢",
+        "hexcode": "1F422",
+        "group": "animals-nature",
+        "subgroups": "animal-reptile",
+        "annotation": "turtle",
+        "tags": "animal, terrapin, tortoise",
+        "openmoji_tags": "slow, water, sand",
+        "openmoji_author": "Robert Winslow",
+        "openmoji_date": "2022-03-29",
+        "skintone": "",
+        "skintone_combination": "",
+        "skintone_base_emoji": "",
+        "skintone_base_hexcode": "",
+        "unicode": 0.6,
+        "order": 3758
+      },
+      "author": "Robert Winslow",
+      "source_page": "https://github.com/hfg-gmuend/openmoji/blob/5acb7f049c45c57a98449122d470de9f09bb6794/black/svg/1F422.svg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "clean": {
+        "file": "clean/openmoji_turtle.png",
+        "sha256": "b157eb8b29e66ad71f7655efffb11091a599e68acb6c5d6e1aa09f97d3e3aa71",
+        "mode": "L",
+        "size": [
+          256,
+          256
+        ]
+      },
+      "preprocessing": [
+        "Original OpenMoji SVG bytes unchanged",
+        "CairoSVG svg2png at 256x256 on opaque #ffffff, no JPEG stage",
+        "Pillow convert to 8-bit L",
+        "Save lossless PNG as clean reference; no hand drawing, L0, sharpening or denoising"
+      ]
+    }
+  ],
+  "reference_definition": "Rasterized external vector artwork before any JPEG compression; not paper author L0 outputs or group-drawn shapes."
+}

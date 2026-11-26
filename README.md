@@ -13,6 +13,20 @@
 
 ## 快速开始与材料入口
 
+当前网页展示结构平滑、同参Canny、JPEG与指标三个部分，可直接打开[离线Demo](docs/demo_interactive.html)。也可使用系统Python启动本地网页：
+
+```bash
+python3 -m scripts.demo_server
+```
+
+打开终端打印的网址，默认 `http://127.0.0.1:8765/`。三个页面支持参数滑块、真实迭代、曲线与局部。无需虚拟环境或联网。Windows用 `python -m scripts.demo_server`。[当前操作、来源与核对](docs/demo_course.md)。
+
+[全屏演示PPTX](docs/L0_图像结构平滑与边缘提取_全屏演示版.pptx) · [44秒三段演示视频](docs/media/demo_three_sections_v2.mp4) · [讲稿](docs/presentation_course_notes.md)。
+
+网页已移除读写与复现页面，相关核心接口、服务API和历史结果保留。当前视频依次展示全图结构平滑、同局部边缘提取、同局部论文素材。所有展示素材来自真实照片、论文官网或注明作者的公开作品。
+
+需要实际计算并生成单次结果页时，使用下面的 CLI Demo：
+
 在项目根目录直接使用系统 Python 3.10+ 运行：
 
 ```bash
@@ -96,3 +110,11 @@ python -m l0_smoothing replay 'results/验证运行/<实际运行目录>/run.jso
 ```
 
 复现默认读取记录内的输入副本；可加 `--input` 指定另一文件。程序先核对图像模式、形状及解码后的像素，再按记录的参数重算。`run.json` 记录输入文件字节是否相同，但同像素的不同 PNG 编码不会单独造成失败；浮点结果按最大绝对误差 `1e-12` 比较，显示结果按解码后像素精确比较。可用 `--float-atol` 调整浮点容差。每次复现也新建目录并写入比较结果；返回码 0 表示匹配，1 表示输出不匹配，2 表示输入、记录或参数错误。已有目录不会被覆盖。
+
+## 成员 B：论文官网素材对照版（2026-11-25）
+
+[早期论文对照PPTX](docs/L0_图像结构平滑与边缘提取_论文对照版.pptx)、[对应PDF](docs/L0_图像结构平滑与边缘提取_论文对照版.pdf)保留A的前5页，B部分改用作者官网西瓜和蜗牛JPEG输入，实际比较作者输出与本组结果。原版材料和合成真值实验均保留。
+
+运行 `python3 -m scripts.paper_comparison run`，然后打开打印的HTML路径；已归档输入，无需虚拟环境或联网。[实验、指标口径与运行说明](docs/paper_comparison.md)、[9分钟讲稿](docs/presentation_paper_notes.md)。
+
+第9页提供 [51秒预录视频](docs/media/demo_paper_comparison.mp4)，已内嵌于上述PPTX；也可用[浏览器播放器](docs/media/demo_player.html)或系统播放器离线观看。[播放与录制说明](docs/demo_video.md)。

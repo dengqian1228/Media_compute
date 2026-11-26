@@ -1,0 +1,56 @@
+[
+  {
+    "case": "paper_9",
+    "input_size": [
+      276,
+      424,
+      3
+    ],
+    "lambda_comparisons": [
+      {
+        "lambda": 0.001,
+        "mean_absolute_channel_difference_vs_input": 0.7813155136268344,
+        "pixel_fraction_any_channel_difference_over_10": 0.003418102269619907
+      },
+      {
+        "lambda": 0.008,
+        "mean_absolute_channel_difference_vs_input": 3.4867605505423387,
+        "pixel_fraction_any_channel_difference_over_10": 0.1636843724364233
+      },
+      {
+        "lambda": 0.08,
+        "mean_absolute_channel_difference_vs_input": 9.949132941390939,
+        "pixel_fraction_any_channel_difference_over_10": 0.5635767022149303
+      }
+    ],
+    "kappa_endpoints_mean_absolute_channel_difference": 1.3278615212833835,
+    "kappa_endpoints_fraction_any_channel_over_10": 0.0329505058791359
+  },
+  {
+    "case": "paper_20",
+    "input_size": [
+      261,
+      400,
+      3
+    ],
+    "lambda_comparisons": [
+      {
+        "lambda": 0.001,
+        "mean_absolute_channel_difference_vs_input": 0.8453863346104725,
+        "pixel_fraction_any_channel_difference_over_10": 0.0023659003831417624
+      },
+      {
+        "lambda": 0.008,
+        "mean_absolute_channel_difference_vs_input": 3.988684546615581,
+        "pixel_fraction_any_channel_difference_over_10": 0.20617816091954022
+      },
+      {
+        "lambda": 0.08,
+        "mean_absolute_channel_difference_vs_input": 12.536775223499362,
+        "pixel_fraction_any_channel_difference_over_10": 0.6927298850574712
+      }
+    ],
+    "kappa_endpoints_mean_absolute_channel_difference": 1.4235089399744572,
+    "kappa_endpoints_fraction_any_channel_over_10": 0.03636973180076628
+  }
+]

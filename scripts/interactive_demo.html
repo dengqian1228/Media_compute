@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!--BASE--><title>L0 平滑 · 参数交互演示</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1f6f7;color:#18313e;font-family:system-ui,"Microsoft YaHei","Noto Sans CJK SC",sans-serif}header{height:88px;padding:14px 26px;border-bottom:1px solid #dce5e8;display:flex;justify-content:space-between;align-items:center}h1{font-size:26px;margin:0 0 4px}header p{font-size:14px;color:#55717b;margin:0}.badge{padding:8px 14px;border-radius:20px;background:#daeeea;color:#146157;font-size:14px}main{display:grid;grid-template-columns:240px minmax(0,1fr);gap:20px;padding:18px 24px}aside{background:white;padding:18px;border-radius:12px}label{display:block;font-size:14px;color:#45616c;margin:14px 0 6px}select,button{font-family:inherit;font-size:16px;width:100%;padding:8px;border:1px solid #bbced3;border-radius:7px;background:white;color:#193b49;cursor:pointer}input[type=range]{width:100%;accent-color:#176778;cursor:pointer}.value{font-size:25px;font-weight:700;color:#145e6b;margin:5px 0}.limits{display:flex;justify-content:space-between;font-size:12px;color:#587079}button{margin-top:10px;background:#155e6b;color:white;border:0}.small{font-size:12px;line-height:1.6;color:#5e737d}.views{display:flex;gap:7px;margin-bottom:10px}.views button{width:auto;margin:0;background:white;color:#155e6b;padding:7px 18px;border:1px solid #c6d9dc}.views button.active{background:#155e6b;color:white}#stage{position:relative}#stage.loading{opacity:.55}#grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{margin:0;background:white;border-radius:9px;padding:9px 12px;min-width:0}.card figcaption{font-size:15px;margin-bottom:5px;color:#1b5965}.card img{width:100%;height:184px;object-fit:contain;display:block}.three{grid-template-columns:repeat(3,minmax(0,1fr))!important}.three img{height:340px}#metrics{font-size:15px;line-height:1.6;margin:11px 0;background:#e1eeed;border-radius:8px;padding:10px 14px;min-height:64px}#status{font-size:13px;color:#4c6b76;margin:7px 0}#caption{font-size:14px;line-height:1.5;margin:7px 0;color:#6b522c}#source{font-size:11px;color:#5c747f;overflow-wrap:anywhere;margin-top:8px}#record{font-size:12px;color:#356b78}.running{background:#8b4b30!important}@media(min-height:850px){.card img{height:240px}.three img{height:470px}}@media(max-width:850px){main{grid-template-columns:1fr}aside{display:grid;grid-template-columns:1fr 1fr;gap:10px}.three img{height:240px}}
+</style></head><body>
+<header><div><h1>L0 平滑：参数变化与结果对照</h1><p>照片结构平滑 · 固定参数 Canny · JPEG 去伪影</p></div><span class="badge">本组算法预计算 · 离线交互</span></header>
+<main><aside>
+<label for="mode">实验内容</label><select id="mode"><option value="photo">照片平滑与边缘</option><option value="paper">论文官网 Clip-art</option></select>
+<label for="sourceSelect">图像</label><select id="sourceSelect"></select>
+<label for="sweep">变化参数</label><select id="sweep"><option value="lambda">平滑强度 λ</option><option value="kappa">β 增长倍率 κ</option></select>
+<div id="parameterValue" class="value">λ = 0.02</div><input id="parameter" type="range" min="0" max="44" value="0" step="1"><div class="limits"><span id="minimum"></span><span id="maximum"></span></div>
+<p id="fixed" class="small"></p>
+<button id="play">▶ 自动往返演示</button><p id="frameNote" class="small"></p>
+<a id="record" href="manifest.json" target="_blank">参数与计算记录</a><br><a class="small" href="SOURCE_CREDITS.md" target="_blank">图像来源与许可</a>
+</aside><section><div class="views"><button id="full" class="active">全图</button><button id="roi">同一局部</button></div><div id="status">正在加载预计算结果…</div><div id="stage"><div id="grid"></div><div id="metrics"></div></div><p id="caption"></p><div id="source"></div></section></main>
+<script id="demo-data" type="application/json">__DATA__</script>
+<script>
+const DATA=JSON.parse(document.querySelector('#demo-data').textContent),$=id=>document.getElementById(id);
+const cases=new Map(DATA.cases.map(c=>[c.id,c]));
+let view='full',ticket=0,timer=null,direction=1;const loaded=new Map();
+function imageReady(src){if(!loaded.has(src)){loaded.set(src,new Promise((resolve,reject)=>{let im=new Image();im.onload=()=>resolve(im);im.onerror=()=>reject(new Error('图片读取失败：'+src));im.src=src;}));}return loaded.get(src);}
+function group(){return DATA.groups.find(g=>g.id===$('sourceSelect').value);}
+function series(){return group().sweeps[$('sweep').value];}
+function selectedFrame(){return DATA.frames[series()[+$('parameter').value]];}
+function selectedCase(){return cases.get(selectedFrame().case);}
+function value(f){return f[$('sweep').value];}
+function choices(){let gs=DATA.groups.filter(g=>g.mode===$('mode').value);$('sourceSelect').replaceChildren(...gs.map(g=>new Option(g.title,g.id)));let choices=[['lambda','平滑强度 λ'],['kappa','β 增长倍率 κ']];$('sweep').replaceChildren(...choices.map(([v,t])=>new Option(t,v)));}
+function parts(c,f){let s=c.shared;return c.mode==='photo'?[['原图',s.input],['本组 L0 平滑',f.output],['原图 Canny',s.input_edges],['平滑后 Canny',f.edges]]:[['JPEG 输入',s.input],['作者公开结果（非真值）',s.reference],['本组 L0 恢复',f.output]];}
+function stop(){if(timer)clearInterval(timer);timer=null;$('play').textContent='▶ 自动往返演示';$('play').classList.remove('running');}
+async function render(){let n=++ticket,c=selectedCase(),f=selectedFrame(),paths=parts(c,f),start=performance.now();let symbol={lambda:'λ',kappa:'κ'}[$('sweep').value];$('parameterValue').textContent=`${symbol} = ${value(f)}`;$('stage').classList.add('loading');
+ try{await Promise.all(paths.map(([_,p])=>imageReady(p[view])));if(n!==ticket)return;
+ $('grid').className=c.mode==='photo'?'':'three';$('grid').replaceChildren(...paths.map(([title,p])=>{let el=document.createElement('figure');el.className='card';let cap=document.createElement('figcaption');cap.textContent=title;let img=document.createElement('img');img.src=p[view];img.alt=title;el.append(cap,img);return el;}));
+ $('status').textContent=`${c.title} · λ=${f.lambda} · κ=${f.kappa} · ${f.iterations}轮 · 原计算耗时 ${f.elapsed_seconds.toFixed(3)}秒`;
+ let metric='';if(c.mode==='photo'){metric=`全图 Canny 边缘像素：原图 ${c.input_edge_count} → 平滑后 ${f.edge_count}。两图固定阈值60/120、孔径3、L2。`;$('caption').textContent='观察纹理减少与主要轮廓的保留；边缘数量减少本身不代表效果更好。κ会影响迭代次数，也可能改变输出。';}
+ else{let region=view==='full'?'full':'roi',m=f.metrics[region],label=view==='full'?'全图':'局部';metric=`${label} 与作者的一致程度：PSNR ${m.psnr_db.toFixed(2)} dB · SSIM ${m.ssim.toFixed(4)}`;$('caption').textContent='作者输出不是干净真值；数值仅表示一致程度。官网JPEG质量和作者逐图参数未公开。';}
+ $('metrics').innerHTML=metric;$('source').textContent='来源：'+c.source_note;$('stage').classList.remove('loading');window.currentFrame={id:f.id,case:c.id,lambda:f.lambda,kappa:f.kappa,quality:c.quality,view,axis:$('sweep').value};window.lastRenderMs=performance.now()-start;if(window.recordRenderedFrames)window.recordRenderedFrames.push({...window.currentFrame,time:performance.now(),render_ms:window.lastRenderMs});
+ }catch(e){if(n===ticket){$('status').textContent=e.message;stop();}}
+}
+async function preload(){let fs=series().map(i=>DATA.frames[i]);await Promise.all(fs.flatMap(f=>parts(cases.get(f.case),f).map(([_,p])=>imageReady(p[view]))));}
+async function reset(){stop();window.demoReady=false;$('parameter').disabled=true;$('play').disabled=true;let fs=series().map(i=>DATA.frames[i]),axis=$('sweep').value;$('parameter').max=fs.length-1;let desired=axis==='lambda'?(group().mode==='photo'?.02:.008):2;let index=fs.findIndex(f=>value(f)===desired);$('parameter').value=Math.max(index,0);$('minimum').textContent=value(fs[0]);$('maximum').textContent=value(fs.at(-1));$('frameNote').textContent=`${fs.length}个真实预计算档位，拖动即时切换；无图像插值。`;
+ $('fixed').textContent=axis==='lambda'?'固定 κ=2、βmax=100000':`固定 λ=${group().mode==='photo'?.02:.008}、βmax=100000`;
+ $('status').textContent='正在预加载参数序列…';await render();try{await preload();$('parameter').disabled=false;$('play').disabled=false;window.demoReady=true;}catch(e){$('status').textContent=e.message;}}
+$('mode').onchange=()=>{choices();reset();};
+$('sourceSelect').onchange=reset;$('sweep').onchange=reset;
+$('parameter').oninput=()=>{stop();render();};
+for(let id of ['full','roi'])$(id).onclick=async()=>{stop();view=id;$('full').classList.toggle('active',id==='full');$('roi').classList.toggle('active',id==='roi');window.demoReady=false;$('parameter').disabled=true;await render();await preload();$('parameter').disabled=false;window.demoReady=true;};
+$('play').onclick=()=>{if(timer){stop();return;}$('play').textContent='⏸ 暂停自动演示';$('play').classList.add('running');timer=setInterval(()=>{let i=+$('parameter').value;if(i===series().length-1)direction=-1;if(i===0)direction=1;$('parameter').value=i+direction;render();},200);};
+choices();reset();
+</script></body></html>

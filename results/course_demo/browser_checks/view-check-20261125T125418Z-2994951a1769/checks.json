@@ -1,0 +1,272 @@
+{
+  "checked_at": "2026-11-25T12:54:21.695680+00:00",
+  "page_sha256": "7fc15ad484d95edf25313de938cbaae9843237ebad901ab6c0eb4b5892c176f5",
+  "passed": true,
+  "checks": [
+    {
+      "before": {
+        "id": 44,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "full",
+        "iteration": 20,
+        "canny_low": 60
+      },
+      "after": {
+        "id": 44,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 20,
+        "canny_low": 60
+      }
+    },
+    {
+      "before": {
+        "id": 44,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "full",
+        "iteration": 20,
+        "canny_low": 60
+      },
+      "after": {
+        "id": 44,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "full",
+        "iteration": 20,
+        "canny_low": 60
+      }
+    },
+    {
+      "before": {
+        "id": 64,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2.5,
+        "quality": null,
+        "axis": "kappa",
+        "view": "full",
+        "iteration": 17,
+        "canny_low": 60
+      },
+      "after": {
+        "id": 64,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2.5,
+        "quality": null,
+        "axis": "kappa",
+        "view": "roi",
+        "iteration": 17,
+        "canny_low": 60
+      }
+    },
+    {
+      "before": {
+        "id": 64,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2.5,
+        "quality": null,
+        "axis": "kappa",
+        "view": "full",
+        "iteration": 17,
+        "canny_low": 60
+      },
+      "after": {
+        "id": 64,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2.5,
+        "quality": null,
+        "axis": "kappa",
+        "view": "full",
+        "iteration": 17,
+        "canny_low": 60
+      }
+    },
+    {
+      "before": {
+        "id": 512,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "iteration",
+        "view": "full",
+        "iteration": 22,
+        "canny_low": 60
+      },
+      "after": {
+        "id": 512,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "iteration",
+        "view": "roi",
+        "iteration": 22,
+        "canny_low": 60
+      }
+    },
+    {
+      "before": {
+        "id": 512,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "iteration",
+        "view": "full",
+        "iteration": 22,
+        "canny_low": 60
+      },
+      "after": {
+        "id": 512,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "iteration",
+        "view": "full",
+        "iteration": 22,
+        "canny_low": 60
+      }
+    },
+    {
+      "before": {
+        "id": 30,
+        "case": "photo_beach",
+        "task": "edge",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "canny",
+        "view": "full",
+        "iteration": 22,
+        "canny_low": 140
+      },
+      "after": {
+        "id": 30,
+        "case": "photo_beach",
+        "task": "edge",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "canny",
+        "view": "roi",
+        "iteration": 22,
+        "canny_low": 140
+      }
+    },
+    {
+      "before": {
+        "id": 30,
+        "case": "photo_beach",
+        "task": "edge",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "canny",
+        "view": "full",
+        "iteration": 22,
+        "canny_low": 140
+      },
+      "after": {
+        "id": 30,
+        "case": "photo_beach",
+        "task": "edge",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "canny",
+        "view": "full",
+        "iteration": 22,
+        "canny_low": 140
+      }
+    },
+    {
+      "before": {
+        "id": 407,
+        "case": "jpeg_openmoji_fox_q95",
+        "task": "jpeg",
+        "lambda": 0.008,
+        "kappa": 2,
+        "quality": 95,
+        "axis": "quality",
+        "view": "full",
+        "iteration": 23,
+        "canny_low": 60
+      },
+      "after": {
+        "id": 407,
+        "case": "jpeg_openmoji_fox_q95",
+        "task": "jpeg",
+        "lambda": 0.008,
+        "kappa": 2,
+        "quality": 95,
+        "axis": "quality",
+        "view": "roi",
+        "iteration": 23,
+        "canny_low": 60
+      }
+    },
+    {
+      "before": {
+        "id": 407,
+        "case": "jpeg_openmoji_fox_q95",
+        "task": "jpeg",
+        "lambda": 0.008,
+        "kappa": 2,
+        "quality": 95,
+        "axis": "quality",
+        "view": "full",
+        "iteration": 23,
+        "canny_low": 60
+      },
+      "after": {
+        "id": 407,
+        "case": "jpeg_openmoji_fox_q95",
+        "task": "jpeg",
+        "lambda": 0.008,
+        "kappa": 2,
+        "quality": 95,
+        "axis": "quality",
+        "view": "full",
+        "iteration": 23,
+        "canny_low": 60
+      }
+    }
+  ],
+  "chart_within_1000px_viewport": true,
+  "current_task_io": true,
+  "verification_script": "verification_script.py",
+  "script_sha256": "32064ca8fb1f1f267966014dcf21efb1554b0468318e09db5820bcf4ca117bb0",
+  "run_from": "project root, system Python; PYTHONPATH=/tmp/media-video-tools:$PWD PLAYWRIGHT_BROWSERS_PATH=/tmp/media-playwright-browsers"
+}

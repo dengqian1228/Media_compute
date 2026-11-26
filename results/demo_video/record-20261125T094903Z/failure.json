@@ -1,0 +1,7 @@
+{
+  "status": "aborted_after_successful_cli_run_before_result_page",
+  "cause": "relative result path passed to Path.relative_to with absolute repository root",
+  "correction": "resolve result path against repository before navigating browser",
+  "experiment_retained": "results/paper_comparison/video_demo/paper-20261125T094907Z-2845d2f1b117",
+  "included_in_final_video": false
+}

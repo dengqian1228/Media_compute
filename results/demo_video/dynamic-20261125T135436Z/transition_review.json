@@ -1,0 +1,46 @@
+{
+  "accepted_for_presentation": false,
+  "reason": "transition into edge tab briefly rendered full view before ROI selection",
+  "incorrect_transition_frames": [
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 17845.60000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 18170.10000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 18579.800000000745
+    }
+  ],
+  "completed_sweeps": 7
+}

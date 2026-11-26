@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-26T10:00:19.154743+00:00",
+  "executor": "AI",
+  "unit_tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "passed": 20,
+    "seconds": 4.941
+  },
+  "demo_artifact_hashes_verified": 2041,
+  "latest_pptx_pdf_video_hashes_verified": true,
+  "latest_deck": "docs/L0_图像结构平滑与边缘提取_全屏演示版",
+  "remote_before_commit": "0d0bddf",
+  "git_identity": "蒋天乐 <jtl23@mails.tsinghua.edu.cn>"
+}

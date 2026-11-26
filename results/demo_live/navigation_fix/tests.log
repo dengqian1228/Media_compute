@@ -1,0 +1,46 @@
+test_concurrent_compute_is_rejected (tests.test_demo_server.DemoServerTests) ... 127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/run HTTP/1.1" 409 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /api/status HTTP/1.1" 200 -
+ok
+test_cross_origin_hidden_paths_and_bad_records_rejected (tests.test_demo_server.DemoServerTests) ... 127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /.git/config HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /%2e%2e/README.md HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /docs/../../.git/config HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/run HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /api/status HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/replay HTTP/1.1" 400 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/replay HTTP/1.1" 400 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/replay HTTP/1.1" 400 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/run HTTP/1.1" 400 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/run HTTP/1.1" 400 -
+ok
+test_external_link_can_open_demo_but_cannot_call_api (tests.test_demo_server.DemoServerTests) ... 127.0.0.1 - - [25/Nov/2026 21:31:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /docs/demo_interactive.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/run HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/replay HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /api/status HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/run HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/replay HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /api/status HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/run HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "POST /api/replay HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /api/status HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET / HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET / HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET / HTTP/1.1" 403 -
+127.0.0.1 - - [25/Nov/2026 21:31:52] "GET /api/status HTTP/1.1" 200 -
+ok
+test_gray_upload_keeps_original_bytes_and_replays (tests.test_demo_server.DemoServerTests) ... 127.0.0.1 - - [25/Nov/2026 21:31:53] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 21:31:53] "POST /api/replay HTTP/1.1" 200 -
+ok
+test_only_explicit_root_documents_are_public (tests.test_demo_server.DemoServerTests) ... 127.0.0.1 - - [25/Nov/2026 21:31:53] "GET /AI_LOG.md HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 21:31:53] "GET /README.md HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 21:31:53] "GET /private.txt HTTP/1.1" 404 -
+127.0.0.1 - - [25/Nov/2026 21:31:53] "GET /.git/config HTTP/1.1" 403 -
+ok
+test_rgb_run_saves_outputs_and_replays (tests.test_demo_server.DemoServerTests) ... 127.0.0.1 - - [25/Nov/2026 21:31:54] "POST /api/run HTTP/1.1" 200 -
+127.0.0.1 - - [25/Nov/2026 21:31:55] "POST /api/replay HTTP/1.1" 200 -
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.310s
+
+OK

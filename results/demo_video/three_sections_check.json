@@ -1,0 +1,70 @@
+{
+  "checked_at": "2026-11-25T13:57:31.928489+00:00",
+  "passed": true,
+  "duration_seconds": 43.64,
+  "ordered_sections": [
+    "smooth",
+    "edge",
+    "jpeg"
+  ],
+  "all_displayed_frames_obey_view_and_source_constraints": true,
+  "sweep_points": [
+    {
+      "section": 1,
+      "label": "01_结构平滑lambda全图",
+      "points": 45
+    },
+    {
+      "section": 1,
+      "label": "02_结构平滑kappa全图",
+      "points": 21
+    },
+    {
+      "section": 1,
+      "label": "03_实际迭代全图",
+      "points": 22
+    },
+    {
+      "section": 2,
+      "label": "04_边缘提取lambda同局部",
+      "points": 45
+    },
+    {
+      "section": 2,
+      "label": "05_Canny同参阈值同局部",
+      "points": 13
+    },
+    {
+      "section": 3,
+      "label": "06_论文西瓜同局部连续参数",
+      "points": 45
+    },
+    {
+      "section": 3,
+      "label": "07_论文蜗牛同局部连续参数",
+      "points": 45
+    }
+  ],
+  "browser_played_past_one_second": true,
+  "seek_positions": [
+    7,
+    23,
+    33.64,
+    41.64
+  ],
+  "browser_errors": [],
+  "unchanged_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+  ],
+  "pptx_embedded_video_identical": true,
+  "slide9_no_external_video_relationships": true,
+  "executor": "AI; no PowerPoint/WPS or member review"
+}

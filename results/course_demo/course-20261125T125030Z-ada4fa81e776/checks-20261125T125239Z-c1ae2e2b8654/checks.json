@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-25T12:52:39.251928+00:00",
+  "passed": true,
+  "frames_checked": 557,
+  "artifacts_checked": 2041,
+  "edge_pairs_checked": 39,
+  "workflow_modes": [
+    "RGB",
+    "L"
+  ],
+  "all_metrics_and_rois_recomputed": true,
+  "executor": "AI; not member review"
+}

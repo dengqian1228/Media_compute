@@ -1,0 +1,3 @@
+# Optional recording tools only; not needed to play MP4 or run Demo
+playwright==1.65.2
+imageio-ffmpeg==0.8.1

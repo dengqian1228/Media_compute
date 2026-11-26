@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-11-25T13:32:21.360202+00:00",
+  "passed": true,
+  "actual_cross_site_link_navigation": true,
+  "navigation_headers": {
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "connection": "keep-alive",
+    "host": "127.0.0.1:45283",
+    "referer": "http://localhost:45435/",
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-user": "?1",
+    "upgrade-insecure-requests": "1",
+    "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.8154.6 Safari/537.36",
+    "sec-ch-ua": "\"HeadlessChrome\";v=\"159\", \"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"159\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\""
+  },
+  "demo_loaded": true,
+  "same_origin_api_run_button_enabled": true,
+  "browser_errors": []
+}

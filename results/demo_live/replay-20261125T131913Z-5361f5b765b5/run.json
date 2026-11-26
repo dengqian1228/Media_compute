@@ -1,0 +1,57 @@
+{
+  "record_version": 1,
+  "kind": "replay",
+  "created_at": "2026-11-25T13:19:13.857774+00:00",
+  "input": {
+    "source_path": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo_live/run-20261125T131913Z-2382b92319cc/input.png",
+    "copy": "input.png",
+    "file_sha256": "83aaa29ba99ad7578f19241c0c386ceed01c7a92837e96d664074416c66710c4",
+    "pixel_sha256": "412bd3b6e9f094211b6268a2c58d277d91b3a30dc1ae3327d4c0ab114572603a",
+    "mode": "L",
+    "shape": [
+      349,
+      512
+    ]
+  },
+  "output": {
+    "float": "output.npy",
+    "display": "output.png",
+    "shape": [
+      349,
+      512
+    ],
+    "dtype": "float64",
+    "display_pixel_sha256": "a190ce5ab384f9dc66033ee0ead37194207b310455fb9149a007f378849f8d94"
+  },
+  "parameters": {
+    "lambda": 0.02,
+    "kappa": 2.0,
+    "beta_max": 100000.0
+  },
+  "iterations": 22,
+  "elapsed_seconds": 0.3221316490016761,
+  "environment": {
+    "python": "3.10.12",
+    "numpy": "2.2.4",
+    "pillow": "11.3.0",
+    "platform": "Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
+  "comparison": {
+    "reference_record": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo_live/run-20261125T131913Z-2382b92319cc/run.json",
+    "input_decoded_pixels_equal": true,
+    "input_file_bytes_equal": true,
+    "float_atol": 1e-12,
+    "max_float_abs_error": 0.0,
+    "mean_float_abs_error": 0.0,
+    "float_within_tolerance": true,
+    "different_pixel_count": 0,
+    "max_pixel_channel_error": 0,
+    "display_pixels_equal": true,
+    "environment_versions_equal": {
+      "python": true,
+      "numpy": true,
+      "pillow": true
+    },
+    "passed": true
+  }
+}

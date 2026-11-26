@@ -415,3 +415,145 @@ AI：现有讲稿安排A讲前5页、B讲后5页，各4分30秒。你这部分�
 - 本地保留：更新前只有 AI_LOG.md 存在未提交修改；先备份，再完整保留本地日志内容，追加远端成员 A 补录。备份与核对结果在仓库上一级 `sync-backups/20261125-171920/`，本地改动继续保持未提交。
 - 智能体验证：报告源摘要匹配，报告6张和幻灯片24张内嵌图片解码通过，10页展示共540秒，交付工具检查范围内的Markdown本地链接通过，新增PDF文件头有效，系统Python运行Demo的help入口成功；未重跑算法实验，未进行浏览器或PDF视觉核验。
 - 发现的既有差异：远端 report_render.json 的HTML摘要与检出的LF文件不一致；将同一文件换行转为CRLF后摘要完全匹配，确认是换行口径差异。未改写队友文件；原交付脚本的严格字节摘要检查仍会对此报错。
+
+## 成员 B：论文官网 Clip-art 对照与展示更新
+
+- 记录时间：2026-11-25T17:38:35+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户本轮原文：“我希望ppt我那个部分演示的图片可以优先使用真实图片.如果对应的论文有图片我们优先使用论文图片并比较论文结果与我们的结果.”
+- 实际资料核对：访问 Xu 等2011论文项目页与 `ClipArt.htm`，取得官网提供的JPEG输入和作者PNG结果配对。本轮项目页的论文PDF链接返回404，因此没有声称核对正文图号。先在/tmp下载10组官网样例用于选图，最终将西瓜9与蜗牛20两组原始文件、来源页、下载时间、URL、SHA-256、尺寸、采样及量化表归档到 `data/paper_clipart/`。它们是官网实际Clip-art素材，不是本组新合成图，也不是实拍照片；页面未给出清晰真值、逐图参数、JPEG质量或明确图片许可，均如实记为未知。
+- 实际实现与实验：新增 `scripts/paper_comparison.py`，prepare下载并拒绝覆盖旧来源；run复用本组 `run_and_save` / `smooth_l0`，对原尺寸输入运行λ=0.002/0.008/0.02/0.08，κ=2、βmax=100000，共8组。未修改成员A核心、图像输入或旧实验，未调用作者算法接口。主展示λ=0.008沿用已有Demo默认值，在计算作者一致性前确定。运行命令为 `python3 -m scripts.paper_comparison prepare`、`python3 -m scripts.paper_comparison run`。输出 `results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e/`，实测总6.765250秒（含读写和离线制页），每次run.json包含真实环境、耗时、参数和输入副本，原浮点输出与显示PNG均保留。
+- 指标与观察：全图及同ROI PSNR/SSIM明确解释为“与作者输出的一致程度”，不冒充真值恢复质量或严格同参复现。西瓜λ=.008全图34.1725dB／.977844，蜗牛47.8521dB／.997680；蜗牛λ=.08降为24.6336dB／.903928。AI查看三方全图和相同局部，观察到默认参数下轮廓附近杂色减少、蜗牛接近作者输出；强平滑时螺旋与细边发生变化。并未据此推断作者参数或声称超过论文。四档结果均保留，原合成24组恢复及30行有真值指标保留作补充。
+- 展示材料：新增 `scripts/build_paper_presentation.py`，生成“L0_图像结构平滑与边缘提取_论文对照版.pdf/.pptx”。PDF直接保留队友最新原版前5页；PPTX前5页以整页图片导入，B后5页文字、图片可独立编辑。B页安排为官网数据与比较口径、西瓜三方对照、蜗牛与强平滑对照、官网输入Demo、两类实验的结论边界；仍为A270+B270=540秒。新增讲稿、来源资产清单、实验说明及README入口，原版PDF和HTML不覆盖。制稿依赖只安装至/tmp目录，没有创建虚拟环境或修改系统包；Demo继续用系统Python。
+- 实际修正：制稿初版将长运行命令分两行但未显示续行符，预览检查时改为单行 `python3 -m scripts.paper_comparison run`，再重新导出。PDF预览已由AI逐页查看，不能当作成员本人检查或PowerPoint/WPS渲染验证。
+- 智能体执行验证：`python3 -m scripts.paper_comparison check results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e`通过产物摘要与8行全图/局部指标重算，两幅λ=.008核心复现通过。原14项单元测试全部通过（1.840秒）；18张结果页内嵌PNG解码、新文档链接通过。新版PDF前5页与原PDF逐页渲染像素相同，PPTX为10页且对象边界在画布内。真实检查汇总见 `results/paper_comparison/verification.json`。没有进行PowerPoint/WPS或浏览器渲染、人工排练与课堂展示。本轮未提交或推送Git。
+
+## 成员 B：展示文字改为最终稿口吻
+
+- 记录时间：2026-11-25T17:43:07+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。按本人要求移除面向观众的修改过程表述。
+- 第6页标题改为“Clip-art JPEG 去伪影：数据与比较方法”；同步将B页及讲稿中的“换用”“已改成”“原合成”“旧的Demo”等改为直接介绍实验、数据和演示的表述。修改制稿源并重新生成PDF、PPTX、讲稿、预览与资产清单；实验数据和参数不变。
+- 智能体检查：从PDF、PPTX和讲稿提取文字核对旧措辞已清理；查看第6页PDF预览；A前5页与原PDF逐页渲染像素相同。未重跑算法，未声称PowerPoint人工核验。未提交或推送Git。
+
+## 成员 B：第9页预录 Demo 视频
+
+- 记录时间：2026-11-25T17:52:33+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户原文：“第九页我想换成一段延时视频防止现场演示出错,你能帮我录制演示视频吗”。采用第9页预录播放方案，保留75秒讲解预算。
+- 实际制作：新增 `scripts/record_demo_video.py`，Playwright录制Chromium浏览器内容；本地页面按钮实际调用 `/usr/bin/python3 -m scripts.paper_comparison run --output-dir results/paper_comparison/video_demo`，画面读取实际stdout并展示本次输出。录屏展示西瓜、蜗牛全图及同ROI、λ=.008与.08的对照和四档真实指标。为视频显示增加浏览标签和排版，不改变源图像像素或指标。不是Windows桌面或PowerPoint录屏，也未编造终端输出。
+- 成片：`docs/media/demo_paper_comparison.mp4`，51.16秒、1280×720、25fps、H.264/yuv420p，无声、未加速。来自原始浏览器WebM转码；封面来自同次浏览器截图。真实浏览时间线、返回码、命令、输出、浏览器版本、转码命令及文件摘要见同名JSON；本次录制实验目录为 `results/paper_comparison/video_demo/paper-20261125T094931Z-5866f9217397`。成功录制目录为 `results/demo_video/record-20261125T094927Z/`。
+- 环境：初始无ffmpeg、Playwright和Linux浏览器。录制依赖安装至 `/tmp/media-video-tools`，Chromium与其录制编码器安装至 `/tmp/media-playwright-browsers`；没有创建虚拟环境或改变系统包。一次在pip安装尚未完成时调用浏览器安装入口返回“No module named playwright”，待安装完成后成功。最终MP4和内嵌视频不依赖这些临时工具目录。
+- 实际失败与修正：首次录制页面的JavaScript换行被Python字符串展开导致语法错误，按钮未执行Demo；改为raw字符串并增加浏览器错误日志。第二次Demo已成功，但结果路径为相对路径，录制导航直接对绝对仓库调用relative_to失败；改为先按仓库解析绝对路径。两次失败目录均有failure.json，未进入成片；第二次实际生成的实验保留。第三次完整录制成功，未把失败流程描述成成功演示。
+- 材料更新：第9页标题“预录演示：程序运行与结果对照”，PPTX嵌入完整MP4并使用真实截图作封面，PDF显示封面和独立文件位置；补充讲稿、浏览器播放器、播放说明和README入口。视频约51秒，余下约24秒可开场与收尾。其他9页内容保持不变；不把预录演示声称为课堂实时执行。
+- 智能体验证：MP4全段FFmpeg解码通过；Chromium实际播放并在18、36、48秒定位成功，AI查看命令完成、全图、强平滑与指标画面。PPTX第9页内嵌MP4摘要等于独立成片，视频关系没有外部路径；其他9页PDF渲染像素相同。对视频采用的新实验执行paper_comparison check，8行指标重算和两组核心复现通过。记录见 `results/demo_video/playback_check.json`、`presentation_check.json` 与实验checks目录。未执行PowerPoint/WPS或投影实机验证，未声称成员本人已核验。没有修改核心算法，本轮未重新运行原14项单元测试，未提交或推送Git。
+
+## 成员 B：单参数预计算交互 Demo 与动态录屏
+
+- 记录时间：2026-11-25T20:22:59+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。以下是本轮实际实现记录，不是成员人工核验或课堂展示记录。请求原文如下；消息本身的精确时间未取得，不用本条记录时间代替。
+
+> 我希望demo能动态的演示参数调整的变化,而且不止局限我做的部分,还有成员A的那部分的参数变化产生的变化.
+>
+> 或许可以提前计算,这样可以流畅的演示随着参数变化,图片的改变
+>
+> 或许可以在演示视频和demo之中先预先处理好一个参数固定另一个参数连续变化的图片然后可以通过拖动参数的大小展示一直连续的变化
+
+- 采用与实现：新增 `scripts/interactive_demo.py` 与HTML模板，复用本组 `smooth_l0`，为A的三幅归档照片和同参Canny、B的两幅论文Clip-art与两幅合成真值图提供滑块。按请求固定其他参数，单独改变λ、κ或JPEG质量Q。λ有45档（.001—.08），κ有21档（1.5—2.5），Q有19档（5—95）。页面预加载当前序列，拖动时切换真实计算PNG；不做插值，不将缓存切换说成实时求解或无限连续采样。全图／同ROI、指标和固定参数同时更新，自动往返播放只变化当前参数。
+- 实际计算：先完成264组较稀疏参数结果，目录 `results/interactive_demo/interactive-20261125T120637Z-ca792b9c31b8/`；按随后明确的单参数密集采样要求，生成最终491组目录 `results/interactive_demo/interactive-20261125T121019Z-66b0fbbdd978/`，耗时223.791秒（含读写和指标），复用摘要匹配的53组，新增438次核心计算。命令 `python3 -m scripts.interactive_demo build --reuse results/interactive_demo/interactive-20261125T120637Z-ca792b9c31b8`。三幅照片195组，论文两图130组，真值两图166组；每类中λ／κ的公共点去重。核心及A原实验未改动。
+- 记录口径：manifest保存系统Python 3.10.12、NumPy 2.2.4、Pillow 11.3.0、OpenCV 4.13.0、来源与输入摘要、JPEG编码设置、参数、迭代次数、逐组算法耗时和结果摘要。展示缓存保留原输入字节、无损显示PNG与浮点摘要，不逐帧保存NPY；原实验NPY保留。核心浮点结果可重算。论文作者结果仅作为一致性参照，原JPEG质量未知；Q滑块仅用于有干净真值的合成图。来源许可与署名单独附在缓存目录。
+- 智能体执行验证：对最终缓存执行 `python3 -m scripts.interactive_demo check results/interactive_demo/interactive-20261125T121019Z-66b0fbbdd978`，1591项文件摘要、全部491组输出ROI及对应Canny／全图局部指标通过；三类输入各抽查一组核心浮点摘要与显示像素完全相同。检查文件位于目录内 `checks-20261125T121503Z-f5a9095406e8/checks.json`。Chromium检查8种素材／参数组合的24个位置、自动播放、图片完整加载，无JavaScript错误或网络请求；见 `results/interactive_demo/browser_checks/checks.json`。浏览器记录的render_ms仅为JavaScript更新耗时，不用来声称端到端帧率。
+- 视频：新增 `scripts/record_dynamic_demo.py`，实际录制Chromium鼠标拖动，依次展示照片λ、照片κ、砖墙局部与Canny、论文蜗牛、合成小屋Q、灰度细线λ。成片 `docs/media/demo_dynamic_parameters.mp4` 为45.88秒、1600×900、25fps、H.264/yuv420p，无声、未加速，标注预计算。原始WebM、截图、真实显示帧与参数时间线保存在 `results/demo_video/dynamic-20261125T121527Z/` 及同名视频JSON。使用/tmp工具目录，没有创建虚拟环境；播放和交互均不依赖Python或临时工具。
+- 展示材料：新建“L0_图像结构平滑与边缘提取_动态演示版.pptx/.pdf”，第9页嵌入动态成片。A前5页及其余B页保持原版内容，前5页PPTX仍为原PDF整页图片。补充交互入口、播放器、操作说明和讲稿；第9页仍75秒，全场9分钟。没有覆盖已打开的论文对照版PPTX或删除Office锁文件。
+- 交付验证：成片FFmpeg全段解码通过，Chromium实际播放并定位10／22／35／42秒通过。PPTX共10页，第9页内嵌MP4与独立文件摘要一致，无外部视频关系；其余9页PDF与论文对照版逐页渲染像素一致。AI查看第9页预览与录屏画面；记录 `results/demo_video/dynamic_playback_check.json`、`dynamic_presentation_check.json`。没有执行PowerPoint/WPS或投影实机核验。原核心未改动，本轮不重复原14项单元测试。
+- 实际修正：一次批量文档补丁因对docs/demo.md使用不存在的占位行而未应用，随后按真实标题重新追加，未丢失原文档。此前较稀疏缓存保留；密集缓存为当前入口。未发现需要修改核心算法的问题，没有编造算法纠错或成员理解经历。
+- 当前回复要点：打开docs/demo_interactive.html，选择素材和变化参数，直接拖动即可；视频与新PPTX均在docs中。以上记录是执行摘要及可核实请求原文，不能代替尚未归档的完整会话。本轮未提交或推送Git。
+
+## 成员 B：展示素材仅使用真实照片与论文官网样例
+
+- 记录时间：2026-11-25T20:32:01+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户原文：“为什么还有你自己画的房子和图形,我不是希望所有照片是真实的或者论文实用的吗”。消息精确时间未取得，本条时间是追加记录时间。
+- 实际问题与修正：上一轮为了展示有真值指标，仍在交互Demo和录屏里保留本组绘制的小屋与线条图，没有贯彻用户对展示素材的要求。本轮删除当前交互脚本的合成数据构建分支与页面入口，录制脚本不再访问合成素材。课堂展示仅含沙滩、砖墙、向日葵三幅真实照片与论文官网西瓜、蜗牛。λ、κ继续单独变化；官网输入原始JPEG质量未知，不保留Q滑块，也不把作者输出当作干净真值。历史实验、旧视频和缓存保留归档，不伪造历史。
+- 当前缓存：`results/interactive_demo/interactive-20261125T122838Z-fce049eb5fea/`，325组，其中照片195组、论文素材130组；命令 `python3 -m scripts.interactive_demo build --reuse results/interactive_demo/interactive-20261125T121019Z-66b0fbbdd978`。全部325组复用已核对源文件、核心和输出摘要的真实计算，重新生成局部、Canny或指标。整理耗时21.621秒，不把它称作325次算法求解耗时。每帧保留原计算耗时与复用来源摘要。A核心和原实验未修改。
+- 智能体验证：`interactive_demo check`通过1067项文件摘要、325组输出ROI与Canny／指标重算，照片与论文两类各复现一组浮点摘要及显示像素。记录 `checks-20261125T122929Z-c3545fbcd5fe/checks.json`。Chromium覆盖五幅素材×两种参数×两种视图×三个位置，共60项；图片加载、自动往返保持另一参数固定、无JS错误或网络请求通过，见 `results/interactive_demo/real_sources_browser_checks/checks.json`。当前入口HTML及讲稿没有合成图条目。
+- 视频：实际重新录制鼠标拖动，后两段为论文西瓜λ与论文蜗牛κ；所有记录帧的case仅为photo或paper。成片 `docs/media/demo_dynamic_real_sources.mp4`，44.76秒、1600×900、25fps、H.264、无声、正常速度。原始录屏与时间线位于 `results/demo_video/dynamic-20261125T122908Z/`，FFmpeg全段解码通过；Chromium实际播放和10、22、35、42秒定位通过。没有使用虚拟环境，交互及播放无需Python。
+- PPT与讲稿：第6页明确一致性指标边界，第9页嵌入新视频，第10页只总结真实照片与论文素材；第8页讲稿引用同一论文素材的强平滑轮廓变化。原10页时间分配不变，A前5页保持原始PDF内容。第一次写入原“动态演示版.pptx”遇到PermissionError，未强行删除或解锁；将已写PDF恢复到备份，使旧PDF/PPTX保持对应。随后成功另存为 `docs/L0_图像结构平滑与边缘提取_课堂演示版.pptx/.pdf`，更新README及操作说明入口。修改前材料备份在 `results/demo_video/presentation-before-source-correction-20261125T122959Z/`。
+- 交付核对：PPTX10页，第9页内嵌视频摘要与独立MP4一致、无外部视频关系；新PDF第1—5、7、8页与论文对照版逐页渲染像素一致，第6、9、10页为本轮修改。AI查看第10页预览和实际播放中的论文西瓜画面；记录 `results/demo_video/real_sources_playback_check.json`、`real_sources_presentation_check.json`。新文档本地链接及git diff --check通过。未声称PowerPoint/WPS或本人实机核验；本轮未提交、未推送Git。
+
+## 成员 B：四项功能与 Demo 分组核对
+
+- 归档时间：2026-11-25T20:41:13+08:00（系统时间）；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。
+- 用户询问为什么只有两个展示任务。已核对仓库的课程要求摘录，区分素材入口与四块功能要求；说明读写复现未单独展示，以及作者一致性不能替代干净参考的JPEG恢复评价。原始课程PDF当前未找到，未声称核验原件。
+- [本轮完整提问及回答](docs/ai_records/member_b_demo_requirements_20261125.md)。本轮只核对与回答，未把待补展示写成完成，未提交或推送Git。
+
+## 成员 B：覆盖四项课程功能的动态 Demo
+
+- 记录时间：2026-11-25T20:59:06+08:00；使用者：蒋天乐，2023010721；工具：Codex（含协作Agent），具体模型版本未确认。用户原文：“我希望所有课程要求的都能在demo之中演示,而且能动态展示的都要动态展示”。原消息精确时间未取得，此处为追加记录时间。
+- 要求核对：读取AGENTS.md、docs/requirements.md、原核心与读写复现接口，按结构平滑18分、读写复现6分、同参Canny6分、JPEG去伪影及比较10分分为四个独立页面。报告和本人课堂讲解仍为独立交付，Demo提供对应证据，不写成自动获分。原课程PDF当前不在目录，沿用既有摘录，不声称重新核对PDF原件。
+- 实际协作：本轮实际调用三个协作Agent，分别实现公开素材受控JPEG实验、本地真实读写复现服务、浏览器核对。Codex完成四页集成、实际迭代观测、录屏、材料与日志整理。执行结果均落在仓库，未将AI操作记作成员本人运行或人工验收。
+- 素材与新JPEG实验：新增scripts/public_jpeg_demo.py；浏览核实并归档OpenMoji官方固定commit `5acb7f049c45c57a98449122d470de9f09bb6794` 的狐狸（Sofie Ascherl，彩色）与乌龟（Robert Winslow，线稿），CC BY-SA4.0。原SVG、上游元数据、LICENSE、来源与转换环境保存data/public_clipart/。白背景栅格化256×256，RGB狐狸／L乌龟；该压缩前PNG定义为受控实验干净参考，不冒充论文真值、实拍图或本组绘图。制备时CairoSVG等工具仅放/tmp，没有虚拟环境；实验使用系统Python与Pillow11.3。
+- 实际计算：`python3 -m scripts.public_jpeg_demo build`生成 `results/public_jpeg_demo/public-jpeg-20261125T124736Z-cc942891889c/`，166组真实L0恢复、38个JPEG基线，耗时32.3366秒；λ45档、κ21档、Q19档，单因素固定条件完整记录。全部使用本组核心。全图29组PSNR下降、14组SSIM下降，CSV完整保留。狐狸Q30/λ=.017259/κ2为31.2301→32.7107dB、SSIM .946113→.974424；乌龟Q30/λ=.08/κ2为31.9761→26.7794dB、.972928→.958181。独立check重算所有指标／ROI／摘要，并对RGB/L各抽查一组核心浮点与显示复现，全部通过。
+- 四页交互：新增scripts/course_demo.py、course_demo.html。①多图λ／κ、实际算法迭代、全图／局部、前后分割与耗时曲线；②RGB／灰度样例或本机上传、真正计算、保存PNG/NPY/JSON与按记录重算；③原图／平滑图与两张同参Canny，λ／κ／迭代及13档阈值对；④公开干净作品的JPEG Q／λ／κ、三方全图局部、PSNR／SSIM曲线及负改善提示，另有论文官网作者对照。作者一致性与真值评价分开，不恢复本组自绘房子或线条图。
+- 迭代与合并：通过Python观测钩子收集原core._fft_update的真实返回值，不改核心；三幅照片固定λ=.02/κ2各22轮，最终帧与既有对应输出像素相同。每帧保留β、λ/β和含观测开销的累计时间，不将其作普通运行性能。命令 `python3 -m scripts.course_demo build --jpeg results/public_jpeg_demo/public-jpeg-20261125T124736Z-cc942891889c`，输出 `results/course_demo/course-20261125T125030Z-ada4fa81e776/`。557个L0显示帧=325照片论文参数+166公开JPEG+66迭代，另39对阈值结果；55.604秒为复制、观测、实际运行复现和制页总时长，不声称557次求解都在该时间内完成。输入、来源、复用摘要及环境均归档。
+- 真实服务：新增scripts/demo_server.py，命令 `python3 -m scripts.demo_server`，只监听127.0.0.1；直接复用run_and_save/replay_record，输出results/demo_live新目录，不执行shell。支持8位L/RGB单帧PNG/JPEG、≤4MiB、总像素≤1024×1024，保留上传原字节。源图与结果、float64 NPY、记录JSON可下载。离线HTML只显示归档证据，明确要求从服务网址执行本次计算。5项HTTP测试分别执行通过：前4项实际运行、复现、路径/Origin/并发校验3.194秒；随后根文档白名单专项0.555秒。
+- 实际修正：服务测试首次用urllib自定义Host受环境代理影响，改为直连HTTPConnection验证，不放松Host限制。UI审阅发现超大新上传可能沿用旧文件、FileReader竞态、运行中切换输入、失败后旧结果残留及旧window.ioReplay状态；已用上传代次标识、读取/运行中禁用输入和清空当前结果修正。全图／ROI切换原先会回默认参数，修为保留当前档位；1000px窗口缩短图片高度以完整展示曲线。错误状态、切换保持参数均有实际专项检查，未编造核心算法纠错。
+- 集成验证：course_demo check通过2041项文件摘要、557帧的全量ROI／指标／Canny、39对阈值与RGB/L重算；记录 `checks-20261125T125239Z-c1ae2e2b8654/checks.json`。浏览器实际检查31组任务／素材／参数×两视图×三位置共186项，曲线点击、SSIM、负例、自动播放、前后分割和图片路径通过；离线归档与禁用运行正确。服务浏览器完成RGB样例、L样例、RGB上传各一次run+replay，显示像素差0、浮点误差合规，下载PNG与输出字节一致，0JS错误、0外部网络请求。证据在results/course_demo/browser_checks/check-20261125T125228Z-672c8edda17e/；另io-error-check-20261125T125337Z-d8d98eb8a280/、view-check-20261125T125418Z-2994951a1769/保存错误状态及10次视图切换专项。
+- 视频与PPT：新增scripts/record_course_demo.py，实际录制四项交互；读写段真实运行并重算灰度和RGB，API原响应归档到视频JSON。成片docs/media/demo_course_all.mp4，50.36秒、1600×1000、25fps、H.264，无声、未加速；原始WebM与截图在results/demo_video/dynamic-20261125T125347Z/。参数/迭代为预计算、IO为录制时实际运行，标识清楚。新增“完整功能演示版.pptx/.pdf”，第9页嵌入视频，第6/10页区分公开真值与论文一致性；A前5页和原7/8页渲染不变，双人540秒及第9页75秒安排保留。旧PPT不覆盖。
+- 成片核验：FFmpeg全段解码通过，Chromium实际播放并定位8/18/29/40/47秒；PPTX10页，视频摘要与独立MP4一致、无外部关系，画面保持原比例。AI目视第10页与录屏中的实际复现界面。记录results/demo_video/course_playback_check.json、course_presentation_check.json。文档链接、语法检查及git diff --check通过；core.py和workflow.py无修改。未声称PowerPoint/WPS、投影或成员人工核验完成。
+- 交付入口：docs/demo_course.md、README及docs/demo_interactive.html指向四项功能，讲稿为presentation_course_notes.md。本轮未提交或推送Git。
+
+## 成员 B：论文两幅素材的变化可见性检查
+
+- 记录时间：2026-11-25T21:10:30+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户原文：“为什么西瓜和后一个蜗牛的任务效果展示我没有看到什么显著的变化”。原消息精确时间未取得；此处为追加记录时间。
+- 实际诊断：读取当前缓存与页面代码，并对JPEG输入、λ=.001/.008/.08结果及κ端点逐像素比较。确认右侧输出路径与像素随参数更新；左侧输入、中间作者输出按比较设计保持固定。κ=1.5→2.5（固定λ=.008）西瓜／蜗牛平均每通道绝对差为1.32786／1.42351（8位0—255尺度），变化较小；λ=.001→.08变化明显。AI查看现有同ROI四列对照，观察到默认参数下背景杂色减少，强平滑时眉毛、白边、螺旋和色块变化。未据此声称有干净真值或恢复质量更高。
+- 实际调整：论文作者对照入口默认ROI；明确左两列固定、右列变化；增加λ=.001/.008/.08三档按钮（固定κ2），κ模式提示变化较小并引导观察迭代与细微边界。论文ROI使用最近邻按原像素放大，避免浏览器平滑显示掩盖小尺度杂色；不修改源像素、输入编码、算法、参数缓存或指标。强平滑提示明确写出轮廓损伤风险，不伪造更明显的成功效果。
+- 验证：两幅素材×三档快捷切换共6项通过，前两列路径保持不变、右列三档路径不同、图像实际加载；默认ROI、κ提示、全图／局部保持当前参数及其他任务隐藏快捷栏通过，无JS错误。证据results/course_demo/paper_visibility/browser_check.json。对照图、逐像素统计在同目录。更新docs/demo_course.md；本轮未重跑算法、未重录视频或生成PPT，原录像保持原内容。未提交或推送Git。
+
+## 成员 B：更新PPT中的论文局部三档演示视频
+
+- 记录时间：2026-11-25T21:21:07+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户原文：“也更新一下ppt里面的视频演示”。此处为记录时间，原消息精确时间未取得。
+- 实际修改：scripts/record_course_demo.py保留四项功能、灰度/RGB真实运行与复现；论文段改为西瓜、蜗牛同ROI各展示λ=.001/.008/.08，固定κ=2，每档停留约2秒。实际点击新快捷按钮，不做图像插值或伪造结果；逐档断言输入和作者列固定、右侧结果路径变化、实际图片加载完成。保存6项真实帧状态与截图。
+- 成片：docs/media/demo_course_roi.mp4，59.56秒、1600×1080、25fps、H.264/yuv420p，无声、未加速。原始录屏、六档截图及API记录在results/demo_video/dynamic-20261125T131858Z/；完整元数据为同名JSON。录制时灰度与RGB均真实运行并重算通过。沿用/tmp制录工具，没有使用虚拟环境；播放不依赖临时目录。旧50.36秒视频保留。
+- PPT更新：制稿脚本默认使用新成片，第9页增加局部三档说明并同步讲稿；先生成/tmp/course_roi_deck.pptx/.pdf再写回docs/L0_图像结构平滑与边缘提取_完整功能演示版.pptx/.pdf，写入成功，无须覆盖其他版本。修改前PPT/PDF/资产清单/讲稿/播放器备份到results/demo_video/before-roi-video-20261125T131927Z/。第9页仍75秒预算，约60秒播放、15秒说明；其余9页渲染保持一致。
+- 智能体核验：FFmpeg全段解码通过；Chromium实际播放并定位8、18、49.56、53.56、57.56秒通过；AI查看蜗牛局部画面。6档参数/ROI及两组实际复现记录通过；PPTX第9页内嵌MP4摘要等于独立文件，无外部视频关系；PDF第1—8及10页与更新前逐页像素相同。证据results/demo_video/course_roi_video_check.json。未声称PowerPoint/WPS或成员人工核验。
+- 同步README、docs/demo_course.md、浏览器播放器及当前讲稿，保留历史日志与实验，不修改算法或重算参数实验。未提交或推送Git。
+
+## 成员 B：逐档核对演示图片是否完整生成
+
+- 记录时间：2026-11-25T21:28:58+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户原文：“你确定所有演示的图片都已经生成了吗,我咋感觉有些图片参数只有两三个点?”。原消息精确时间未取得，本条为追加记录时间。
+- 实际核对：从docs/demo_interactive.html解析当前内嵌数据和base路径，与实际manifest逐字段一致。重新读取并核对2041项归档文件摘要，2019个PNG/JPEG全部解码。单独按每个素材、参数序列和full/ROI计算输出像素SHA与相邻帧绝对差；λ每图45档、κ每图21档、受控JPEG Q19档、照片迭代22步、Canny阈值13档均存在，每个序列内部的全图与ROI像素也均不同，没有用两三张PNG重复指向全部档位。主L0显示帧仍为557，另39对Canny阈值。参数序列为固定其他条件的单因素扫描，不声称任意多参数组合全网格都已生成。
+- 发现的真实原因：当前视频元数据表明西瓜和蜗牛各只记录λ=.001/.008/.08三个值，与上一轮为局部观察采用三档停留一致；视频没有展示它们的全部45档。公开狐狸和乌龟κ序列虽然21幅像素各不同，但所有20个相邻间隔平均每通道差均小于0.1个8位灰度级，肉眼变化小。没有将相近结果描述成缺图，也没有将视频三点描述成全序列演示。
+- 浏览器逐档验证：实际依次遍历smooth/edge/jpeg的全部素材、参数和全图／ROI，62个序列视图共1738个状态，逐次等待当前frame id与全部图片URL匹配且加载完成；全部通过，无JS错误。证据results/course_demo/frame_coverage/browser_all_steps.json；文件与像素统计为audit.json。不是只检查首、中、末三个位置。
+- 显示修正：当前页增加“第n／总档数”的即时计数，论文快捷栏明确写明三个按钮仅为跳转、λ滑块有45档。浏览器检查第1/2/21/31/45档计数通过，见counter_check.json。图片、参数、算法、指标及视频内容不变，没有额外生成重复图片或插值帧。同步操作说明，未提交或推送Git。
+
+## 成员 B：修复从外部链接打开Demo时的跨站误拦截
+
+- 记录时间：2026-11-25T21:32:45+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户反馈原文：`{"ok": false, "error": "拒绝跨站请求"}`。原消息精确时间未取得，此处为记录时间。
+- 原因与修改：原local_request对所有Sec-Fetch-Site=cross-site一律拒绝，导致从聊天等其他站点点击链接、正常顶层打开Demo也被拦截。现在仅允许GET访问 `/` 或 `/docs/demo_interactive.html`，且浏览器标识为navigate/document的页面导航；本机Host校验保留，API、fetch、iframe和POST仍沿用原跨来源检查。不放开任意跨站计算或上传。
+- 验证：新增回归测试覆盖两个入口正常导航、跨站API run/replay/status拒绝、fetch/iframe拒绝、非法Host拒绝，以及正常同源status。运行 `python3 -m unittest tests.test_demo_server -v`，6项全部通过，3.310秒，包含原RGB/灰度真实运行复现。另用Chromium从localhost另一站点实际点击127.0.0.1的Demo链接，捕获Sec-Fetch-Site=cross-site、navigate/document，页面加载成功且同源API运行按钮可用，无JS错误。证据results/demo_live/navigation_fix/browser_check.json、tests.log。
+- 使用说明：已运行的旧Python进程不会自动加载代码修复，需要在用户终端Ctrl+C后重新执行 `python3 -m scripts.demo_server`。本轮未终止用户进程；未改算法、实验或视频，未提交或推送Git。
+
+## 成员 B：仅移除网页的读写与复现展示
+
+- 记录时间：2026-11-25T21:42:26+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户先要求“去掉读写与复现的部分”，随后补充“演示视频线不用改”。按补充要求，将范围限定为Demo网页，现有视频和PPT不修改。原消息精确时间未取得，此处为追加记录时间。
+- 实际修改：从scripts/course_demo.html移除读写页导航、上传/运行/复现控件、IO页面JavaScript和对应展示条目；导航重排为①结构平滑、②同参Canny、③JPEG与指标。刷新docs/demo_interactive.html和当前缓存index.html，保留滑块、实际迭代、局部、曲线、三档快捷跳转与自动播放。更新README和操作说明，说明现有视频仍是上一版四项演示。未删除核心读写/保存/复现接口、服务API、参数缓存或历史实验。
+- 验证：更新scripts/check_course_demo.py以核对当前三页，186个参数/视图位置及曲线、负例、前后分割、自动播放和参数保持通过；明确断言task-io/ioLayout/run/replay节点不存在，无JS错误。证据results/course_demo/browser_checks/check-20261125T134113Z-416e1392af1f/。本轮不重新执行已保留的读写算法或服务API测试。
+- 保留与确认：修改前网页模板、浏览器检查脚本和说明备份在results/course_demo/before-remove-io-20261125T134112Z/。对docs中的14个非Office锁文件视频/PPT/PDF逐一比较SHA-256，字节完全不变；记录同目录unchanged_media_check.json。本轮没有重新录屏、制稿或提交推送Git，刷新原网页即可看到三个部分。
+
+## 成员 B：按三段顺序重录演示视频
+
+- 记录时间：2026-11-25T21:58:04+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户原文：“我也要求演示视频如下:1:展示结构平滑的动态演示,用全图2:展示边缘提取的动态演示(用同一局部)3:用论文官网照片演示,用同一局部”。此处为追加记录时间，原消息精确时间未取得。按本轮要求更新视频，不继续沿用此前暂不改视频的范围。
+- 实际实现：新增scripts/record_three_sections.py，从当前三页Demo真实录制。第一段沙滩结构平滑全部使用full：λ45档、κ21档和迭代22步；第二段砖墙边缘全部使用同ROI：λ45档、Canny阈值对13档；第三段仅论文官网西瓜与蜗牛，同ROI各展示全部45档λ，在λ=.008短暂停留。每档实际移动鼠标、等待显示并断言frame id与输入档位匹配、图像加载完成；共236个采样位置，不使用图片插值。没有录制读写复现或OpenMoji段。
+- 实际修正：首轮主拖动段符合要求，但切换到边缘页时短暂渲染了3个full过渡帧。逐帧记录发现后，先设置目标视图再切页并重新录制；首轮保留为docs/media/demo_three_sections.mp4及对应记录，transition_review.json标明不用于交付。第二轮增加全程视图与素材断言，所有smooth帧为full，edge/jpeg帧为roi，jpeg仅paper_9/paper_20，顺序严格为smooth→edge→jpeg。
+- 最终视频：docs/media/demo_three_sections_v2.mp4，43.64秒、1600×1080、25fps、H.264/yuv420p，无声、未加速。原始WebM、逐段截图、档位与完整显示帧记录在results/demo_video/dynamic-20261125T135557Z/及同名视频JSON。FFmpeg全段解码通过；只使用此前已安装在/tmp的制录依赖，没有虚拟环境，也未重算或修改算法实验。
+- PPT：当前完整功能演示版有Office锁文件，因此另存docs/L0_图像结构平滑与边缘提取_三段演示版.pptx/.pdf，第9页嵌入新视频并写明三段视图；其他9页保持原内容，双人540秒、第9页75秒预算保留。旧PPT/视频保留，修改前资产与讲稿备份在results/demo_video/before-three-sections-20261125T135435Z/。同步播放器、README、当前操作说明和讲稿链接。
+- 智能体核验：完整显示历史的段落顺序、视图和来源全部符合要求；七段扫参分别访问45/21/22/45/13/45/45个唯一参数值。Chromium实际播放并定位7、23、33.64、41.64秒成功，无JS错误。PPT内嵌MP4摘要与独立成片一致，无外部视频关系；PDF第1—8及10页与更新前像素相同。AI查看第9页预览，文档链接及git diff --check通过。证据results/demo_video/three_sections_check.json。未声称PowerPoint/WPS或成员实机核验；未提交或推送Git。
+
+## 成员 B：演示稿页脚、全页视频与致谢页
+
+- 记录时间：2026-11-25T22:07:13+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户原文：“一个是去掉ppt里面成员 B · 蒋天乐 2023010721    |    建议 55 秒                                       论文官网素材 / 本组真实运行     8/10 这样的灰色字,另一个是动态演示那一页视频直接占据全页,不用加上文字介绍,然后最后一页改成谢谢大家”。原消息精确时间未取得，此处为追加记录时间。
+- 实际修改：制稿脚本取消第6—10页成员、学号、建议用时、素材说明与页码组成的灰色页脚。第9页只有铺满画布的视频对象和封面，没有额外标题、旁边介绍或底部播放说明；第10页只显示居中的“谢谢大家”。讲解提示留在备注及讲稿，成员登记信息仍保留在项目文档。第1—5页和第6—8页主要内容未改。
+- 视频处理：scripts/prepare_fullscreen_video.py使用系统Python及既有/tmp制录依赖，将上一版1600×1080录屏置于1920×1080画布，左右补同色背景，不裁剪、不拉伸；三段演示内容、档位顺序与43.64秒时长保持。输出docs/media/demo_three_sections_fullscreen.mp4/.png/.json，JSON记录源摘要与FFmpeg命令，原始录屏保留。FFmpeg全段解码通过，没有虚拟环境，也没有重新计算实验。
+- 交付：当前三段演示版有Office锁文件，另存docs/L0_图像结构平滑与边缘提取_全屏演示版.pptx/.pdf。同步README、docs/demo_course.md、当前资产清单和讲稿。修改前生成脚本、资产与讲稿等备份在results/demo_video/before-fullscreen-20261125T140520Z/。
+- 实际命令：`PYTHONPATH=/tmp/media-video-tools python3 -m scripts.prepare_fullscreen_video`；`PYTHONPATH=/tmp/media-presentation-tools python3 -m scripts.build_paper_presentation --experiment results/paper_comparison/paper-20261125T093231Z-ebe97260fc7e`。验证脚本results/demo_video/check_fullscreen_deck.py，使用/tmp/media-presentation-tools:/tmp/media-video-tools及已有Playwright浏览器执行。
+- 智能体核验：10页完整；第1—5页逐像素一致，第6—8页去掉页脚以外的主内容区域逐像素一致；第9页无文本对象，视频位置和尺寸与整页相同；第10页唯一文本为“谢谢大家”。内嵌MP4摘要与独立文件一致，无外部视频依赖。Chromium实际播放超过1秒并定位7、23、33.64、41.64秒成功，读到1920×1080、43.64秒；AI查看第9与10页预览。证据results/demo_video/fullscreen_deck_check.json。Python语法编译与git diff --check通过；未声称PowerPoint/WPS或成员人工核验。未提交或推送Git。
+
+## 成员 B：提交并推送最新演示版本
+
+- 记录时间：2026-11-26T18:02:16+08:00；使用者：蒋天乐，2023010721；工具：Codex，具体模型版本未确认。用户原文：“你把最新的版本推上去”。
+- 范围：本轮累计的论文官网与公开素材实验、三部分交互Demo及完整预计算图片、三段录屏、全屏演示PPT/PDF、生成脚本、验证证据和AI日志一并提交。保留旧素材、实验与录屏修正记录，README首要入口指向全屏演示版；Office临时锁文件不提交。原成员A算法代码和提交历史保留。
+- 远端核对：实际git fetch origin成功，提交前本地HEAD与origin/main均为0d0bddf，没有队友新提交需要合并。仓库现有邮箱配置与此前确认邮箱不同，本次提交通过git -c显式使用已确认的蒋天乐 <jtl23@mails.tsinghua.edu.cn>，不改写已有提交。
+- 智能体执行验证：系统Python运行python3 -m unittest discover -s tests -v，20项通过（4.941秒）；重新核对当前Demo的2041项资源摘要，以及最新PPT/PDF/内嵌视频对应文件摘要，全部通过。证据results/delivery/latest_push_20261126.json。源码及主要修改文档的git diff --cached --check通过；归档下载网页与FFmpeg原始日志含原有CRLF/行尾空格，保持原始字节和摘要，不为格式检查改写原始证据。
+- 本条记录提交准备及实际检查；真实提交hash、提交时间和提交说明在提交成功后另行追加，不预填推送成功。

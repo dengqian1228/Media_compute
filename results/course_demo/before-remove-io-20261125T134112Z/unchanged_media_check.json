@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "unchanged_files": [
+    "docs/L0_图像结构平滑与边缘提取.pdf",
+    "docs/L0_图像结构平滑与边缘提取_动态演示版.pdf",
+    "docs/L0_图像结构平滑与边缘提取_动态演示版.pptx",
+    "docs/L0_图像结构平滑与边缘提取_完整功能演示版.pdf",
+    "docs/L0_图像结构平滑与边缘提取_完整功能演示版.pptx",
+    "docs/L0_图像结构平滑与边缘提取_论文对照版.pdf",
+    "docs/L0_图像结构平滑与边缘提取_论文对照版.pptx",
+    "docs/L0_图像结构平滑与边缘提取_课堂演示版.pdf",
+    "docs/L0_图像结构平滑与边缘提取_课堂演示版.pptx",
+    "docs/media/demo_course_all.mp4",
+    "docs/media/demo_course_roi.mp4",
+    "docs/media/demo_dynamic_parameters.mp4",
+    "docs/media/demo_dynamic_real_sources.mp4",
+    "docs/media/demo_paper_comparison.mp4"
+  ]
+}

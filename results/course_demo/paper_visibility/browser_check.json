@@ -1,0 +1,82 @@
+{
+  "checked_at": "2026-11-25T13:09:51.291868+00:00",
+  "passed": true,
+  "preset_checks": [
+    {
+      "id": 195,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.001,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60
+    },
+    {
+      "id": 239,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.08,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60
+    },
+    {
+      "id": 260,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.001,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60
+    },
+    {
+      "id": 280,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60
+    },
+    {
+      "id": 304,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.08,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60
+    }
+  ],
+  "paper_default_view": "roi",
+  "first_two_columns_fixed": true,
+  "third_column_changes": true,
+  "browser_errors": []
+}

@@ -1,0 +1,146 @@
+{
+  "checked_at": "2026-11-25T13:20:31.593688+00:00",
+  "passed": true,
+  "duration_seconds": 59.56,
+  "paper_presets": [
+    {
+      "frame": {
+        "id": 195,
+        "case": "paper_9",
+        "task": "jpeg",
+        "lambda": 0.001,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 26,
+        "canny_low": 60
+      },
+      "fixed_columns": [
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_9_input_roi.png",
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_9_reference_roi.png"
+      ],
+      "output": "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/frame_195_roi.png"
+    },
+    {
+      "frame": {
+        "id": 215,
+        "case": "paper_9",
+        "task": "jpeg",
+        "lambda": 0.008,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 23,
+        "canny_low": 60
+      },
+      "fixed_columns": [
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_9_input_roi.png",
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_9_reference_roi.png"
+      ],
+      "output": "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/frame_215_roi.png"
+    },
+    {
+      "frame": {
+        "id": 239,
+        "case": "paper_9",
+        "task": "jpeg",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 20,
+        "canny_low": 60
+      },
+      "fixed_columns": [
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_9_input_roi.png",
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_9_reference_roi.png"
+      ],
+      "output": "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/frame_239_roi.png"
+    },
+    {
+      "frame": {
+        "id": 260,
+        "case": "paper_20",
+        "task": "jpeg",
+        "lambda": 0.001,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 26,
+        "canny_low": 60
+      },
+      "fixed_columns": [
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_20_input_roi.png",
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_20_reference_roi.png"
+      ],
+      "output": "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/frame_260_roi.png"
+    },
+    {
+      "frame": {
+        "id": 280,
+        "case": "paper_20",
+        "task": "jpeg",
+        "lambda": 0.008,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 23,
+        "canny_low": 60
+      },
+      "fixed_columns": [
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_20_input_roi.png",
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_20_reference_roi.png"
+      ],
+      "output": "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/frame_280_roi.png"
+    },
+    {
+      "frame": {
+        "id": 304,
+        "case": "paper_20",
+        "task": "jpeg",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 20,
+        "canny_low": 60
+      },
+      "fixed_columns": [
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_20_input_roi.png",
+        "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/paper_20_reference_roi.png"
+      ],
+      "output": "http://127.0.0.1:46101/results/course_demo/course-20261125T125030Z-ada4fa81e776/photo_paper/assets/frame_304_roi.png"
+    }
+  ],
+  "rgb_gray_live_replays_passed": true,
+  "browser_played_past_1_second": true,
+  "seek_positions": [
+    8,
+    18,
+    49.56,
+    53.56,
+    57.56
+  ],
+  "browser_errors": [],
+  "unchanged_pdf_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+  ],
+  "pptx_video_identical": true,
+  "slide9_no_external_video": true,
+  "pptx": "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/docs/L0_图像结构平滑与边缘提取_完整功能演示版.pptx",
+  "executor": "AI, not PowerPoint/WPS or member review"
+}

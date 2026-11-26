@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-25T14:06:47.796524+00:00",
+  "passed": true,
+  "slides": 10,
+  "A_pages_1_to_5_pixel_identical": true,
+  "pages_6_to_8_main_content_pixel_identical": true,
+  "B_metadata_footers_removed": true,
+  "slide9_full_slide_movie_no_text": true,
+  "slide10_only_thanks": true,
+  "embedded_mp4_sha256_matches": true,
+  "browser_playback_and_four_seeks_passed": true,
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "duration": 43.64
+  },
+  "executor": "AI; not PowerPoint/WPS or member review"
+}

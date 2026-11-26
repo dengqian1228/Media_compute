@@ -1,0 +1,7577 @@
+{
+  "created_at": "2026-11-25T13:55:26.919161+00:00",
+  "demo_kind": "three_sections",
+  "source_scope": "real_photos_and_paper_website_only",
+  "duration_seconds": 47.16,
+  "width": 1600,
+  "height": 1080,
+  "fps": 25,
+  "codec": "H.264",
+  "audio": false,
+  "speed_factor": 1,
+  "recording": "actual Chromium mouse drags across every sampled point; full-image smoothing, same-ROI edges, same-ROI paper JPEG; precomputed genuine outputs, no interpolation",
+  "browser_version": "159.0.8154.6",
+  "video_sha256": "d397147d37ff1a0b7a7117c70e897bf10944a91d3432b449d8e734cdd0a74aab",
+  "poster_sha256": "1f15248a45cae72505c4f0e6ba9bde863893f99abc42f8076d2c96a167e59b04",
+  "output_video": "docs/media/demo_three_sections.mp4",
+  "poster": "docs/media/demo_three_sections.png",
+  "raw_video": "results/demo_video/dynamic-20261125T135436Z/raw/page@b641723a7d553273d217251af911e01c.webm",
+  "raw_sha256": "dab6731a29340abd2d7ec31278ea23c38ad1087936d9bef48e730fa3c0796591",
+  "demo_page": "docs/demo_interactive.html",
+  "demo_manifest_sha256": "133a2975b8ab4295e3bc89ea9679d4ae39a8db3ad22ee15482c147364498bb4e",
+  "timeline": [
+    {
+      "seconds": 0.9921378630024265,
+      "label": "01 结构平滑 · 全图",
+      "frame": {
+        "id": 30,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "full",
+        "iteration": 22,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 2.1605518910000683,
+      "label": "01_结构平滑lambda全图：起点",
+      "frame": {
+        "id": 0,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.001,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "full",
+        "iteration": 26,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 8.54694207600187,
+      "label": "01_结构平滑lambda全图：终点",
+      "frame": {
+        "id": 44,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "full",
+        "iteration": 20,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 9.539230643000337,
+      "label": "02_结构平滑kappa全图：起点",
+      "frame": {
+        "id": 45,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 1.5,
+        "quality": null,
+        "axis": "kappa",
+        "view": "full",
+        "iteration": 37,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 13.043812318002892,
+      "label": "02_结构平滑kappa全图：终点",
+      "frame": {
+        "id": 64,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2.5,
+        "quality": null,
+        "axis": "kappa",
+        "view": "full",
+        "iteration": 17,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 14.10400054800266,
+      "label": "03_实际迭代全图：起点",
+      "frame": {
+        "id": 491,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "iteration",
+        "view": "full",
+        "iteration": 1,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 17.650856774002023,
+      "label": "03_实际迭代全图：终点",
+      "frame": {
+        "id": 512,
+        "case": "photo_beach",
+        "task": "smooth",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "iteration",
+        "view": "full",
+        "iteration": 22,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 19.889442792002228,
+      "label": "04_边缘提取lambda同局部：起点",
+      "frame": {
+        "id": 65,
+        "case": "photo_brick_window_gray",
+        "task": "edge",
+        "lambda": 0.001,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 26,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 26.294565355001396,
+      "label": "04_边缘提取lambda同局部：终点",
+      "frame": {
+        "id": 109,
+        "case": "photo_brick_window_gray",
+        "task": "edge",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 20,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 27.92262077200212,
+      "label": "05_Canny同参阈值同局部：起点",
+      "frame": {
+        "id": 95,
+        "case": "photo_brick_window_gray",
+        "task": "edge",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "canny",
+        "view": "roi",
+        "iteration": 22,
+        "canny_low": 20
+      }
+    },
+    {
+      "seconds": 30.723428934001277,
+      "label": "05_Canny同参阈值同局部：终点",
+      "frame": {
+        "id": 95,
+        "case": "photo_brick_window_gray",
+        "task": "edge",
+        "lambda": 0.02,
+        "kappa": 2,
+        "quality": null,
+        "axis": "canny",
+        "view": "roi",
+        "iteration": 22,
+        "canny_low": 140
+      }
+    },
+    {
+      "seconds": 31.89050834900263,
+      "label": "06_论文西瓜同局部连续参数：起点",
+      "frame": {
+        "id": 195,
+        "case": "paper_9",
+        "task": "jpeg",
+        "lambda": 0.001,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 26,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 39.55535333700027,
+      "label": "06_论文西瓜同局部连续参数：终点",
+      "frame": {
+        "id": 239,
+        "case": "paper_9",
+        "task": "jpeg",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 20,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 40.72284812700309,
+      "label": "07_论文蜗牛同局部连续参数：起点",
+      "frame": {
+        "id": 260,
+        "case": "paper_20",
+        "task": "jpeg",
+        "lambda": 0.001,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 26,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 48.29086620000089,
+      "label": "07_论文蜗牛同局部连续参数：终点",
+      "frame": {
+        "id": 304,
+        "case": "paper_20",
+        "task": "jpeg",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 20,
+        "canny_low": 60
+      }
+    },
+    {
+      "seconds": 49.116332245001104,
+      "label": "演示结束",
+      "frame": {
+        "id": 304,
+        "case": "paper_20",
+        "task": "jpeg",
+        "lambda": 0.08,
+        "kappa": 2,
+        "quality": null,
+        "axis": "lambda",
+        "view": "roi",
+        "iteration": 20,
+        "canny_low": 60
+      }
+    }
+  ],
+  "sweeps": [
+    {
+      "section": 1,
+      "label": "01_结构平滑lambda全图",
+      "expected_points": 45,
+      "visited": [
+        {
+          "index": 0,
+          "value": 0.001,
+          "frame": {
+            "id": 0,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.001,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 1,
+          "value": 0.001116,
+          "frame": {
+            "id": 1,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.001116,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 2,
+          "value": 0.001245,
+          "frame": {
+            "id": 2,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.001245,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 3,
+          "value": 0.001389,
+          "frame": {
+            "id": 3,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.001389,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 4,
+          "value": 0.00155,
+          "frame": {
+            "id": 4,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.00155,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 5,
+          "value": 0.001729,
+          "frame": {
+            "id": 5,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.001729,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 6,
+          "value": 0.00193,
+          "frame": {
+            "id": 6,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.00193,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 7,
+          "value": 0.002153,
+          "frame": {
+            "id": 7,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.002153,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 8,
+          "value": 0.002402,
+          "frame": {
+            "id": 8,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.002402,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 9,
+          "value": 0.00268,
+          "frame": {
+            "id": 9,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.00268,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 10,
+          "value": 0.002991,
+          "frame": {
+            "id": 10,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.002991,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 11,
+          "value": 0.003337,
+          "frame": {
+            "id": 11,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.003337,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 12,
+          "value": 0.003723,
+          "frame": {
+            "id": 12,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.003723,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 13,
+          "value": 0.004154,
+          "frame": {
+            "id": 13,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.004154,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 14,
+          "value": 0.004635,
+          "frame": {
+            "id": 14,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.004635,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 15,
+          "value": 0.005,
+          "frame": {
+            "id": 15,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.005,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 16,
+          "value": 0.005172,
+          "frame": {
+            "id": 16,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.005172,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 17,
+          "value": 0.005771,
+          "frame": {
+            "id": 17,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.005771,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 18,
+          "value": 0.006439,
+          "frame": {
+            "id": 18,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.006439,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 19,
+          "value": 0.007184,
+          "frame": {
+            "id": 19,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.007184,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 20,
+          "value": 0.008,
+          "frame": {
+            "id": 20,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.008,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 21,
+          "value": 0.008016,
+          "frame": {
+            "id": 21,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.008016,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 22,
+          "value": 0.008944,
+          "frame": {
+            "id": 22,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.008944,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 23,
+          "value": 0.00998,
+          "frame": {
+            "id": 23,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.00998,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 24,
+          "value": 0.011135,
+          "frame": {
+            "id": 24,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.011135,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 25,
+          "value": 0.012424,
+          "frame": {
+            "id": 25,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.012424,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 26,
+          "value": 0.013863,
+          "frame": {
+            "id": 26,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.013863,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 27,
+          "value": 0.015468,
+          "frame": {
+            "id": 27,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.015468,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 28,
+          "value": 0.017259,
+          "frame": {
+            "id": 28,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.017259,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 29,
+          "value": 0.019257,
+          "frame": {
+            "id": 29,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.019257,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 30,
+          "value": 0.02,
+          "frame": {
+            "id": 30,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 31,
+          "value": 0.021486,
+          "frame": {
+            "id": 31,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.021486,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 32,
+          "value": 0.023974,
+          "frame": {
+            "id": 32,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.023974,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 33,
+          "value": 0.02675,
+          "frame": {
+            "id": 33,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02675,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 34,
+          "value": 0.029847,
+          "frame": {
+            "id": 34,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.029847,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 35,
+          "value": 0.033302,
+          "frame": {
+            "id": 35,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.033302,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 36,
+          "value": 0.037158,
+          "frame": {
+            "id": 36,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.037158,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 37,
+          "value": 0.04,
+          "frame": {
+            "id": 37,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.04,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 38,
+          "value": 0.04146,
+          "frame": {
+            "id": 38,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.04146,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 39,
+          "value": 0.04626,
+          "frame": {
+            "id": 39,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.04626,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 40,
+          "value": 0.051616,
+          "frame": {
+            "id": 40,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.051616,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 41,
+          "value": 0.057591,
+          "frame": {
+            "id": 41,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.057591,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 42,
+          "value": 0.064259,
+          "frame": {
+            "id": 42,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.064259,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 43,
+          "value": 0.071699,
+          "frame": {
+            "id": 43,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.071699,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 44,
+          "value": 0.08,
+          "frame": {
+            "id": 44,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.08,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "full",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        }
+      ]
+    },
+    {
+      "section": 1,
+      "label": "02_结构平滑kappa全图",
+      "expected_points": 21,
+      "visited": [
+        {
+          "index": 0,
+          "value": 1.5,
+          "frame": {
+            "id": 45,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.5,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 37,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 1,
+          "value": 1.55,
+          "frame": {
+            "id": 46,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.55,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 34,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 2,
+          "value": 1.6,
+          "frame": {
+            "id": 47,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.6,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 32,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 3,
+          "value": 1.65,
+          "frame": {
+            "id": 48,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.65,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 30,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 4,
+          "value": 1.7,
+          "frame": {
+            "id": 49,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.7,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 28,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 5,
+          "value": 1.75,
+          "frame": {
+            "id": 50,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.75,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 27,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 6,
+          "value": 1.8,
+          "frame": {
+            "id": 51,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.8,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 7,
+          "value": 1.85,
+          "frame": {
+            "id": 52,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.85,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 8,
+          "value": 1.9,
+          "frame": {
+            "id": 53,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.9,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 9,
+          "value": 1.95,
+          "frame": {
+            "id": 54,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 1.95,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 10,
+          "value": 2,
+          "frame": {
+            "id": 30,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 11,
+          "value": 2.05,
+          "frame": {
+            "id": 55,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.05,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 12,
+          "value": 2.1,
+          "frame": {
+            "id": 56,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.1,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 13,
+          "value": 2.15,
+          "frame": {
+            "id": 57,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.15,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 14,
+          "value": 2.2,
+          "frame": {
+            "id": 58,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.2,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 19,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 15,
+          "value": 2.25,
+          "frame": {
+            "id": 59,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.25,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 19,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 16,
+          "value": 2.3,
+          "frame": {
+            "id": 60,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.3,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 18,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 17,
+          "value": 2.35,
+          "frame": {
+            "id": 61,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.35,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 18,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 18,
+          "value": 2.4,
+          "frame": {
+            "id": 62,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.4,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 17,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 19,
+          "value": 2.45,
+          "frame": {
+            "id": 63,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.45,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 17,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 20,
+          "value": 2.5,
+          "frame": {
+            "id": 64,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2.5,
+            "quality": null,
+            "axis": "kappa",
+            "view": "full",
+            "iteration": 17,
+            "canny_low": 60
+          }
+        }
+      ]
+    },
+    {
+      "section": 1,
+      "label": "03_实际迭代全图",
+      "expected_points": 22,
+      "visited": [
+        {
+          "index": 0,
+          "value": 1,
+          "frame": {
+            "id": 491,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 1,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 1,
+          "value": 2,
+          "frame": {
+            "id": 492,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 2,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 2,
+          "value": 3,
+          "frame": {
+            "id": 493,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 3,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 3,
+          "value": 4,
+          "frame": {
+            "id": 494,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 4,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 4,
+          "value": 5,
+          "frame": {
+            "id": 495,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 5,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 5,
+          "value": 6,
+          "frame": {
+            "id": 496,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 6,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 6,
+          "value": 7,
+          "frame": {
+            "id": 497,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 7,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 7,
+          "value": 8,
+          "frame": {
+            "id": 498,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 8,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 8,
+          "value": 9,
+          "frame": {
+            "id": 499,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 9,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 9,
+          "value": 10,
+          "frame": {
+            "id": 500,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 10,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 10,
+          "value": 11,
+          "frame": {
+            "id": 501,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 11,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 11,
+          "value": 12,
+          "frame": {
+            "id": 502,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 12,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 12,
+          "value": 13,
+          "frame": {
+            "id": 503,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 13,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 13,
+          "value": 14,
+          "frame": {
+            "id": 504,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 14,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 14,
+          "value": 15,
+          "frame": {
+            "id": 505,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 15,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 15,
+          "value": 16,
+          "frame": {
+            "id": 506,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 16,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 16,
+          "value": 17,
+          "frame": {
+            "id": 507,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 17,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 17,
+          "value": 18,
+          "frame": {
+            "id": 508,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 18,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 18,
+          "value": 19,
+          "frame": {
+            "id": 509,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 19,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 19,
+          "value": 20,
+          "frame": {
+            "id": 510,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 20,
+          "value": 21,
+          "frame": {
+            "id": 511,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 21,
+          "value": 22,
+          "frame": {
+            "id": 512,
+            "case": "photo_beach",
+            "task": "smooth",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "iteration",
+            "view": "full",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        }
+      ]
+    },
+    {
+      "section": 2,
+      "label": "04_边缘提取lambda同局部",
+      "expected_points": 45,
+      "visited": [
+        {
+          "index": 0,
+          "value": 0.001,
+          "frame": {
+            "id": 65,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.001,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 1,
+          "value": 0.001116,
+          "frame": {
+            "id": 66,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.001116,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 2,
+          "value": 0.001245,
+          "frame": {
+            "id": 67,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.001245,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 3,
+          "value": 0.001389,
+          "frame": {
+            "id": 68,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.001389,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 4,
+          "value": 0.00155,
+          "frame": {
+            "id": 69,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.00155,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 5,
+          "value": 0.001729,
+          "frame": {
+            "id": 70,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.001729,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 6,
+          "value": 0.00193,
+          "frame": {
+            "id": 71,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.00193,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 7,
+          "value": 0.002153,
+          "frame": {
+            "id": 72,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.002153,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 8,
+          "value": 0.002402,
+          "frame": {
+            "id": 73,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.002402,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 9,
+          "value": 0.00268,
+          "frame": {
+            "id": 74,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.00268,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 10,
+          "value": 0.002991,
+          "frame": {
+            "id": 75,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.002991,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 11,
+          "value": 0.003337,
+          "frame": {
+            "id": 76,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.003337,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 12,
+          "value": 0.003723,
+          "frame": {
+            "id": 77,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.003723,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 13,
+          "value": 0.004154,
+          "frame": {
+            "id": 78,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.004154,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 14,
+          "value": 0.004635,
+          "frame": {
+            "id": 79,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.004635,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 15,
+          "value": 0.005,
+          "frame": {
+            "id": 80,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.005,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 16,
+          "value": 0.005172,
+          "frame": {
+            "id": 81,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.005172,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 17,
+          "value": 0.005771,
+          "frame": {
+            "id": 82,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.005771,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 18,
+          "value": 0.006439,
+          "frame": {
+            "id": 83,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.006439,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 19,
+          "value": 0.007184,
+          "frame": {
+            "id": 84,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.007184,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 20,
+          "value": 0.008,
+          "frame": {
+            "id": 85,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.008,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 21,
+          "value": 0.008016,
+          "frame": {
+            "id": 86,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.008016,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 22,
+          "value": 0.008944,
+          "frame": {
+            "id": 87,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.008944,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 23,
+          "value": 0.00998,
+          "frame": {
+            "id": 88,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.00998,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 24,
+          "value": 0.011135,
+          "frame": {
+            "id": 89,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.011135,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 25,
+          "value": 0.012424,
+          "frame": {
+            "id": 90,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.012424,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 26,
+          "value": 0.013863,
+          "frame": {
+            "id": 91,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.013863,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 27,
+          "value": 0.015468,
+          "frame": {
+            "id": 92,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.015468,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 28,
+          "value": 0.017259,
+          "frame": {
+            "id": 93,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.017259,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 29,
+          "value": 0.019257,
+          "frame": {
+            "id": 94,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.019257,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 30,
+          "value": 0.02,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 31,
+          "value": 0.021486,
+          "frame": {
+            "id": 96,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.021486,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 32,
+          "value": 0.023974,
+          "frame": {
+            "id": 97,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.023974,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 33,
+          "value": 0.02675,
+          "frame": {
+            "id": 98,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02675,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 34,
+          "value": 0.029847,
+          "frame": {
+            "id": 99,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.029847,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 35,
+          "value": 0.033302,
+          "frame": {
+            "id": 100,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.033302,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 36,
+          "value": 0.037158,
+          "frame": {
+            "id": 101,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.037158,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 37,
+          "value": 0.04,
+          "frame": {
+            "id": 102,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.04,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 38,
+          "value": 0.04146,
+          "frame": {
+            "id": 103,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.04146,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 39,
+          "value": 0.04626,
+          "frame": {
+            "id": 104,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.04626,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 40,
+          "value": 0.051616,
+          "frame": {
+            "id": 105,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.051616,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 41,
+          "value": 0.057591,
+          "frame": {
+            "id": 106,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.057591,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 42,
+          "value": 0.064259,
+          "frame": {
+            "id": 107,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.064259,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 43,
+          "value": 0.071699,
+          "frame": {
+            "id": 108,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.071699,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 44,
+          "value": 0.08,
+          "frame": {
+            "id": 109,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.08,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        }
+      ]
+    },
+    {
+      "section": 2,
+      "label": "05_Canny同参阈值同局部",
+      "expected_points": 13,
+      "visited": [
+        {
+          "index": 0,
+          "value": 20,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 20
+          }
+        },
+        {
+          "index": 1,
+          "value": 30,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 30
+          }
+        },
+        {
+          "index": 2,
+          "value": 40,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 40
+          }
+        },
+        {
+          "index": 3,
+          "value": 50,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 50
+          }
+        },
+        {
+          "index": 4,
+          "value": 60,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 5,
+          "value": 70,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 70
+          }
+        },
+        {
+          "index": 6,
+          "value": 80,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 80
+          }
+        },
+        {
+          "index": 7,
+          "value": 90,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 90
+          }
+        },
+        {
+          "index": 8,
+          "value": 100,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 100
+          }
+        },
+        {
+          "index": 9,
+          "value": 110,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 110
+          }
+        },
+        {
+          "index": 10,
+          "value": 120,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 120
+          }
+        },
+        {
+          "index": 11,
+          "value": 130,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 130
+          }
+        },
+        {
+          "index": 12,
+          "value": 140,
+          "frame": {
+            "id": 95,
+            "case": "photo_brick_window_gray",
+            "task": "edge",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "canny",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 140
+          }
+        }
+      ]
+    },
+    {
+      "section": 3,
+      "label": "06_论文西瓜同局部连续参数",
+      "expected_points": 45,
+      "visited": [
+        {
+          "index": 0,
+          "value": 0.001,
+          "frame": {
+            "id": 195,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.001,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 1,
+          "value": 0.001116,
+          "frame": {
+            "id": 196,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.001116,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 2,
+          "value": 0.001245,
+          "frame": {
+            "id": 197,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.001245,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 3,
+          "value": 0.001389,
+          "frame": {
+            "id": 198,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.001389,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 4,
+          "value": 0.00155,
+          "frame": {
+            "id": 199,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.00155,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 5,
+          "value": 0.001729,
+          "frame": {
+            "id": 200,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.001729,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 6,
+          "value": 0.00193,
+          "frame": {
+            "id": 201,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.00193,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 7,
+          "value": 0.002153,
+          "frame": {
+            "id": 202,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.002153,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 8,
+          "value": 0.002402,
+          "frame": {
+            "id": 203,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.002402,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 9,
+          "value": 0.00268,
+          "frame": {
+            "id": 204,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.00268,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 10,
+          "value": 0.002991,
+          "frame": {
+            "id": 205,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.002991,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 11,
+          "value": 0.003337,
+          "frame": {
+            "id": 206,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.003337,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 12,
+          "value": 0.003723,
+          "frame": {
+            "id": 207,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.003723,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 13,
+          "value": 0.004154,
+          "frame": {
+            "id": 208,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.004154,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 14,
+          "value": 0.004635,
+          "frame": {
+            "id": 209,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.004635,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 15,
+          "value": 0.005,
+          "frame": {
+            "id": 210,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.005,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 16,
+          "value": 0.005172,
+          "frame": {
+            "id": 211,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.005172,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 17,
+          "value": 0.005771,
+          "frame": {
+            "id": 212,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.005771,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 18,
+          "value": 0.006439,
+          "frame": {
+            "id": 213,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.006439,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 19,
+          "value": 0.007184,
+          "frame": {
+            "id": 214,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.007184,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 20,
+          "value": 0.008,
+          "frame": {
+            "id": 215,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.008,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 21,
+          "value": 0.008016,
+          "frame": {
+            "id": 216,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.008016,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 22,
+          "value": 0.008944,
+          "frame": {
+            "id": 217,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.008944,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 23,
+          "value": 0.00998,
+          "frame": {
+            "id": 218,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.00998,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 24,
+          "value": 0.011135,
+          "frame": {
+            "id": 219,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.011135,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 25,
+          "value": 0.012424,
+          "frame": {
+            "id": 220,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.012424,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 26,
+          "value": 0.013863,
+          "frame": {
+            "id": 221,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.013863,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 27,
+          "value": 0.015468,
+          "frame": {
+            "id": 222,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.015468,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 28,
+          "value": 0.017259,
+          "frame": {
+            "id": 223,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.017259,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 29,
+          "value": 0.019257,
+          "frame": {
+            "id": 224,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.019257,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 30,
+          "value": 0.02,
+          "frame": {
+            "id": 225,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 31,
+          "value": 0.021486,
+          "frame": {
+            "id": 226,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.021486,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 32,
+          "value": 0.023974,
+          "frame": {
+            "id": 227,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.023974,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 33,
+          "value": 0.02675,
+          "frame": {
+            "id": 228,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.02675,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 34,
+          "value": 0.029847,
+          "frame": {
+            "id": 229,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.029847,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 35,
+          "value": 0.033302,
+          "frame": {
+            "id": 230,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.033302,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 36,
+          "value": 0.037158,
+          "frame": {
+            "id": 231,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.037158,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 37,
+          "value": 0.04,
+          "frame": {
+            "id": 232,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.04,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 38,
+          "value": 0.04146,
+          "frame": {
+            "id": 233,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.04146,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 39,
+          "value": 0.04626,
+          "frame": {
+            "id": 234,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.04626,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 40,
+          "value": 0.051616,
+          "frame": {
+            "id": 235,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.051616,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 41,
+          "value": 0.057591,
+          "frame": {
+            "id": 236,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.057591,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 42,
+          "value": 0.064259,
+          "frame": {
+            "id": 237,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.064259,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 43,
+          "value": 0.071699,
+          "frame": {
+            "id": 238,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.071699,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 44,
+          "value": 0.08,
+          "frame": {
+            "id": 239,
+            "case": "paper_9",
+            "task": "jpeg",
+            "lambda": 0.08,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        }
+      ]
+    },
+    {
+      "section": 3,
+      "label": "07_论文蜗牛同局部连续参数",
+      "expected_points": 45,
+      "visited": [
+        {
+          "index": 0,
+          "value": 0.001,
+          "frame": {
+            "id": 260,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.001,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 1,
+          "value": 0.001116,
+          "frame": {
+            "id": 261,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.001116,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 2,
+          "value": 0.001245,
+          "frame": {
+            "id": 262,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.001245,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 3,
+          "value": 0.001389,
+          "frame": {
+            "id": 263,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.001389,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 26,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 4,
+          "value": 0.00155,
+          "frame": {
+            "id": 264,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.00155,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 5,
+          "value": 0.001729,
+          "frame": {
+            "id": 265,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.001729,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 6,
+          "value": 0.00193,
+          "frame": {
+            "id": 266,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.00193,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 7,
+          "value": 0.002153,
+          "frame": {
+            "id": 267,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.002153,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 8,
+          "value": 0.002402,
+          "frame": {
+            "id": 268,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.002402,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 9,
+          "value": 0.00268,
+          "frame": {
+            "id": 269,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.00268,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 25,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 10,
+          "value": 0.002991,
+          "frame": {
+            "id": 270,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.002991,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 11,
+          "value": 0.003337,
+          "frame": {
+            "id": 271,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.003337,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 12,
+          "value": 0.003723,
+          "frame": {
+            "id": 272,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.003723,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 13,
+          "value": 0.004154,
+          "frame": {
+            "id": 273,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.004154,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 14,
+          "value": 0.004635,
+          "frame": {
+            "id": 274,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.004635,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 15,
+          "value": 0.005,
+          "frame": {
+            "id": 275,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.005,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 16,
+          "value": 0.005172,
+          "frame": {
+            "id": 276,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.005172,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 17,
+          "value": 0.005771,
+          "frame": {
+            "id": 277,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.005771,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 24,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 18,
+          "value": 0.006439,
+          "frame": {
+            "id": 278,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.006439,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 19,
+          "value": 0.007184,
+          "frame": {
+            "id": 279,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.007184,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 20,
+          "value": 0.008,
+          "frame": {
+            "id": 280,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.008,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 21,
+          "value": 0.008016,
+          "frame": {
+            "id": 281,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.008016,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 22,
+          "value": 0.008944,
+          "frame": {
+            "id": 282,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.008944,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 23,
+          "value": 0.00998,
+          "frame": {
+            "id": 283,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.00998,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 24,
+          "value": 0.011135,
+          "frame": {
+            "id": 284,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.011135,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 23,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 25,
+          "value": 0.012424,
+          "frame": {
+            "id": 285,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.012424,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 26,
+          "value": 0.013863,
+          "frame": {
+            "id": 286,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.013863,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 27,
+          "value": 0.015468,
+          "frame": {
+            "id": 287,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.015468,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 28,
+          "value": 0.017259,
+          "frame": {
+            "id": 288,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.017259,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 29,
+          "value": 0.019257,
+          "frame": {
+            "id": 289,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.019257,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 30,
+          "value": 0.02,
+          "frame": {
+            "id": 290,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.02,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 31,
+          "value": 0.021486,
+          "frame": {
+            "id": 291,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.021486,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 22,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 32,
+          "value": 0.023974,
+          "frame": {
+            "id": 292,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.023974,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 33,
+          "value": 0.02675,
+          "frame": {
+            "id": 293,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.02675,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 34,
+          "value": 0.029847,
+          "frame": {
+            "id": 294,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.029847,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 35,
+          "value": 0.033302,
+          "frame": {
+            "id": 295,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.033302,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 36,
+          "value": 0.037158,
+          "frame": {
+            "id": 296,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.037158,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 37,
+          "value": 0.04,
+          "frame": {
+            "id": 297,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.04,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 38,
+          "value": 0.04146,
+          "frame": {
+            "id": 298,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.04146,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 39,
+          "value": 0.04626,
+          "frame": {
+            "id": 299,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.04626,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 21,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 40,
+          "value": 0.051616,
+          "frame": {
+            "id": 300,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.051616,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 41,
+          "value": 0.057591,
+          "frame": {
+            "id": 301,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.057591,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 42,
+          "value": 0.064259,
+          "frame": {
+            "id": 302,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.064259,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 43,
+          "value": 0.071699,
+          "frame": {
+            "id": 303,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.071699,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        },
+        {
+          "index": 44,
+          "value": 0.08,
+          "frame": {
+            "id": 304,
+            "case": "paper_20",
+            "task": "jpeg",
+            "lambda": 0.08,
+            "kappa": 2,
+            "quality": null,
+            "axis": "lambda",
+            "view": "roi",
+            "iteration": 20,
+            "canny_low": 60
+          }
+        }
+      ]
+    }
+  ],
+  "demo_html_sha256": "0a83168634bd3c71864b7079160091749684ad0a19ce5237921ed5cf3f85fe35",
+  "rendered_frames": [
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 1386
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 1396.1000000014901
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 1407.9000000022352
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 1447.300000000745
+    },
+    {
+      "id": 0,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.001,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 1478.4000000022352
+    },
+    {
+      "id": 1,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.001116,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 1643.1000000014901
+    },
+    {
+      "id": 2,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.001245,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 1785.699999999255
+    },
+    {
+      "id": 3,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.001389,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 1926.300000000745
+    },
+    {
+      "id": 4,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.00155,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 2070.699999999255
+    },
+    {
+      "id": 5,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.001729,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 2215.699999999255
+    },
+    {
+      "id": 6,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.00193,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 2360.5
+    },
+    {
+      "id": 7,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.002153,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 2500.199999999255
+    },
+    {
+      "id": 8,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.002402,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 2638.300000000745
+    },
+    {
+      "id": 9,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.00268,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 2782.900000002235
+    },
+    {
+      "id": 10,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.002991,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 2927.400000002235
+    },
+    {
+      "id": 11,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.003337,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 3070.900000002235
+    },
+    {
+      "id": 12,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.003723,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 3212
+    },
+    {
+      "id": 13,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.004154,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 3346.699999999255
+    },
+    {
+      "id": 14,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.004635,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 3490.5
+    },
+    {
+      "id": 15,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.005,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 3635.699999999255
+    },
+    {
+      "id": 16,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.005172,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 3779.60000000149
+    },
+    {
+      "id": 17,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.005771,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 3913.699999999255
+    },
+    {
+      "id": 18,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.006439,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 4046.699999999255
+    },
+    {
+      "id": 19,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.007184,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 4180
+    },
+    {
+      "id": 20,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 4313.900000002235
+    },
+    {
+      "id": 21,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.008016,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 4452.699999999255
+    },
+    {
+      "id": 22,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.008944,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 4595.699999999255
+    },
+    {
+      "id": 23,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.00998,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 4740.400000002235
+    },
+    {
+      "id": 24,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.011135,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 4883.199999999255
+    },
+    {
+      "id": 25,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.012424,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 5027.10000000149
+    },
+    {
+      "id": 26,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.013863,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 5171.699999999255
+    },
+    {
+      "id": 27,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.015468,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 5308.300000000745
+    },
+    {
+      "id": 28,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.017259,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 5451.800000000745
+    },
+    {
+      "id": 29,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.019257,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 5594.5
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 5737
+    },
+    {
+      "id": 31,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.021486,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 5871
+    },
+    {
+      "id": 32,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.023974,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 6007.5
+    },
+    {
+      "id": 33,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02675,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 6149.800000000745
+    },
+    {
+      "id": 34,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.029847,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 6294.199999999255
+    },
+    {
+      "id": 35,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.033302,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 6439.199999999255
+    },
+    {
+      "id": 36,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.037158,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 6584.400000002235
+    },
+    {
+      "id": 37,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.04,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 6730.300000000745
+    },
+    {
+      "id": 38,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.04146,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 6873.199999999255
+    },
+    {
+      "id": 39,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.04626,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 7019.699999999255
+    },
+    {
+      "id": 40,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.051616,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 7161.699999999255
+    },
+    {
+      "id": 41,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.057591,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 7306.60000000149
+    },
+    {
+      "id": 42,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.064259,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 7442.699999999255
+    },
+    {
+      "id": 43,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.071699,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 7585
+    },
+    {
+      "id": 44,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.08,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 7727.60000000149
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 8697
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 8705.10000000149
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 8712.199999999255
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 8844.699999999255
+    },
+    {
+      "id": 45,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.5,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 37,
+      "canny_low": 60,
+      "time": 8859.699999999255
+    },
+    {
+      "id": 46,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.55,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 34,
+      "canny_low": 60,
+      "time": 9031.60000000149
+    },
+    {
+      "id": 47,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.6,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 32,
+      "canny_low": 60,
+      "time": 9198.199999999255
+    },
+    {
+      "id": 48,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.65,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 30,
+      "canny_low": 60,
+      "time": 9358.699999999255
+    },
+    {
+      "id": 49,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.7,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 28,
+      "canny_low": 60,
+      "time": 9524.699999999255
+    },
+    {
+      "id": 50,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.75,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 27,
+      "canny_low": 60,
+      "time": 9691.699999999255
+    },
+    {
+      "id": 51,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.8,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 9858.60000000149
+    },
+    {
+      "id": 52,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.85,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 10019.400000002235
+    },
+    {
+      "id": 53,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.9,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 10186
+    },
+    {
+      "id": 54,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 1.95,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 10349.699999999255
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 10518.199999999255
+    },
+    {
+      "id": 55,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.05,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 10685.400000002235
+    },
+    {
+      "id": 56,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.1,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 10853
+    },
+    {
+      "id": 57,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.15,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 11020
+    },
+    {
+      "id": 58,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.2,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 19,
+      "canny_low": 60,
+      "time": 11187
+    },
+    {
+      "id": 59,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.25,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 19,
+      "canny_low": 60,
+      "time": 11355.199999999255
+    },
+    {
+      "id": 60,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.3,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 18,
+      "canny_low": 60,
+      "time": 11523.900000002235
+    },
+    {
+      "id": 61,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.35,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 18,
+      "canny_low": 60,
+      "time": 11692
+    },
+    {
+      "id": 62,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.4,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 17,
+      "canny_low": 60,
+      "time": 11860.10000000149
+    },
+    {
+      "id": 63,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.45,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 17,
+      "canny_low": 60,
+      "time": 12027.699999999255
+    },
+    {
+      "id": 64,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2.5,
+      "quality": null,
+      "axis": "kappa",
+      "view": "full",
+      "iteration": 17,
+      "canny_low": 60,
+      "time": 12197.10000000149
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 13261.400000002235
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 13269.5
+    },
+    {
+      "id": 491,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 1,
+      "canny_low": 60,
+      "time": 13289.400000002235
+    },
+    {
+      "id": 491,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 1,
+      "canny_low": 60,
+      "time": 13411.800000000745
+    },
+    {
+      "id": 492,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 2,
+      "canny_low": 60,
+      "time": 13591.900000002235
+    },
+    {
+      "id": 493,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 3,
+      "canny_low": 60,
+      "time": 13751.800000000745
+    },
+    {
+      "id": 494,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 4,
+      "canny_low": 60,
+      "time": 13915.60000000149
+    },
+    {
+      "id": 495,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 5,
+      "canny_low": 60,
+      "time": 14076.199999999255
+    },
+    {
+      "id": 496,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 6,
+      "canny_low": 60,
+      "time": 14233.10000000149
+    },
+    {
+      "id": 497,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 7,
+      "canny_low": 60,
+      "time": 14394.300000000745
+    },
+    {
+      "id": 498,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 8,
+      "canny_low": 60,
+      "time": 14554.60000000149
+    },
+    {
+      "id": 499,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 9,
+      "canny_low": 60,
+      "time": 14715.900000002235
+    },
+    {
+      "id": 500,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 10,
+      "canny_low": 60,
+      "time": 14876.800000000745
+    },
+    {
+      "id": 501,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 11,
+      "canny_low": 60,
+      "time": 15037.300000000745
+    },
+    {
+      "id": 502,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 12,
+      "canny_low": 60,
+      "time": 15197.60000000149
+    },
+    {
+      "id": 503,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 13,
+      "canny_low": 60,
+      "time": 15359.300000000745
+    },
+    {
+      "id": 504,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 14,
+      "canny_low": 60,
+      "time": 15519.60000000149
+    },
+    {
+      "id": 505,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 15,
+      "canny_low": 60,
+      "time": 15685.300000000745
+    },
+    {
+      "id": 506,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 16,
+      "canny_low": 60,
+      "time": 15844.60000000149
+    },
+    {
+      "id": 507,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 17,
+      "canny_low": 60,
+      "time": 16005.800000000745
+    },
+    {
+      "id": 508,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 18,
+      "canny_low": 60,
+      "time": 16167.400000002235
+    },
+    {
+      "id": 509,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 19,
+      "canny_low": 60,
+      "time": 16327.5
+    },
+    {
+      "id": 510,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 16488.699999999255
+    },
+    {
+      "id": 511,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 16650.900000002235
+    },
+    {
+      "id": 512,
+      "case": "photo_beach",
+      "task": "smooth",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "iteration",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 16813
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 17845.60000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 18170.10000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "full",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 18579.800000000745
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 18647.10000000149
+    },
+    {
+      "id": 65,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.001,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 19209.5
+    },
+    {
+      "id": 66,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.001116,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 19369.60000000149
+    },
+    {
+      "id": 67,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.001245,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 19509.400000002235
+    },
+    {
+      "id": 68,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.001389,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 19653.60000000149
+    },
+    {
+      "id": 69,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.00155,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 19799.300000000745
+    },
+    {
+      "id": 70,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.001729,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 19944.400000002235
+    },
+    {
+      "id": 71,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.00193,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 20078.300000000745
+    },
+    {
+      "id": 72,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.002153,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 20221.800000000745
+    },
+    {
+      "id": 73,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.002402,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 20367.300000000745
+    },
+    {
+      "id": 74,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.00268,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 20512.800000000745
+    },
+    {
+      "id": 75,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.002991,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 20659.400000002235
+    },
+    {
+      "id": 76,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.003337,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 20804.900000002235
+    },
+    {
+      "id": 77,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.003723,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 20950.900000002235
+    },
+    {
+      "id": 78,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.004154,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 21096.199999999255
+    },
+    {
+      "id": 79,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.004635,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 21243.199999999255
+    },
+    {
+      "id": 80,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.005,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 21386.300000000745
+    },
+    {
+      "id": 81,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.005172,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 21531
+    },
+    {
+      "id": 82,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.005771,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 21676.800000000745
+    },
+    {
+      "id": 83,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.006439,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 21823.10000000149
+    },
+    {
+      "id": 84,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.007184,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 21968.5
+    },
+    {
+      "id": 85,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 22113.60000000149
+    },
+    {
+      "id": 86,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.008016,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 22248.199999999255
+    },
+    {
+      "id": 87,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.008944,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 22383.900000002235
+    },
+    {
+      "id": 88,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.00998,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 22528.699999999255
+    },
+    {
+      "id": 89,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.011135,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 22662.699999999255
+    },
+    {
+      "id": 90,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.012424,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 22807.400000002235
+    },
+    {
+      "id": 91,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.013863,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 22942.60000000149
+    },
+    {
+      "id": 92,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.015468,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 23087.699999999255
+    },
+    {
+      "id": 93,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.017259,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 23236.699999999255
+    },
+    {
+      "id": 94,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.019257,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 23382.300000000745
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 23527.5
+    },
+    {
+      "id": 96,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.021486,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 23673.60000000149
+    },
+    {
+      "id": 97,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.023974,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 23818.900000002235
+    },
+    {
+      "id": 98,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02675,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 23963.300000000745
+    },
+    {
+      "id": 99,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.029847,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 24109.900000002235
+    },
+    {
+      "id": 100,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.033302,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 24255.300000000745
+    },
+    {
+      "id": 101,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.037158,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 24388.300000000745
+    },
+    {
+      "id": 102,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.04,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 24521.199999999255
+    },
+    {
+      "id": 103,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.04146,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 24657.60000000149
+    },
+    {
+      "id": 104,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.04626,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 24793.60000000149
+    },
+    {
+      "id": 105,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.051616,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 24927.60000000149
+    },
+    {
+      "id": 106,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.057591,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 25062.60000000149
+    },
+    {
+      "id": 107,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.064259,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 25200.60000000149
+    },
+    {
+      "id": 108,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.071699,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 25333.800000000745
+    },
+    {
+      "id": 109,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.08,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 25475.699999999255
+    },
+    {
+      "id": 30,
+      "case": "photo_beach",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 26518.60000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 27029.199999999255
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 27048
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 27227.10000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 20,
+      "time": 27243
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 30,
+      "time": 27480.5
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 40,
+      "time": 27702.5
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 50,
+      "time": 27925.10000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 28147.900000002235
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 70,
+      "time": 28359.5
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 80,
+      "time": 28563.60000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 90,
+      "time": 28767.5
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 100,
+      "time": 28974.699999999255
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 110,
+      "time": 29196.60000000149
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 120,
+      "time": 29411.800000000745
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 130,
+      "time": 29634.800000000745
+    },
+    {
+      "id": 95,
+      "case": "photo_brick_window_gray",
+      "task": "edge",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "canny",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 140,
+      "time": 29839.900000002235
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 30885.10000000149
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 31130.10000000149
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 31137.10000000149
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 31143.60000000149
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 31176.800000000745
+    },
+    {
+      "id": 195,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.001,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 31208.800000000745
+    },
+    {
+      "id": 196,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.001116,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 31373.900000002235
+    },
+    {
+      "id": 197,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.001245,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 31519
+    },
+    {
+      "id": 198,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.001389,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 31665.900000002235
+    },
+    {
+      "id": 199,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.00155,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 31814.60000000149
+    },
+    {
+      "id": 200,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.001729,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 31963.199999999255
+    },
+    {
+      "id": 201,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.00193,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 32111.199999999255
+    },
+    {
+      "id": 202,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.002153,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 32267.60000000149
+    },
+    {
+      "id": 203,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.002402,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 32416.800000000745
+    },
+    {
+      "id": 204,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.00268,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 32564.400000002235
+    },
+    {
+      "id": 205,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.002991,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 32713.800000000745
+    },
+    {
+      "id": 206,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.003337,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 32864.400000002235
+    },
+    {
+      "id": 207,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.003723,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 33012.800000000745
+    },
+    {
+      "id": 208,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.004154,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 33158.5
+    },
+    {
+      "id": 209,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.004635,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 33306.699999999255
+    },
+    {
+      "id": 210,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.005,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 33464.10000000149
+    },
+    {
+      "id": 211,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.005172,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 33619.800000000745
+    },
+    {
+      "id": 212,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.005771,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 33775.60000000149
+    },
+    {
+      "id": 213,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.006439,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 33932.199999999255
+    },
+    {
+      "id": 214,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.007184,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 34091.199999999255
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 34249.800000000745
+    },
+    {
+      "id": 216,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008016,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 35206
+    },
+    {
+      "id": 217,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008944,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 35353.300000000745
+    },
+    {
+      "id": 218,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.00998,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 35510.800000000745
+    },
+    {
+      "id": 219,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.011135,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 35662.800000000745
+    },
+    {
+      "id": 220,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.012424,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 35818.199999999255
+    },
+    {
+      "id": 221,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.013863,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 35973.199999999255
+    },
+    {
+      "id": 222,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.015468,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 36131
+    },
+    {
+      "id": 223,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.017259,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 36287.199999999255
+    },
+    {
+      "id": 224,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.019257,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 36444.400000002235
+    },
+    {
+      "id": 225,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 36606
+    },
+    {
+      "id": 226,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.021486,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 36752.800000000745
+    },
+    {
+      "id": 227,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.023974,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 36899.5
+    },
+    {
+      "id": 228,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.02675,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 37046.400000002235
+    },
+    {
+      "id": 229,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.029847,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 37202
+    },
+    {
+      "id": 230,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.033302,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 37353.300000000745
+    },
+    {
+      "id": 231,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.037158,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 37510.10000000149
+    },
+    {
+      "id": 232,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.04,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 37669.800000000745
+    },
+    {
+      "id": 233,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.04146,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 37816.400000002235
+    },
+    {
+      "id": 234,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.04626,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 37975.10000000149
+    },
+    {
+      "id": 235,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.051616,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 38123.900000002235
+    },
+    {
+      "id": 236,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.057591,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 38280.699999999255
+    },
+    {
+      "id": 237,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.064259,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 38430.10000000149
+    },
+    {
+      "id": 238,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.071699,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 38576.300000000745
+    },
+    {
+      "id": 239,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.08,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 38728
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 39662.199999999255
+    },
+    {
+      "id": 215,
+      "case": "paper_9",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 39670.10000000149
+    },
+    {
+      "id": 280,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 39702.5
+    },
+    {
+      "id": 280,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 39978.300000000745
+    },
+    {
+      "id": 280,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 40010
+    },
+    {
+      "id": 260,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.001,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 40042.199999999255
+    },
+    {
+      "id": 261,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.001116,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 40204.400000002235
+    },
+    {
+      "id": 262,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.001245,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 40358.300000000745
+    },
+    {
+      "id": 263,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.001389,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 26,
+      "canny_low": 60,
+      "time": 40502.300000000745
+    },
+    {
+      "id": 264,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.00155,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 40648.199999999255
+    },
+    {
+      "id": 265,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.001729,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 40796.400000002235
+    },
+    {
+      "id": 266,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.00193,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 40940.5
+    },
+    {
+      "id": 267,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.002153,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 41089
+    },
+    {
+      "id": 268,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.002402,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 41245.10000000149
+    },
+    {
+      "id": 269,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.00268,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 25,
+      "canny_low": 60,
+      "time": 41397.400000002235
+    },
+    {
+      "id": 270,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.002991,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 41546
+    },
+    {
+      "id": 271,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.003337,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 41695.199999999255
+    },
+    {
+      "id": 272,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.003723,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 41847.800000000745
+    },
+    {
+      "id": 273,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.004154,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 41995.300000000745
+    },
+    {
+      "id": 274,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.004635,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 42143
+    },
+    {
+      "id": 275,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.005,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 42288.60000000149
+    },
+    {
+      "id": 276,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.005172,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 42443.699999999255
+    },
+    {
+      "id": 277,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.005771,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 24,
+      "canny_low": 60,
+      "time": 42591.400000002235
+    },
+    {
+      "id": 278,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.006439,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 42745.900000002235
+    },
+    {
+      "id": 279,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.007184,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 42902.699999999255
+    },
+    {
+      "id": 280,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.008,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 43056.699999999255
+    },
+    {
+      "id": 281,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.008016,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 44010.60000000149
+    },
+    {
+      "id": 282,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.008944,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 44159
+    },
+    {
+      "id": 283,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.00998,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 44306.699999999255
+    },
+    {
+      "id": 284,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.011135,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 23,
+      "canny_low": 60,
+      "time": 44462
+    },
+    {
+      "id": 285,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.012424,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 44609
+    },
+    {
+      "id": 286,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.013863,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 44763.60000000149
+    },
+    {
+      "id": 287,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.015468,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 44914.199999999255
+    },
+    {
+      "id": 288,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.017259,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 45069.800000000745
+    },
+    {
+      "id": 289,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.019257,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 45219.5
+    },
+    {
+      "id": 290,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.02,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 45365.10000000149
+    },
+    {
+      "id": 291,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.021486,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 22,
+      "canny_low": 60,
+      "time": 45509.800000000745
+    },
+    {
+      "id": 292,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.023974,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 45657.199999999255
+    },
+    {
+      "id": 293,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.02675,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 45802.900000002235
+    },
+    {
+      "id": 294,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.029847,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 45949.199999999255
+    },
+    {
+      "id": 295,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.033302,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 46094.300000000745
+    },
+    {
+      "id": 296,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.037158,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 46242.199999999255
+    },
+    {
+      "id": 297,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.04,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 46388
+    },
+    {
+      "id": 298,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.04146,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 46535.699999999255
+    },
+    {
+      "id": 299,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.04626,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 21,
+      "canny_low": 60,
+      "time": 46683
+    },
+    {
+      "id": 300,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.051616,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 46831
+    },
+    {
+      "id": 301,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.057591,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 46987.199999999255
+    },
+    {
+      "id": 302,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.064259,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 47143.800000000745
+    },
+    {
+      "id": 303,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.071699,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 47299.5
+    },
+    {
+      "id": 304,
+      "case": "paper_20",
+      "task": "jpeg",
+      "lambda": 0.08,
+      "kappa": 2,
+      "quality": null,
+      "axis": "lambda",
+      "view": "roi",
+      "iteration": 20,
+      "canny_low": 60,
+      "time": 47456.10000000149
+    }
+  ],
+  "full_decode_passed": true,
+  "browser_errors": [],
+  "transcode_command": [
+    "/tmp/media-video-tools/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+    "-y",
+    "-i",
+    "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/results/demo_video/dynamic-20261125T135436Z/raw/page@b641723a7d553273d217251af911e01c.webm",
+    "-c:v",
+    "libx264",
+    "-crf",
+    "20",
+    "-preset",
+    "medium",
+    "-pix_fmt",
+    "yuv420p",
+    "-r",
+    "25",
+    "-movflags",
+    "+faststart",
+    "-an",
+    "/mnt/d/Myfiles/Mycode/2026/媒体计算/Big/Media_compute/docs/media/demo_three_sections.mp4"
+  ]
+}

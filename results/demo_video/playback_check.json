@@ -1,0 +1,13 @@
+{
+  "duration": 51.16,
+  "width": 1280,
+  "height": 720,
+  "canPlay": "probably",
+  "actual_browser_playback_passed": true,
+  "seek_seconds": [
+    18,
+    36,
+    48
+  ],
+  "browser_version": "159.0.8154.6"
+}
